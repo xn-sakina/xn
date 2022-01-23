@@ -1,5 +1,11 @@
 # @xn-sakina/meta
 
+## 1.0.3
+
+### Patch Changes
+
+- resolve polyfill auto inject
+
 ## 1.0.2
 
 ### Patch Changes

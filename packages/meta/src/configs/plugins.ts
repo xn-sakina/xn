@@ -26,7 +26,7 @@ export const addPlugins = ({
   config.plugin('define').use(DefinePlugin, [envs.stringified])
   config.plugin('provide').use(ProvidePlugin, [
     {
-      process: 'process/browser',
+      process: require.resolve('process/browser'),
     },
   ])
   config.plugin('html').use(HtmlWebpackPlugin, [

@@ -1,6 +1,6 @@
 {
   "name": "@xn-sakina/meta",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Easy react bundle cli powered by swc & webpack5",
   "keywords": [
     "cli",
@@ -27,6 +27,7 @@
     "build": "rimraf dist && tsc --declarationMap false",
     "dev": "tsc --watch",
     "test": "tsc && swno ./test/print.ts",
+    "test:local": "npm publish --registry=http://localhost:4873/",
     "test:xn": "node ./bin/xn.js"
   },
   "dependencies": {
@@ -43,6 +44,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "commander": "^8.3.0",
     "copy-webpack-plugin": "^10.2.1",
+    "core-js": "3.20.3",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.4.1",
     "dotenv": "^12.0.3",
@@ -64,6 +66,7 @@
     "process": "^0.11.10",
     "react-dev-utils": "^12.0.0",
     "react-refresh": "^0.11.0",
+    "regenerator-runtime": "^0.13.9",
     "require-from-string": "^2.0.2",
     "sass": "^1.49.0",
     "sass-loader": "^12.4.0",
@@ -84,10 +87,5 @@
     "@types/lodash": "^4.14.178",
     "rimraf": "^3.0.2",
     "ts-node": "^10.4.0"
-  },
-  "peerDependencies": {
-    "core-js": "3.20.3",
-    "process": "^0.11.10",
-    "regenerator-runtime": "^0.13.9"
   }
 }

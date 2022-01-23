@@ -7,8 +7,6 @@ Easy react bundle cli powered by swc & webpack5
 ```bash
   # install cli
   pnpm add -D @xn-sakina/meta
-  # install peer deps and polyfill
-  pnpm add core-js process regenerator-runtime
 ```
 
 ### Usage

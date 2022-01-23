@@ -51,20 +51,14 @@ importers:
       '@types/react-dom': ^17.0.11
       '@types/react-router-dom': ^5.3.3
       '@xn-sakina/meta': workspace:*
-      core-js: 3.20.3
-      process: ^0.11.10
       react: ^17.0.2
       react-dom: ^17.0.2
       react-router-dom: ^5.3.0
-      regenerator-runtime: ^0.13.9
       typescript: ^4.5.5
     dependencies:
-      core-js: registry.npmjs.org/core-js/3.20.3
-      process: registry.npmjs.org/process/0.11.10
       react: registry.npmjs.org/react/17.0.2
       react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
       react-router-dom: registry.npmjs.org/react-router-dom/5.3.0_react@17.0.2
-      regenerator-runtime: 0.13.9
     devDependencies:
       '@types/node': 16.11.21
       '@types/react': registry.npmjs.org/@types/react/17.0.38
@@ -90,6 +84,7 @@ importers:
       clean-webpack-plugin: ^4.0.0
       commander: ^8.3.0
       copy-webpack-plugin: ^10.2.1
+      core-js: 3.20.3
       css-loader: ^6.5.1
       css-minimizer-webpack-plugin: ^3.4.1
       dotenv: ^12.0.3
@@ -111,6 +106,7 @@ importers:
       process: ^0.11.10
       react-dev-utils: ^12.0.0
       react-refresh: ^0.11.0
+      regenerator-runtime: ^0.13.9
       require-from-string: ^2.0.2
       rimraf: ^3.0.2
       sass: ^1.49.0
@@ -141,6 +137,7 @@ importers:
       clean-webpack-plugin: registry.npmjs.org/clean-webpack-plugin/4.0.0_webpack@5.67.0
       commander: 8.3.0
       copy-webpack-plugin: registry.npmjs.org/copy-webpack-plugin/10.2.1_webpack@5.67.0
+      core-js: 3.20.3
       css-loader: registry.npmjs.org/css-loader/6.5.1_webpack@5.67.0
       css-minimizer-webpack-plugin: registry.npmjs.org/css-minimizer-webpack-plugin/3.4.1_esbuild@0.14.13+webpack@5.67.0
       dotenv: registry.npmjs.org/dotenv/12.0.3
@@ -162,6 +159,7 @@ importers:
       process: registry.npmjs.org/process/0.11.10
       react-dev-utils: registry.npmjs.org/react-dev-utils/12.0.0_30e3284c0ef3df942980ea8a1f481282
       react-refresh: registry.npmjs.org/react-refresh/0.11.0
+      regenerator-runtime: 0.13.9
       require-from-string: 2.0.2
       sass: registry.npmjs.org/sass/1.49.0
       sass-loader: registry.npmjs.org/sass-loader/12.4.0_sass@1.49.0+webpack@5.67.0
@@ -1485,6 +1483,11 @@ packages:
     resolution: {integrity: sha1-8zc8MtIbTXgN2ABFFGhPt5HKQ2k=, tarball: convert-source-map/download/convert-source-map-1.8.0.tgz}
     dependencies:
       safe-buffer: 5.1.2
+    dev: false
+
+  /core-js/3.20.3:
+    resolution: {integrity: sha512-vVl8j8ph6tRS3B8qir40H7yw7voy17xL0piAjlbBUsH7WIfzoedL/ZOr1OV9FyZQLWXsayOJyV4tnRyXR85/ag==, tarball: core-js/download/core-js-3.20.3.tgz}
+    requiresBuild: true
     dev: false
 
   /core-util-is/1.0.3:
@@ -6706,13 +6709,6 @@ packages:
     resolution: {integrity: sha512-CmWHvSKn2vNL6p6StNp1EmMIfVY/pqn3JLAjfZQ8WZGPOlGoO92EkX9/Mk81i6GxvoPXjUqEQnpM3rJ5QxxIOg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/core-js-pure/-/core-js-pure-3.20.2.tgz}
     name: core-js-pure
     version: 3.20.2
-    requiresBuild: true
-    dev: false
-
-  registry.npmjs.org/core-js/3.20.3:
-    resolution: {integrity: sha512-vVl8j8ph6tRS3B8qir40H7yw7voy17xL0piAjlbBUsH7WIfzoedL/ZOr1OV9FyZQLWXsayOJyV4tnRyXR85/ag==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/core-js/-/core-js-3.20.3.tgz}
-    name: core-js
-    version: 3.20.3
     requiresBuild: true
     dev: false
 
