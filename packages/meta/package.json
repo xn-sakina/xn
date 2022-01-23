@@ -1,6 +1,6 @@
 {
   "name": "@xn-sakina/meta",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easy react bunlde cli powered by swc & webpack5",
   "keywords": [
     "cli",
@@ -84,5 +84,10 @@
     "@types/lodash": "^4.14.178",
     "rimraf": "^3.0.2",
     "ts-node": "^10.4.0"
+  },
+  "peerDependencies": {
+    "core-js": "3.20.3",
+    "process": "^0.11.10",
+    "regenerator-runtime": "^0.13.9"
   }
 }
