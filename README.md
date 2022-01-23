@@ -1,6 +1,6 @@
 # xn
 
-Easy react bunlde cli powered by swc & webpack5
+Easy react bundle cli powered by swc & webpack5
 
 ### Install
 
