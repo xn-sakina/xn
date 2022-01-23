@@ -1,0 +1,4 @@
+node_modules
+.swc
+/dist
+/output.js
