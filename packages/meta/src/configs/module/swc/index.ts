@@ -32,7 +32,7 @@ export const getSwcConfigs = ({ root }: IGetSwcConfigsOpts) => {
       },
       loose: true, // works like babel-preset-env loose mode.
       target: 'es2015',
-      externalHelpers: true,
+      externalHelpers: false,
       transform: {
         legacyDecorator: true,
         decoratorMetadata: true,
