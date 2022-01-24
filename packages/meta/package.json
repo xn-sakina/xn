@@ -1,9 +1,10 @@
 {
   "name": "@xn-sakina/meta",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Easy react bundle cli powered by swc & webpack5",
   "keywords": [
     "cli",
+    "react",
     "webpack5",
     "swc",
     "sakina"

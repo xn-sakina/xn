@@ -1,5 +1,11 @@
 # @xn-sakina/meta
 
+## 1.0.4
+
+### Patch Changes
+
+- improve find core-js pkg position
+
 ## 1.0.3
 
 ### Patch Changes
