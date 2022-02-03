@@ -1,4 +1,5 @@
 import { ENV } from '../../../constants/env'
+import { getCorejsVersion } from '../../../utils/getCorejsVersion'
 
 export const getBabelConfig = () => {
   const isDev = ENV.isDev
@@ -9,7 +10,7 @@ export const getBabelConfig = () => {
         require.resolve('@babel/preset-env'),
         {
           useBuiltIns: 'usage',
-          corejs: { version: '3.20' },
+          corejs: { version: getCorejsVersion() },
           bugfixes: true,
           loose: false,
           modules: false,

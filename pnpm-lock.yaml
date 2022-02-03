@@ -84,7 +84,7 @@ importers:
       clean-webpack-plugin: 4.0.0
       commander: 8.3.0
       copy-webpack-plugin: 10.2.4
-      core-js: 3.20.3
+      core-js: 3.21.0
       css-loader: 6.6.0
       css-minimizer-webpack-plugin: 3.4.1
       dotenv: 12.0.3
@@ -137,7 +137,7 @@ importers:
       clean-webpack-plugin: 4.0.0_webpack@5.68.0
       commander: 8.3.0
       copy-webpack-plugin: 10.2.4_webpack@5.68.0
-      core-js: 3.20.3
+      core-js: 3.21.0
       css-loader: 6.6.0_webpack@5.68.0
       css-minimizer-webpack-plugin: 3.4.1_esbuild@0.14.18+webpack@5.68.0
       dotenv: 12.0.3
@@ -3466,8 +3466,8 @@ packages:
     requiresBuild: true
     dev: false
 
-  /core-js/3.20.3:
-    resolution: {integrity: sha512-vVl8j8ph6tRS3B8qir40H7yw7voy17xL0piAjlbBUsH7WIfzoedL/ZOr1OV9FyZQLWXsayOJyV4tnRyXR85/ag==, tarball: core-js/download/core-js-3.20.3.tgz}
+  /core-js/3.21.0:
+    resolution: {integrity: sha512-YUdI3fFu4TF/2WykQ2xzSiTQdldLB4KVuL9WeAy5XONZYt5Cun/fpQvctoKbCgvPhmzADeesTk/j2Rdx77AcKQ==}
     requiresBuild: true
     dev: false
 
