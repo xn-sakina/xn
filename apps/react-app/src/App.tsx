@@ -9,6 +9,12 @@ const Example = React.lazy(() =>
 )
 
 function App() {
+  const a = async () => {
+    console.log(123)
+  }
+
+  a()
+
   return (
     <div className="App">
       <header className="App-header">
