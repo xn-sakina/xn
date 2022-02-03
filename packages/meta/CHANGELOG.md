@@ -1,5 +1,11 @@
 # @xn-sakina/meta
 
+## 1.0.5
+
+### Patch Changes
+
+- pin deps version && auto identify core-js version
+
 ## 1.0.4
 
 ### Patch Changes
