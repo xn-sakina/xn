@@ -1,5 +1,11 @@
 # @xn-sakina/meta
 
+## 1.1.0
+
+### Minor Changes
+
+- support mfsu mode
+
 ## 1.0.5
 
 ### Patch Changes
