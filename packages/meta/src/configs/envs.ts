@@ -1,3 +1,4 @@
+import { ENV } from '../constants/env'
 import { DEFAULT_SERVER } from '../constants/server'
 
 const XN_APP = /^XN_APP_/i
@@ -5,6 +6,8 @@ const XN_APP = /^XN_APP_/i
 export interface IEnvs {
   raw: Record<string, string>
   stringified: Record<string, string>
+  isDev: boolean
+  isProd: boolean
 }
 
 export function getClientEnvironment(publicUrl: string): IEnvs {
@@ -29,5 +32,5 @@ export function getClientEnvironment(publicUrl: string): IEnvs {
     }, {}),
   }
 
-  return { raw, stringified }
+  return { raw, stringified, isDev: ENV.isDev, isProd: ENV.isProd }
 }

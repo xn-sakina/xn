@@ -1,4 +1,3 @@
-import { ENV } from '../constants/env'
 import { getSplitChunksConfig } from '../utils/spiltChunk'
 import { ECompile, IConfigChainOpts } from './interface'
 
@@ -7,8 +6,13 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const { ESBuildMinifyPlugin } = require('esbuild-loader')
 const esbuild = require('esbuild')
 
-export const addOpti = ({ config, userConfig, paths }: IConfigChainOpts) => {
-  if (ENV.isDev) {
+export const addOpti = ({
+  config,
+  userConfig,
+  paths,
+  envs,
+}: IConfigChainOpts) => {
+  if (envs.isDev) {
     return
   }
 
@@ -25,7 +29,7 @@ export const addOpti = ({ config, userConfig, paths }: IConfigChainOpts) => {
             comments: false,
           },
           compress: {
-            drop_console: ENV.isProd,
+            drop_console: envs.isProd,
           },
         },
       },

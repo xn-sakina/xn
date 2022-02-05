@@ -1,5 +1,4 @@
 import { DefinePlugin, ProvidePlugin } from 'webpack'
-import { ENV } from '../constants/env'
 import { IConfigChainOpts } from './interface'
 import { Paths } from './paths'
 
@@ -20,7 +19,7 @@ export const addPlugins = ({
   paths,
   envs,
 }: IConfigChainOpts) => {
-  const isDev = ENV.isDev
+  const isDev = envs.isDev
 
   config.plugin('clean').use(CleanWebpackPlugin)
   config.plugin('define').use(DefinePlugin, [envs.stringified])

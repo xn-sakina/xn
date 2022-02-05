@@ -1,8 +1,8 @@
-import { ENV } from '../../../constants/env'
 import { getCorejsVersion } from '../../../utils/getCorejsVersion'
+import { IConfigChainOpts } from '../../interface'
 
-export const getBabelConfig = () => {
-  const isDev = ENV.isDev
+export const getBabelConfig = ({ envs }: IConfigChainOpts) => {
+  const isDev = envs.isDev
 
   const configs: Record<string, any> = {
     presets: [

@@ -1,5 +1,4 @@
 import { REG } from '../../constants'
-import { ENV } from '../../constants/env'
 import { IConfigChainOpts } from '../interface'
 import { getPostcssConfig } from './postcss'
 
@@ -30,8 +29,8 @@ interface IRuleBase {
   options?: Record<string, any>
 }
 
-export const addCssRule = ({ config }: IConfigChainOpts) => {
-  const styleLoader = ENV.isDev
+export const addCssRule = ({ config, envs }: IConfigChainOpts) => {
+  const styleLoader = envs.isDev
     ? originStyleLoader
     : MiniCssExtractPlugin.loader
   const postcssOptions = getPostcssConfig()

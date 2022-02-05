@@ -1,7 +1,6 @@
 import { merge } from 'lodash'
 import Config from 'webpack-chain'
 import { EMode } from '../constants'
-import { ENV } from '../constants/env'
 import { addCache } from './cache'
 import { addDevServer } from './devServer'
 import { addEntry } from './entry'
@@ -68,7 +67,7 @@ export const getConfigs = async ({
   config.mode(mode === EMode.dev ? 'development' : 'production')
 
   // bail
-  config.bail(ENV.isProd)
+  config.bail(envs.isProd)
 
   // entry
   addEntry(opts)
@@ -94,13 +93,13 @@ export const getConfigs = async ({
   addOpti(opts)
 
   // devtool
-  config.devtool(ENV.isDev ? 'cheap-module-source-map' : false)
+  config.devtool(envs.isDev ? 'cheap-module-source-map' : false)
 
   // dev server
   addDevServer(opts)
 
   // target
-  config.set('target', ENV.isDev ? 'web' : ['web', 'es5'])
+  config.set('target', envs.isDev ? 'web' : ['web', 'es5'])
 
   // cache
   addCache(opts)

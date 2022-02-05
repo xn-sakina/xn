@@ -1,11 +1,7 @@
-import { ENV } from '../../../constants/env'
+import { IConfigChainOpts } from '../../interface'
 
-interface IGetSwcConfigsOpts {
-  root: string
-}
-
-export const getSwcConfigs = ({ root }: IGetSwcConfigsOpts) => {
-  const isDev = ENV.isDev
+export const getSwcConfigs = ({ root, envs }: IConfigChainOpts) => {
+  const isDev = envs.isDev
 
   const configs = {
     module: {
