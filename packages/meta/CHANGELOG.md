@@ -1,5 +1,11 @@
 # @xn-sakina/meta
 
+## 1.1.1
+
+### Patch Changes
+
+- fix mfsu not provide React
+
 ## 1.1.0
 
 ### Minor Changes

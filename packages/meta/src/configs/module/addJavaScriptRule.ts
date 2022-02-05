@@ -1,4 +1,5 @@
 import { esbuildLoaderPath } from '@umijs/bundler-webpack/dist/loader/esbuild'
+import { ProvidePlugin } from 'webpack'
 import { REG } from '../../constants'
 import { ECompile, IConfigChainOpts } from '../interface'
 import { getBabelConfig } from './babel'
@@ -27,6 +28,11 @@ export const addJavaScriptRule = (opts: IConfigChainOpts) => {
         handler: [...(opts.mfsu?.getEsbuildLoaderHandler() || [])],
         target: isDev ? 'esnext' : 'es2015',
       })
+    opts.config.plugin('provide-react').use(ProvidePlugin, [
+      {
+        React: require.resolve('react'),
+      },
+    ])
   } else {
     const swcOptions = getSwcConfigs(opts)
     rule.use('swc-loader').loader(swcLoader).options(swcOptions)
