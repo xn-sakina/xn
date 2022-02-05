@@ -10,6 +10,7 @@ export const addDevServer = ({
   envs,
   userConfig,
   paths,
+  mfsu,
 }: IConfigChainOpts) => {
   config.devServer
     .hot(true)
@@ -45,6 +46,7 @@ export const addDevServer = ({
       }
 
       middlewares.unshift(
+        ...(mfsu?.getMiddlewares() || []),
         evalSourceMapMiddleware(devServer),
         redirectServedPath(userConfig.publicPath),
         noopServiceWorkerMiddleware(userConfig.publicPath),

@@ -1,4 +1,6 @@
+import { MFSU } from '@umijs/mfsu'
 import { merge } from 'lodash'
+import webpack from 'webpack'
 import Config from 'webpack-chain'
 import { EMode } from '../constants'
 import { addCache } from './cache'
@@ -48,12 +50,24 @@ export const getConfigs = async ({
     splitChunks: [],
     analyzer: false,
     webpackChain: (c) => c,
+    mfsu: false,
   }
   const userConfig = merge(defaultConfig, _userConfig) as InternalUserConfig
   // handle publicPath
   handleUserConfig({ userConfig })
   // get envs
   const envs = getClientEnvironment(userConfig.publicPath.slice(0, -1))
+  // mfsu
+  let mfsu: MFSU | undefined
+  if (envs.isDev && userConfig.mfsu) {
+    mfsu = new MFSU({
+      implementor: webpack as any,
+      buildDepWithESBuild: true,
+      depBuildConfig: {},
+    })
+    // mfsu only support esbuild in `development` env
+    userConfig.compile = ECompile.esbuild
+  }
   // opts
   const opts: IConfigChainOpts = {
     config,
@@ -61,6 +75,7 @@ export const getConfigs = async ({
     paths,
     envs,
     root,
+    mfsu,
   }
 
   // mode
@@ -115,5 +130,11 @@ export const getConfigs = async ({
   // chain modify
   userConfig.webpackChain(config)
 
-  return config
+  // mfsu
+  const configObj = config.toConfig()
+  if (mfsu) {
+    await mfsu.setWebpackConfig({ config: configObj } as any)
+  }
+
+  return configObj
 }

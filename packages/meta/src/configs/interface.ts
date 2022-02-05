@@ -1,11 +1,13 @@
+import type { MFSU } from '@umijs/mfsu'
 import Config from 'webpack-chain'
 import { IEnvs } from './envs'
 import { Paths } from './paths'
 
-export type Compile = 'babel' | 'swc'
+export type Compile = 'babel' | 'swc' | 'esbuild'
 export enum ECompile {
   babel = 'babel',
   swc = 'swc',
+  esbuild = 'esbuild',
 }
 
 export interface IXnConfig {
@@ -28,9 +30,14 @@ export interface IXnConfig {
   /**
    * transpiler switch
    * @default webpack
-   * @enum 'webpack' | 'swc'
+   * @enum 'webpack' | 'swc' | 'esbuild'
    */
   compile?: Compile
+  /**
+   * mfsu ability (dev only)
+   * @default false
+   */
+  mfsu?: boolean
   /**
    * open webpack5 persist cache
    * @default false
@@ -61,4 +68,5 @@ export interface IConfigChainOpts {
   paths: Paths
   envs: IEnvs
   root: string
+  mfsu?: MFSU
 }

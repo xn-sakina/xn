@@ -17,12 +17,12 @@ export const transformUserConfig = async ({
 }: ITransformUserConfigOpts) => {
   const createFactory = (userConfig: IXnConfig) => {
     const configFactory = async ({ mode }: { mode: EMode }) => {
-      const configChainObj = await getConfigs({
+      const configObj = await getConfigs({
         root: paths.root,
         mode,
         userConfig,
       })
-      return configChainObj.toConfig()
+      return configObj
     }
 
     return configFactory
