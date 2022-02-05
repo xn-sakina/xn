@@ -28,7 +28,8 @@ import { defineConfig } from "@xn-sakina/meta";
 
 export default defineConfig({
   cache: true,
-  publicPath: "/sub-path",
+  mfsu: true,
+  compile: "swc",
 });
 ```
 
