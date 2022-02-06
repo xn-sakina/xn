@@ -25,7 +25,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "rimraf dist && tsc --declarationMap false",
+    "build": "swno ./scripts/build.ts",
+    "build:polyfill": "swno ./src/utils/polyfill/refresh.ts",
+    "build:src": "rimraf dist && tsc --declarationMap false",
     "dev": "tsc --watch",
     "test": "tsc && swno ./test/print.ts",
     "test:local": "npm publish --registry=http://localhost:4873/",
@@ -89,6 +91,7 @@
     "@types/fs-extra": "^9.0.13",
     "@types/lodash": "^4.14.178",
     "rimraf": "^3.0.2",
-    "ts-node": "^10.4.0"
+    "ts-node": "^10.4.0",
+    "zx": "^4.3.0"
   }
 }

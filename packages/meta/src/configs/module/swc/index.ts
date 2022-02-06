@@ -1,3 +1,4 @@
+import { polyfills } from '../../../utils/polyfill/polyfill'
 import { IConfigChainOpts } from '../../interface'
 
 export const getSwcConfigs = ({ root, envs }: IConfigChainOpts) => {
@@ -17,6 +18,7 @@ export const getSwcConfigs = ({ root, envs }: IConfigChainOpts) => {
             mode: 'usage', // or entry
             coreJs: 3,
             path: root,
+            include: polyfills,
           },
         }),
     jsc: {
