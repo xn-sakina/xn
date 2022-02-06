@@ -1,5 +1,11 @@
 # @xn-sakina/meta
 
+## 1.1.2
+
+### Patch Changes
+
+- force inject high level polyfill for swc
+
 ## 1.1.1
 
 ### Patch Changes

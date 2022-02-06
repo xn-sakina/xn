@@ -20,7 +20,7 @@ const change = async () => {
   json(changesetConfig).set("ignore", appNames).save();
 
   console.log(
-    chalk.green(`[changeset-config]: refresh config ignore list complete`)
+    chalk.cyan(`[changeset-config]: refresh config ignore list complete`)
   );
 
   await $`changeset`;
