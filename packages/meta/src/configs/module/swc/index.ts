@@ -18,6 +18,7 @@ export const getSwcConfigs = ({ root, envs }: IConfigChainOpts) => {
             mode: 'usage', // or entry
             coreJs: 3,
             path: root,
+            // ? swc only auto identify polyfill to `ES2019`, need display inject high level polyfill.
             include: polyfills,
           },
         }),
