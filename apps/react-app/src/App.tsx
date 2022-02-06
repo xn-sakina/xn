@@ -11,6 +11,8 @@ const Example = React.lazy(() =>
 function App() {
   const a = async () => {
     console.log(123)
+    // @ts-ignore
+    window.a = [1, 2, 3].at(0)
   }
 
   a()
