@@ -16,7 +16,10 @@ export const getBabelConfig = ({ envs }: IConfigChainOpts) => {
           modules: false,
         },
       ],
-      [require.resolve('@babel/preset-react'), { runtime: 'automatic' }],
+      [
+        require.resolve('@babel/preset-react'),
+        { runtime: 'automatic', development: isDev },
+      ],
       [
         require.resolve('@babel/preset-typescript'),
         {
