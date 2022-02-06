@@ -5,18 +5,20 @@ export enum EMode {
 
 export const REG = {
   // js
-  jsReg: /\.(ts|tsx|js|jsx)$/,
+  jsReg: /\.js$/,
+  // ts
+  tsReg: /\.(ts|tsx|jsx)$/,
   // node_modules
   nodeModulesReg: /node_modules/,
   // css
   cssReg: /\.css$/,
-  cssModuleReg: /\.module.css$/,
+  cssModuleReg: /\.module\.css$/,
   // scss
   scssReg: /\.scss$/,
-  scssModuleReg: /\.module.scss$/,
+  scssModuleReg: /\.module\.scss$/,
   // less
   lessReg: /\.less$/,
-  lessModuleReg: /\.module.less$/,
+  lessModuleReg: /\.module\.less$/,
   // svg
   svgReg: /\.(svg)(\?.*)?$/i,
   // font
