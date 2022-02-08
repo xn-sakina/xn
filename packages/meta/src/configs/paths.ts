@@ -5,6 +5,8 @@ export const getPaths = ({ root }: { root: string }) => {
   const configFile = tryPaths([
     join(root, 'xn.config.ts'),
     join(root, 'xn.config.js'),
+    join(root, 'config/xn.config.ts'),
+    join(root, 'config/xn.config.js'),
   ])
   const componentsDir = tryPaths([
     join(root, 'src/components'),

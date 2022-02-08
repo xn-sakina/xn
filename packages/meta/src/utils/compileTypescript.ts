@@ -1,18 +1,9 @@
-import { transformSync } from 'esbuild'
-import { readFileSync } from 'fs-extra'
-
-const requireFromString = require('require-from-string')
+import { EsbuildPhoenix } from '@xn-sakina/phoenix'
+import * as esbuild from 'esbuild'
 
 export const compileTypescript = ({ filePath }: { filePath: string }) => {
-  const input = readFileSync(filePath, { encoding: 'utf-8' })
-
-  const res = transformSync(input, {
-    sourcefile: filePath,
-    loader: 'ts',
-    target: 'es6',
-    format: 'cjs',
-  })
-
-  const module = requireFromString(res.code)
-  return module?.default ? module.default : module
+  const ins = new EsbuildPhoenix({ implementor: esbuild })
+  const module = require(filePath)
+  ins.restore()
+  return module?.default || module || {}
 }
