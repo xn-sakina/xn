@@ -41,7 +41,15 @@ async function choicePort() {
   process.env.PORT = newPort
 }
 
-export const registry = async ({ root }: { root: string }) => {
+export const registry = async ({
+  root,
+  port = true,
+}: {
+  root: string
+  port?: boolean
+}) => {
   loadEnv({ root })
-  await choicePort()
+  if (port) {
+    await choicePort()
+  }
 }
