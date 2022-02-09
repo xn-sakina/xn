@@ -16,11 +16,11 @@ program
   .command('dev')
   .description('start development project')
   .allowUnknownOption(true)
-  .action(() => {
+  .action(async () => {
     process.env.NODE_ENV = 'development'
     process.env.BABEL_ENV = 'development'
 
-    registry({ root: cwd })
+    await registry({ root: cwd })
 
     fork(scriptsPath.dev, {
       cwd,
@@ -35,11 +35,11 @@ program
   .command('build')
   .description('build project')
   .allowUnknownOption(true)
-  .action(() => {
+  .action(async () => {
     process.env.NODE_ENV = 'production'
     process.env.BABEL_ENV = 'production'
 
-    registry({ root: cwd })
+    await registry({ root: cwd, port: false })
 
     fork(scriptsPath.build, {
       cwd,
