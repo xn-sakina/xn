@@ -1,4 +1,4 @@
-import { polyfills } from '../../../utils/polyfill/polyfill'
+import { getPolyfills } from '../../../utils/polyfill/getPolyfills'
 import { IConfigChainOpts } from '../../interface'
 
 export const getSwcConfigs = ({ root, envs }: IConfigChainOpts) => {
@@ -15,11 +15,16 @@ export const getSwcConfigs = ({ root, envs }: IConfigChainOpts) => {
       ? {}
       : {
           env: {
-            mode: 'usage', // or entry
-            coreJs: 3,
-            path: root,
-            // ? swc only auto identify polyfill to `ES2019`, need display inject high level polyfill.
-            include: polyfills,
+            /**
+             * need inject list:
+             * https://unpkg.com/browse/core-js-compat@3.21.0/modules-by-versions.json
+             *
+             * @issue https://github.com/swc-project/swc/issues/2607
+             *        https://github.com/swc-project/swc/issues/1604
+             *
+             * display inject polyfill
+             */
+            include: getPolyfills({ root, env: envs.raw.NODE_ENV }),
           },
         }),
     jsc: {

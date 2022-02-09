@@ -83,11 +83,13 @@ importers:
       '@umijs/mfsu': 4.0.0-rc.1
       '@xn-sakina/phoenix': ^1.0.1
       babel-loader: 8.2.3
+      browserslist: 4.19.1
       chalk: 4.0.0
       clean-webpack-plugin: 4.0.0
       commander: 8.3.0
       copy-webpack-plugin: 10.2.4
       core-js: 3.21.0
+      core-js-compat: 3.21.0
       css-loader: 6.6.0
       css-minimizer-webpack-plugin: 3.4.1
       dotenv: 12.0.3
@@ -139,11 +141,13 @@ importers:
       '@umijs/mfsu': 4.0.0-rc.1
       '@xn-sakina/phoenix': 1.0.1
       babel-loader: 8.2.3_900eac683bef8a6b239b47efcf24e8a9
+      browserslist: 4.19.1
       chalk: 4.0.0
       clean-webpack-plugin: 4.0.0_webpack@5.68.0
       commander: 8.3.0
       copy-webpack-plugin: 10.2.4_webpack@5.68.0
       core-js: 3.21.0
+      core-js-compat: 3.21.0
       css-loader: 6.6.0_webpack@5.68.0
       css-minimizer-webpack-plugin: 3.4.1_esbuild@0.14.20+webpack@5.68.0
       dotenv: 12.0.3
@@ -160,7 +164,7 @@ importers:
       postcss: 8.4.6
       postcss-flexbugs-fixes: 5.0.2_postcss@8.4.6
       postcss-loader: 6.2.1_postcss@8.4.6+webpack@5.68.0
-      postcss-normalize: 10.0.1_postcss@8.4.6
+      postcss-normalize: 10.0.1_3762e1ae487ee11145f4d9b6e71ce368
       postcss-preset-env: 7.3.1_postcss@8.4.6
       process: 0.11.10
       react-dev-utils: 12.0.0_b09399f2023ad1d4f8ff1d9b53849d2d
@@ -1346,7 +1350,7 @@ packages:
       babel-plugin-polyfill-corejs2: 0.3.0_@babel+core@7.17.2
       babel-plugin-polyfill-corejs3: 0.5.1_@babel+core@7.17.2
       babel-plugin-polyfill-regenerator: 0.3.0_@babel+core@7.17.2
-      core-js-compat: 3.20.2
+      core-js-compat: 3.21.0
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
@@ -3196,7 +3200,7 @@ packages:
     dependencies:
       '@babel/core': 7.17.2
       '@babel/helper-define-polyfill-provider': 0.3.1_@babel+core@7.17.2
-      core-js-compat: 3.20.2
+      core-js-compat: 3.21.0
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -3813,8 +3817,8 @@ packages:
       webpack: 5.68.0_589e7dfbecad4f0aad96bea840cc0d3a
     dev: false
 
-  /core-js-compat/3.20.2:
-    resolution: {integrity: sha512-qZEzVQ+5Qh6cROaTPFLNS4lkvQ6mBzE3R6A6EEpssj7Zr2egMHgsy4XapdifqJDGC9CBiNv7s+ejI96rLNQFdg==}
+  /core-js-compat/3.21.0:
+    resolution: {integrity: sha512-OSXseNPSK2OPJa6GdtkMz/XxeXx8/CJvfhQWTqd6neuUraujcL4jVsjkLQz1OWnax8xVQJnRPe0V2jqNWORA+A==}
     dependencies:
       browserslist: 4.19.1
       semver: 7.0.0
@@ -7219,13 +7223,14 @@ packages:
       postcss-selector-parser: 6.0.9
     dev: false
 
-  /postcss-browser-comments/4.0.0_postcss@8.4.6:
+  /postcss-browser-comments/4.0.0_3762e1ae487ee11145f4d9b6e71ce368:
     resolution: {integrity: sha512-X9X9/WN3KIvY9+hNERUqX9gncsgBA25XaeR+jshHz2j8+sYyHktHw1JdKuMjeLpGktXidqDhA7b/qm1mrBDmgg==}
     engines: {node: '>=8'}
     peerDependencies:
       browserslist: '>=4'
       postcss: '>=8'
     dependencies:
+      browserslist: 4.19.1
       postcss: 8.4.6
     dev: false
 
@@ -7717,7 +7722,7 @@ packages:
       postcss-value-parser: 4.2.0
     dev: false
 
-  /postcss-normalize/10.0.1_postcss@8.4.6:
+  /postcss-normalize/10.0.1_3762e1ae487ee11145f4d9b6e71ce368:
     resolution: {integrity: sha1-RkaSZ2tSeSoGsGiAoXYnkhZUDdc=, tarball: postcss-normalize/download/postcss-normalize-10.0.1.tgz}
     engines: {node: '>= 12'}
     peerDependencies:
@@ -7725,8 +7730,9 @@ packages:
       postcss: '>= 8'
     dependencies:
       '@csstools/normalize.css': 12.0.0
+      browserslist: 4.19.1
       postcss: 8.4.6
-      postcss-browser-comments: 4.0.0_postcss@8.4.6
+      postcss-browser-comments: 4.0.0_3762e1ae487ee11145f4d9b6e71ce368
       sanitize.css: 13.0.0
     dev: false
 
