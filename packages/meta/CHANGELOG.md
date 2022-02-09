@@ -1,5 +1,11 @@
 # @xn-sakina/meta
 
+## 1.1.4
+
+### Patch Changes
+
+- fix registry entry choice port. swc polyfill all inject
+
 ## 1.1.3
 
 ### Patch Changes
