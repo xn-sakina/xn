@@ -1,5 +1,11 @@
 # @xn-sakina/meta
 
+## 1.1.5
+
+### Patch Changes
+
+- remove all error overlay
+
 ## 1.1.4
 
 ### Patch Changes
