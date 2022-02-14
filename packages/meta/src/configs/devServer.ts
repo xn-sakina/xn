@@ -31,10 +31,7 @@ export const addDevServer = ({
       'Access-Control-Allow-Headers': '*',
     })
     .set('client', {
-      overlay: {
-        errors: true,
-        warnings: false,
-      },
+      overlay: false,
     })
     .set('static', {
       directory: paths.publicDirPath,
