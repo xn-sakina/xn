@@ -10,6 +10,7 @@ importers:
       '@types/lodash': ^4.14.178
       '@typescript-eslint/parser': ^5.12.0
       chalk: ^4.0.0
+      emoji-regex: ^10.0.0
       eslint: ^8.9.0
       eslint-config-prettier: ^8.4.0
       eslint-plugin-prettier: ^4.0.0
@@ -32,6 +33,7 @@ importers:
       '@types/lodash': 4.14.178
       '@typescript-eslint/parser': 5.12.0_eslint@8.9.0+typescript@4.5.5
       chalk: 4.1.2
+      emoji-regex: 10.0.0
       eslint: 8.9.0
       eslint-config-prettier: 8.4.0_eslint@8.9.0
       eslint-plugin-prettier: 4.0.0_9f62b85ce3ce02949dbd2ccffcebe95f
@@ -4467,6 +4469,10 @@ packages:
       minimalistic-assert: 1.0.1
       minimalistic-crypto-utils: 1.0.1
     dev: false
+
+  /emoji-regex/10.0.0:
+    resolution: {integrity: sha512-KmJa8l6uHi1HrBI34udwlzZY1jOEuID/ft4d8BSSEdRyap7PwBEt910453PJa5MuGvxkLqlt4Uvhu7tttFHViw==}
+    dev: true
 
   /emoji-regex/8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}

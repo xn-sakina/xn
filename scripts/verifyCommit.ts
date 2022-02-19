@@ -1,5 +1,6 @@
 import "zx/globals";
 import lodash from "lodash";
+import emojiRegex from "emoji-regex";
 
 const msgPath = process.argv[2];
 if (!msgPath) process.exit();
@@ -36,6 +37,9 @@ if (!commitRE.test(msg)) {
 }
 
 // add emoji
-const addEmoji = lodash.sample(emojis);
-fs.writeFileSync(msgPath, `${msg} ${addEmoji}`, "utf-8");
-console.log(chalk.blue(`Auto add emoji (${addEmoji}) to commit msg tail.`));
+const emojiReg = emojiRegex();
+if (!Array.from(msg.matchAll(emojiReg)).length) {
+  const addEmoji = lodash.sample(emojis);
+  fs.writeFileSync(msgPath, `${msg} ${addEmoji}`, "utf-8");
+  console.log(chalk.blue(`Auto add emoji (${addEmoji}) to commit msg tail.`));
+}
