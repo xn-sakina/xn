@@ -10,7 +10,7 @@ importers:
       '@types/lodash': ^4.14.178
       '@typescript-eslint/parser': ^5.12.0
       chalk: ^4.0.0
-      commit-verify: ^1.0.0
+      commit-verify: ^1.0.1
       emoji-regex: ^10.0.0
       eslint: ^8.9.0
       eslint-config-prettier: ^8.4.0
@@ -34,7 +34,7 @@ importers:
       '@types/lodash': 4.14.178
       '@typescript-eslint/parser': 5.12.0_eslint@8.9.0+typescript@4.5.5
       chalk: 4.1.2
-      commit-verify: 1.0.0
+      commit-verify: 1.0.1
       emoji-regex: 10.0.0
       eslint: 8.9.0
       eslint-config-prettier: 8.4.0_eslint@8.9.0
@@ -3685,8 +3685,8 @@ packages:
       repeat-string: 1.6.1
     dev: true
 
-  /commit-verify/1.0.0:
-    resolution: {integrity: sha512-nILguZ4WBQHkr3gt4O4A8w6zLEScI68vkKNGrH88374Ey2Te3Q2/Q9VxAkQ/vXc/nHkKeICthz9QIEY695hpiQ==}
+  /commit-verify/1.0.1:
+    resolution: {integrity: sha512-Z+94banlrKfc5zShbgcMBhJpc85NQNqT2oDKayv8rTWuip4KHhGruATTwHm6OFgTdeV5TmSG6Ux2SZWCIlmPkw==}
     hasBin: true
     requiresBuild: true
     dependencies:
