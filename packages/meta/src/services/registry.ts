@@ -1,3 +1,5 @@
+import dotEnv from 'dotenv'
+import dotEnvExpand from 'dotenv-expand'
 import { existsSync } from 'fs-extra'
 import { getPaths } from '../configs/paths'
 import { DEFAULT_SERVER } from '../constants/server'
@@ -7,8 +9,8 @@ const { choosePort } = require('react-dev-utils/WebpackDevServerUtils')
 function loadEnv({ root }: { root: string }) {
   const load = (dotenvFile: string) => {
     if (existsSync(dotenvFile)) {
-      require('dotenv-expand')(
-        require('dotenv').config({
+      dotEnvExpand.expand(
+        dotEnv.config({
           path: dotenvFile,
         }),
       )
