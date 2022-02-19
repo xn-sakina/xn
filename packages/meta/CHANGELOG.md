@@ -1,5 +1,11 @@
 # @xn-sakina/meta
 
+## 1.1.6
+
+### Patch Changes
+
+- improve swc config and upgrade deps version
+
 ## 1.1.5
 
 ### Patch Changes
