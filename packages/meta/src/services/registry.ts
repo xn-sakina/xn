@@ -3,6 +3,7 @@ import dotEnvExpand from 'dotenv-expand'
 import { existsSync } from 'fs-extra'
 import { getPaths } from '../configs/paths'
 import { DEFAULT_SERVER } from '../constants/server'
+import { processPrepare } from './prepare'
 
 const { choosePort } = require('react-dev-utils/WebpackDevServerUtils')
 
@@ -50,6 +51,8 @@ export const registry = async ({
   root: string
   port?: boolean
 }) => {
+  processPrepare()
+
   loadEnv({ root })
   if (port) {
     await choicePort()

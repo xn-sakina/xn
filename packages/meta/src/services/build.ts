@@ -2,6 +2,7 @@ import chalk from 'chalk'
 import webpack from 'webpack'
 import { getPaths } from '../configs/paths'
 import { EMode } from '../constants'
+import { processPrepare } from './prepare'
 import { transformUserConfig } from './transform/transformUserConfig'
 
 const checkRequiredFiles = require('react-dev-utils/checkRequiredFiles')
@@ -17,6 +18,8 @@ const WARN_AFTER_BUNDLE_GZIP_SIZE = 512 * 1024
 const WARN_AFTER_CHUNK_GZIP_SIZE = 1024 * 1024
 
 async function build() {
+  processPrepare()
+
   process.on('unhandledRejection', (err) => {
     throw err
   })

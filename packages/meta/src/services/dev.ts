@@ -3,11 +3,14 @@ import WebpackDevServer from 'webpack-dev-server'
 import { getPaths } from '../configs/paths'
 import { EMode } from '../constants'
 import { createCompiler } from './compiler/createCompiler'
+import { processPrepare } from './prepare'
 import { transformUserConfig } from './transform/transformUserConfig'
 
 const checkRequiredFiles = require('react-dev-utils/checkRequiredFiles')
 
 async function dev() {
+  processPrepare()
+
   process.on('unhandledRejection', (err) => {
     throw err
   })
