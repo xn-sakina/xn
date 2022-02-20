@@ -1,5 +1,11 @@
 # @xn-sakina/meta
 
+## 1.2.0
+
+### Minor Changes
+
+- support parcel css loader
+
 ## 1.1.6
 
 ### Patch Changes
