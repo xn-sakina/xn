@@ -29,8 +29,8 @@ export interface IXnConfig {
   alias?: Record<string, string>
   /**
    * transpiler switch
-   * @default webpack
-   * @enum 'webpack' | 'swc' | 'esbuild'
+   * @default babel
+   * @enum 'babel' | 'swc' | 'esbuild'
    */
   compile?: Compile
   /**
