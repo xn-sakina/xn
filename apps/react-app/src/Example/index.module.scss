@@ -1,4 +1,6 @@
 .text {
   color: pink;
   font-weight: bold;
+  display: flex;
+  user-select: none;
 }

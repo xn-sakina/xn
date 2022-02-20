@@ -15,6 +15,10 @@ function App() {
     window.a = [1, 2, 3].at(0)
   }
 
+  let b = 1
+  // @ts-ignore
+  window.v = b
+
   a()
 
   return (
