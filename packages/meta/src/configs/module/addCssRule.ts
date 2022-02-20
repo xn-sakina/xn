@@ -13,6 +13,7 @@ const cssLoaderModulesOption = {
   getLocalIdent: getCSSModuleLocalIdent,
 }
 const postcssLoader = require.resolve('postcss-loader')
+const parcelCssLoader = require.resolve('parcel-css-loader')
 
 const lessLoaderOptions = {
   lessOptions: {
@@ -29,7 +30,8 @@ interface IRuleBase {
   options?: Record<string, any>
 }
 
-export const addCssRule = ({ config, envs }: IConfigChainOpts) => {
+export const addCssRule = ({ config, envs, userConfig }: IConfigChainOpts) => {
+  const useParcelCss = userConfig.parcelCss
   const styleLoader = envs.isDev
     ? originStyleLoader
     : MiniCssExtractPlugin.loader
@@ -90,18 +92,26 @@ export const addCssRule = ({ config, envs }: IConfigChainOpts) => {
     }
     // style loader
     rule.use('style-loader').loader(styleLoader)
+
     // css loader
+    const preLoaderCount = loader ? 2 : 1
     rule
       .use('css-loader')
       .loader(cssLoader)
       .options({
-        importLoaders: loader ? 2 : 1,
+        importLoaders: preLoaderCount,
         ...(isCssModule ? { modules: cssLoaderModulesOption } : {}),
       })
+
     // postcss loader
-    rule.use('postcss-loader').loader(postcssLoader).options({
-      postcssOptions,
-    })
+    if (useParcelCss) {
+      rule.use('parcel-css-loader').loader(parcelCssLoader)
+    } else {
+      rule.use('postcss-loader').loader(postcssLoader).options({
+        postcssOptions,
+      })
+    }
+
     // current loader
     if (loader) {
       const currentLoader = rule

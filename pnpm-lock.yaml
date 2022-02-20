@@ -110,6 +110,7 @@ importers:
       less-loader: 10.2.0
       lodash: 4.17.21
       mini-css-extract-plugin: 2.5.3
+      parcel-css-loader: 1.0.0
       postcss: 8.4.6
       postcss-flexbugs-fixes: 5.0.2
       postcss-loader: 6.2.1
@@ -166,6 +167,7 @@ importers:
       less-loader: 10.2.0_less@4.1.2+webpack@5.69.1
       lodash: 4.17.21
       mini-css-extract-plugin: 2.5.3_webpack@5.69.1
+      parcel-css-loader: 1.0.0_webpack@5.69.1
       postcss: 8.4.6
       postcss-flexbugs-fixes: 5.0.2_postcss@8.4.6
       postcss-loader: 6.2.1_postcss@8.4.6+webpack@5.69.1
@@ -1826,6 +1828,94 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
+
+  /@parcel/css-darwin-arm64/1.3.2:
+    resolution: {integrity: sha512-wa5zwmjLCwbslCOzjux7mQm5xei/GVkyfHrrJY8PiGesD8GxE3r2s11B1Y2gb1k9iFRUHo+4pjdxcDUjqW5pKw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@parcel/css-darwin-x64/1.3.2:
+    resolution: {integrity: sha512-5xsg/n1WC/SrfDbdXZ9rOxggSemmRnnfZ9r8Yce+1L25i3mx1KR9412JhWXTCs86x28kz+kclOzLj3s4lK3c7w==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@parcel/css-linux-arm-gnueabihf/1.3.2:
+    resolution: {integrity: sha512-c9nVi57m7kO4YCseG03ByGZia2/IrESywQSFINvHcKVY6W8bmAcXWbURmqGXGGxwKb/gx3qcJ0qGTGg2MklOjw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@parcel/css-linux-arm64-gnu/1.3.2:
+    resolution: {integrity: sha512-MBZerANtUXsY+zitCgAqRccBHyq6XTtpSapW5jDz2aI8VVIVBHPo69COw/i7Zq5VNFqZJeLX+NEja5Zp3gif2Q==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@parcel/css-linux-arm64-musl/1.3.2:
+    resolution: {integrity: sha512-u+qZKlP0GEOLsY40iAZ7BAxfy69IloyzbakTLBXlBmULLUggqCA8qM89uylhQ9711ItRewsYC5EmJ0WWUxf+ZQ==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@parcel/css-linux-x64-gnu/1.3.2:
+    resolution: {integrity: sha512-VfnOpQX+tqxaYVdR+dA4VJY6e1LELYnzIhdA4qsZNsKJeDtfx7lO50ObpQUsC8/bRFO6KD35ETXhy5wsDNlE2w==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@parcel/css-linux-x64-musl/1.3.2:
+    resolution: {integrity: sha512-StTlswO1rJW7Z+znGJs7BdotB2GUjejYR5r7z5mTaxb8acWXr2llU9fc3eGc9g5jE/7WATgoTZYOR0Y59HyGbw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@parcel/css-win32-x64-msvc/1.3.2:
+    resolution: {integrity: sha512-W+Nt4tqK1LucaKm3RkZRnGolOzZ4Qp18RvLVIFGu0Jd0arGQBPEI438XkX20zglpeB9MBdLhDbd0Pgi8jS15YQ==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@parcel/css/1.3.2:
+    resolution: {integrity: sha512-66a6R8UpF+pZ3HTkhGLl/pM9//KiMr7iHK3jF6EgxneklEzTMsSDDKhVZEGJSXuc3j2dzb8FSa0gy1vq4v/mhQ==}
+    engines: {node: '>= 12.0.0'}
+    dependencies:
+      detect-libc: 1.0.3
+    optionalDependencies:
+      '@parcel/css-darwin-arm64': 1.3.2
+      '@parcel/css-darwin-x64': 1.3.2
+      '@parcel/css-linux-arm-gnueabihf': 1.3.2
+      '@parcel/css-linux-arm64-gnu': 1.3.2
+      '@parcel/css-linux-arm64-musl': 1.3.2
+      '@parcel/css-linux-x64-gnu': 1.3.2
+      '@parcel/css-linux-x64-musl': 1.3.2
+      '@parcel/css-win32-x64-msvc': 1.3.2
+    dev: false
 
   /@pmmmwh/react-refresh-webpack-plugin/0.5.3_c9d7d4a77b192c76978c5e4fda4d054f:
     resolution: {integrity: sha512-OoTnFb8XEYaOuMNhVDsLRnAO6MCYHNs1g6d8pBcHhDFsi1P3lPbq/IklwtbAx9cG0W4J9KswxZtwGnejrnxp+g==, tarball: '@pmmmwh/react-refresh-webpack-plugin/download/@pmmmwh/react-refresh-webpack-plugin-0.5.3.tgz'}
@@ -4330,6 +4420,12 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /detect-libc/1.0.3:
+    resolution: {integrity: sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==}
+    engines: {node: '>=0.10'}
+    hasBin: true
+    dev: false
+
   /detect-newline/3.1.0:
     resolution: {integrity: sha1-V29d/GOuGhkv8ZLYrTr2MImRtlE=, tarball: detect-newline/download/detect-newline-3.1.0.tgz}
     engines: {node: '>=8'}
@@ -4962,7 +5058,7 @@ packages:
     dev: true
 
   /eslint-plugin-prettier/4.0.0_9f62b85ce3ce02949dbd2ccffcebe95f:
-    resolution: {integrity: sha1-i5nR5LiySnYkcrRWeZICNhnLmOA=, tarball: eslint-plugin-prettier/download/eslint-plugin-prettier-4.0.0.tgz}
+    resolution: {integrity: sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
       eslint: '>=7.28.0'
@@ -4979,7 +5075,7 @@ packages:
     dev: true
 
   /eslint-plugin-react-hooks/4.3.0_eslint@8.9.0:
-    resolution: {integrity: sha512-XslZy0LnMn+84NEG9jSGR6eGqaZB3133L8xewQo3fQagbQuGt7a63gf+P1NGKZavEYEC3UXaWEAA/AqDkuN6xA==, tarball: eslint-plugin-react-hooks/download/eslint-plugin-react-hooks-4.3.0.tgz}
+    resolution: {integrity: sha512-XslZy0LnMn+84NEG9jSGR6eGqaZB3133L8xewQo3fQagbQuGt7a63gf+P1NGKZavEYEC3UXaWEAA/AqDkuN6xA==}
     engines: {node: '>=10'}
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
@@ -5225,7 +5321,7 @@ packages:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
 
   /fast-diff/1.2.0:
-    resolution: {integrity: sha1-c+4RmC2Gyq95WYKNUZz+kn+sXwM=, tarball: fast-diff/download/fast-diff-1.2.0.tgz}
+    resolution: {integrity: sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==}
     dev: true
 
   /fast-glob/3.2.11:
@@ -7053,6 +7149,17 @@ packages:
       tslib: 2.3.1
     dev: false
 
+  /parcel-css-loader/1.0.0_webpack@5.69.1:
+    resolution: {integrity: sha512-SZeOIpAPtKTLoXr7qYtl4HBuqz1xX7/dmXS2B2StTR21dfVqGGCnO3jTRHmiD9CrE0d9tDvLTY8dufsyb5e36A==}
+    requiresBuild: true
+    peerDependencies:
+      webpack: '>=5'
+    dependencies:
+      '@parcel/css': 1.3.2
+      safe-buffer: 5.2.1
+      webpack: 5.69.1_c76aa099756db29dd3141dc8c7ce72b1
+    dev: false
+
   /parent-module/1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
@@ -7975,7 +8082,7 @@ packages:
     dev: true
 
   /prettier-linter-helpers/1.0.0:
-    resolution: {integrity: sha1-0j1B/hN1ZG3i0BBNNFSjAIgCz3s=, tarball: prettier-linter-helpers/download/prettier-linter-helpers-1.0.0.tgz}
+    resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
     engines: {node: '>=6.0.0'}
     dependencies:
       fast-diff: 1.2.0
@@ -8007,7 +8114,7 @@ packages:
     dev: true
 
   /prettier/2.5.1:
-    resolution: {integrity: sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==, tarball: prettier/download/prettier-2.5.1.tgz}
+    resolution: {integrity: sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
