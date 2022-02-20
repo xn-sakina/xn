@@ -1,6 +1,7 @@
 import chalk from 'chalk'
 import { existsSync } from 'fs-extra'
 import { basename } from 'path'
+import type { Configuration } from 'webpack'
 import { getConfigs } from '../../configs'
 import { IXnConfig } from '../../configs/interface'
 import { Paths } from '../../configs/paths'
@@ -12,11 +13,13 @@ interface ITransformUserConfigOpts {
   paths: Paths
 }
 
+type ConfigFactory = (opts: { mode: EMode }) => Promise<Configuration>
+
 export const transformUserConfig = async ({
   paths,
 }: ITransformUserConfigOpts) => {
   const createFactory = (userConfig: IXnConfig) => {
-    const configFactory = async ({ mode }: { mode: EMode }) => {
+    const configFactory: ConfigFactory = async ({ mode }: { mode: EMode }) => {
       const configObj = await getConfigs({
         root: paths.root,
         mode,
