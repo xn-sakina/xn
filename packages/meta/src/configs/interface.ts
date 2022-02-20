@@ -3,11 +3,25 @@ import Config from 'webpack-chain'
 import { IEnvs } from './envs'
 import { Paths } from './paths'
 
-export type Compile = 'babel' | 'swc' | 'esbuild'
+type Compile = 'babel' | 'swc' | 'esbuild'
 export enum ECompile {
   babel = 'babel',
   swc = 'swc',
   esbuild = 'esbuild',
+}
+
+type Jsminify = 'terser' | 'esbuild' | 'swc'
+export enum EJsMinify {
+  terser = 'terser',
+  esbuild = 'esbuild',
+  swc = 'swc',
+}
+
+type CssMinify = 'cssMini' | 'esbuild' | 'parcelCss'
+export enum ECssMinify {
+  cssMini = 'cssMini',
+  esbuild = 'esbuild',
+  parcelCss = 'parcelCss',
 }
 
 export interface IXnConfig {
@@ -58,6 +72,22 @@ export interface IXnConfig {
    * @default (c)=>c
    */
   webpackChain?: (config: Config) => Config
+  /**
+   * open parcel css instead `postcss`
+   */
+  parcelCss?: boolean
+  /**
+   * js minify
+   * @default terser
+   * @enum terser | esbuild | swc
+   */
+  jsMinify?: Jsminify
+  /**
+   * css minify
+   * @default css-mini
+   * @enum cssMini | esbuild | parcelCss
+   */
+  cssMinify?: CssMinify
 }
 
 export type InternalUserConfig = Required<IXnConfig>

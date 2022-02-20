@@ -10,6 +10,8 @@ import { getClientEnvironment } from './envs'
 import { handleUserConfig } from './handler/userConfig'
 import {
   ECompile,
+  ECssMinify,
+  EJsMinify,
   IConfigChainOpts,
   InternalUserConfig,
   IXnConfig,
@@ -51,6 +53,9 @@ export const getConfigs = async ({
     analyzer: false,
     webpackChain: (c) => c,
     mfsu: false,
+    parcelCss: false,
+    jsMinify: EJsMinify.terser,
+    cssMinify: ECssMinify.cssMini,
   }
   const userConfig = merge(defaultConfig, _userConfig) as InternalUserConfig
   // handle publicPath
