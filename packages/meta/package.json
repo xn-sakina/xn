@@ -65,7 +65,7 @@
     "less-loader": "10.2.0",
     "lodash": "4.17.21",
     "mini-css-extract-plugin": "2.5.3",
-    "parcel-css-loader": "1.0.1",
+    "parcel-css-loader": "1.0.2",
     "postcss": "8.4.7",
     "postcss-flexbugs-fixes": "5.0.2",
     "postcss-loader": "6.2.1",

@@ -1,3 +1,4 @@
+import parcelCSS from '@parcel/css'
 import { REG } from '../../constants'
 import { IConfigChainOpts } from '../interface'
 import { getPostcssConfig } from './postcss'
@@ -105,7 +106,9 @@ export const addCssRule = ({ config, envs, userConfig }: IConfigChainOpts) => {
 
     // postcss loader
     if (useParcelCss) {
-      rule.use('parcel-css-loader').loader(parcelCssLoader)
+      rule.use('parcel-css-loader').loader(parcelCssLoader).options({
+        implementation: parcelCSS,
+      })
     } else {
       rule.use('postcss-loader').loader(postcssLoader).options({
         postcssOptions,

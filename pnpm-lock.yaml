@@ -110,7 +110,7 @@ importers:
       less-loader: 10.2.0
       lodash: 4.17.21
       mini-css-extract-plugin: 2.5.3
-      parcel-css-loader: 1.0.1
+      parcel-css-loader: 1.0.2
       postcss: 8.4.7
       postcss-flexbugs-fixes: 5.0.2
       postcss-loader: 6.2.1
@@ -167,7 +167,7 @@ importers:
       less-loader: 10.2.0_less@4.1.2+webpack@5.69.1
       lodash: 4.17.21
       mini-css-extract-plugin: 2.5.3_webpack@5.69.1
-      parcel-css-loader: 1.0.1_webpack@5.69.1
+      parcel-css-loader: 1.0.2_webpack@5.69.1
       postcss: 8.4.7
       postcss-flexbugs-fixes: 5.0.2_postcss@8.4.7
       postcss-loader: 6.2.1_postcss@8.4.7+webpack@5.69.1
@@ -6551,8 +6551,8 @@ packages:
       tslib: 2.3.1
     dev: false
 
-  /parcel-css-loader/1.0.1_webpack@5.69.1:
-    resolution: {integrity: sha512-yb0S4xKLx1qrdunzIQD2QSkxQkkiL40qPCkQpGNT23d5DAseOsUGW9OGVKBc3ddory1xlILaUXOcW7RQ6wYcIA==}
+  /parcel-css-loader/1.0.2_webpack@5.69.1:
+    resolution: {integrity: sha512-0fLo7JgU7d0VPE9Kw3aTY9XaaMC0nUO0N04SYxYOW3MyBBZsj+4wCIOPXvr96DSOccMT9dnx0pygFX7m2W48xA==}
     requiresBuild: true
     peerDependencies:
       webpack: '>=5'
