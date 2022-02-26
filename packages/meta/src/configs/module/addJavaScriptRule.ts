@@ -1,4 +1,5 @@
-import { esbuildLoaderPath } from '@umijs/bundler-webpack/dist/loader/esbuild'
+import { esbuildLoader } from '@umijs/mfsu'
+import esbuild from 'esbuild'
 import { ProvidePlugin } from 'webpack'
 import { REG } from '../../constants'
 import { ECompile, IConfigChainOpts } from '../interface'
@@ -29,14 +30,15 @@ export const addJavaScriptRule = (opts: IConfigChainOpts) => {
     } else if (userConfig.compile === ECompile.esbuild) {
       rule
         .use('esbuild-loader')
-        .loader(esbuildLoaderPath)
+        .loader(esbuildLoader)
         .options({
           handler: [...(mfsu?.getEsbuildLoaderHandler() || [])],
           target: isDev ? 'esnext' : 'es2015',
+          implementation: esbuild,
         })
       config.plugin('provide-react').use(ProvidePlugin, [
         {
-          React: require.resolve('react'),
+          React: 'react',
         },
       ])
     } else if (userConfig.compile === ECompile.swc) {
