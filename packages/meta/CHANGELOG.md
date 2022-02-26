@@ -1,5 +1,17 @@
 # @xn-sakina/meta
 
+## 1.2.2
+
+### Patch Changes
+
+- force upgrade version
+
+## 1.2.1
+
+### Patch Changes
+
+- improve configs
+
 ## 1.2.0
 
 ### Minor Changes

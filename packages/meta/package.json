@@ -1,6 +1,6 @@
 {
   "name": "@xn-sakina/meta",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "Easy react bundle cli powered by swc & webpack5",
   "keywords": [
     "cli",
@@ -22,7 +22,8 @@
     "xn": "bin/xn.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "bin"
   ],
   "scripts": {
     "build": "swno ./scripts/build.ts",
