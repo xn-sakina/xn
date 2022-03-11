@@ -1,5 +1,11 @@
 # @xn-sakina/meta
 
+## 1.2.4
+
+### Patch Changes
+
+- upgrade deps
+
 ## 1.2.3
 
 ### Patch Changes
