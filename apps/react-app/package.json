@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "xn dev",
-    "build": "xn build",
-    "fix": "prettier -c --write \"src/**/*.{ts,tsx}\""
+    "build": "xn build"
   },
   "dependencies": {
     "react": "^17.0.2",
