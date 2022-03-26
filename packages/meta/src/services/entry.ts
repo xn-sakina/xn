@@ -1,3 +1,5 @@
+import { logger } from '@xn-sakina/xn-utils'
+import chalk from 'chalk'
 import { fork } from 'child_process'
 import { program } from 'commander'
 import { join } from 'path'
@@ -23,6 +25,8 @@ program
     process.env.NODE_ENV = 'development'
     process.env.BABEL_ENV = 'development'
 
+    startTip()
+
     await registry({ root: cwd })
 
     fork(scriptsPath.dev, {
@@ -42,6 +46,8 @@ program
     process.env.NODE_ENV = 'production'
     process.env.BABEL_ENV = 'production'
 
+    startTip()
+
     await registry({ root: cwd, port: false })
 
     fork(scriptsPath.build, {
@@ -55,3 +61,8 @@ program
 
 program.version(pkg.version)
 program.parse(process.argv)
+
+function startTip() {
+  logger.info(`Start xn for ${chalk.magenta(process.env.NODE_ENV)}`)
+  console.log()
+}
