@@ -1,3 +1,4 @@
+import { logger } from '@xn-sakina/xn-utils'
 import chalk from 'chalk'
 import { existsSync } from 'fs-extra'
 import { basename } from 'path'
@@ -7,7 +8,6 @@ import { IXnConfig } from '../../configs/interface'
 import { Paths } from '../../configs/paths'
 import { EMode } from '../../constants'
 import { compileTypescript } from '../../utils/compileTypescript'
-import { logger } from '../../utils/logger'
 
 interface ITransformUserConfigOpts {
   paths: Paths

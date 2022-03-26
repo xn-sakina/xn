@@ -1,5 +1,5 @@
+import { logger } from '@xn-sakina/xn-utils'
 import { FRAMEWORK_NAME, MIN_NODE_VERSION } from '../constants/node'
-import { logger } from '../utils/logger'
 
 function checkNodeVersion() {
   const v = parseInt(process.version.slice(1))

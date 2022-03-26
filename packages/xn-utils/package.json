@@ -1,0 +1,16 @@
+{
+  "name": "@xn-sakina/xn-utils",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "chalk": "4.0.0"
+  }
+}

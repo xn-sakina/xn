@@ -12,6 +12,9 @@ const scriptsPath = {
 }
 const cwd = process.cwd()
 
+// set common env
+process.env.XN_LOGGER_PREFIX = 'xn'
+
 program
   .command('dev')
   .description('start development project')
