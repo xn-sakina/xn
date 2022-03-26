@@ -9,4 +9,5 @@ export default defineConfig({
   parcelCss: true,
   cssMinify: 'parcelCss',
   jsMinify: 'esbuild',
+  compile: 'swc',
 })
