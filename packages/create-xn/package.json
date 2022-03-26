@@ -1,0 +1,29 @@
+{
+  "name": "@xn-sakina/create-xn",
+  "version": "1.0.0",
+  "bin": {
+    "create-xn": "bin/create-xn.js"
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "test": "node bin/create-xn.js"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.0",
+    "@types/mustache": "^4.1.2",
+    "@types/yargs-parser": "^21.0.0"
+  },
+  "dependencies": {
+    "@xn-sakina/xn-utils": "workspace:*",
+    "chalk": "4.0.0",
+    "fs-extra": "10.0.1",
+    "inquirer": "8.2.2",
+    "mustache": "4.2.0",
+    "yargs-parser": "21.0.1"
+  }
+}
