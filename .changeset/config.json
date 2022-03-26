@@ -1,8 +1,9 @@
 {
-  "$schema": "https://unpkg.com/@changesets/config@1.6.1/schema.json",
+  "$schema": "https://unpkg.com/@changesets/config@1.7.0/schema.json",
   "changelog": "@changesets/cli/changelog",
   "commit": false,
   "linked": [],
+  "fixed": [["@xn-sakina/create-xn", "@xn-sakina/meta", "@xn-sakina/xn-utils"]],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
