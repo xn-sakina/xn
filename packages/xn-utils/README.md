@@ -1,4 +1,4 @@
-# @xn-sakina/meta
+# @xn-sakina/xn-utils
 
 Easy react bundle cli powered by swc & webpack5
 

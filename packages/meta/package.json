@@ -3,13 +3,15 @@
   "version": "1.2.7",
   "description": "Easy react bundle cli powered by swc & webpack5",
   "keywords": [
-    "cli",
     "react",
     "webpack5",
     "swc",
-    "sakina"
+    "sakina",
+    "xn",
+    "react-app",
+    "react-cli"
   ],
-  "homepage": "https://github.com/xn-sakina/xn#README",
+  "homepage": "https://github.com/xn-sakina/xn/tree/main/packages/meta#README",
   "repository": {
     "type": "git",
     "url": "https://github.com/xn-sakina/xn"
@@ -26,11 +28,9 @@
     "bin"
   ],
   "scripts": {
-    "build": "swno ./scripts/build.ts",
+    "build": "rimraf dist && tsc --declarationMap false",
     "build:polyfill": "swno ./src/utils/polyfill/refresh.ts",
-    "build:src": "rimraf dist && tsc --declarationMap false",
     "dev": "tsc --watch",
-    "test": "tsc && swno ./test/print.ts",
     "test:local": "npm publish --registry=http://localhost:4873/",
     "test:xn": "node ./bin/xn.js"
   },

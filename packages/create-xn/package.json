@@ -1,6 +1,23 @@
 {
   "name": "@xn-sakina/create-xn",
   "version": "1.0.0",
+  "description": "Easy react bundle cli powered by swc & webpack5",
+  "keywords": [
+    "react",
+    "webpack5",
+    "swc",
+    "sakina",
+    "xn",
+    "react-app",
+    "react-cli"
+  ],
+  "homepage": "https://github.com/xn-sakina/xn/tree/main/packages/create-xn#README",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xn-sakina/xn"
+  },
+  "license": "MIT",
+  "author": "fz6m",
   "bin": {
     "create-xn": "bin/create-xn.js"
   },
@@ -9,14 +26,9 @@
     "templates"
   ],
   "scripts": {
+    "build": "rimraf dist && tsc --declarationMap false",
     "dev": "tsc --watch",
-    "build": "tsc",
     "test": "node bin/create-xn.js"
-  },
-  "devDependencies": {
-    "@types/inquirer": "^8.2.0",
-    "@types/mustache": "^4.1.2",
-    "@types/yargs-parser": "^21.0.0"
   },
   "dependencies": {
     "@xn-sakina/xn-utils": "workspace:*",
@@ -25,5 +37,10 @@
     "inquirer": "8.2.2",
     "mustache": "4.2.0",
     "yargs-parser": "21.0.1"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.0",
+    "@types/mustache": "^4.1.2",
+    "@types/yargs-parser": "^21.0.0"
   }
 }
