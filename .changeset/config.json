@@ -3,7 +3,7 @@
   "changelog": "@changesets/cli/changelog",
   "commit": false,
   "linked": [],
-  "fixed": [["@xn-sakina/create-xn", "@xn-sakina/meta", "@xn-sakina/xn-utils"]],
+  "fixed": [["create-xn-app", "@xn-sakina/meta", "@xn-sakina/xn-utils"]],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",

@@ -1,4 +1,4 @@
-# @xn-sakina/create-xn
+# create-xn-app
 
 Easy react bundle cli powered by swc & webpack5
 

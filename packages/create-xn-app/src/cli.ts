@@ -9,9 +9,6 @@ const argv = yParser(process.argv.slice(2), {
   },
 })
 
-// set common env
-process.env.XN_LOGGER_PREFIX = 'create-xn'
-
 const run = async () => {
   const res: IPrompt = await inquirer.prompt([
     {
