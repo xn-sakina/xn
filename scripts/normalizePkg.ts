@@ -3,6 +3,8 @@ import { getPkgs } from "./getPkgs";
 import sortPkg from "sort-package-json";
 
 const run = async () => {
+  const nameList: string[] = [];
+
   getPkgs().forEach((p) => {
     const pkg = path.join(p, "package.json");
     const dirName = path.basename(p);
@@ -49,7 +51,19 @@ See more info at [xn-sakina/xn](https://github.com/xn-sakina/xn)
 `.trimEnd() + "\n",
       "utf-8"
     );
+
+    nameList.push(newPkgJson.name);
   });
+
+  // refresh fixed version
+  const csConfigPath = path.join(__dirname, "../.changeset/config.json");
+  const changesetsConfig = require(csConfigPath);
+  changesetsConfig.fixed = [nameList];
+  fs.writeFileSync(
+    csConfigPath,
+    `${JSON.stringify(changesetsConfig, null, 2)}\n`,
+    "utf-8"
+  );
 };
 
 run();
