@@ -2,23 +2,13 @@
 
 Easy react bundle cli powered by swc & webpack5
 
-### Install
+### Quick start
 
 ```bash
-  # install cli
-  pnpm add -D @xn-sakina/meta
+  pnpx create-xn-app my-app
+  cd my-app
+  pnpm dev
 ```
-
-### Usage
-
-```bash
-  # development
-  xn dev
-  # build
-  xn build
-```
-
-**Example**: [react-app](./apps/react-app)
 
 ### Config
 
