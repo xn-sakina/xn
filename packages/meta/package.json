@@ -90,9 +90,5 @@
     "webpack-config-copilot": "1.0.0",
     "webpack-dev-server": "4.7.4",
     "webpackbar": "5.0.2"
-  },
-  "devDependencies": {
-    "@types/fs-extra": "^9.0.13",
-    "@types/lodash": "^4.14.180"
   }
 }
