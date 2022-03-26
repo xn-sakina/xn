@@ -7,6 +7,7 @@ Easy react bundle cli powered by swc & webpack5
 ```bash
   pnpx create-xn-app my-app
   cd my-app
+  pnpm i
   pnpm dev
 ```
 
