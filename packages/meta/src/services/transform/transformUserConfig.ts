@@ -1,6 +1,4 @@
-import { logger } from '@xn-sakina/xn-utils'
-import chalk from 'chalk'
-import { existsSync } from 'fs-extra'
+import { chalk, fs, logger } from '@xn-sakina/xn-utils'
 import { basename } from 'path'
 import type { Configuration } from 'webpack'
 import { getConfigs } from '../../configs'
@@ -8,6 +6,8 @@ import { IXnConfig } from '../../configs/interface'
 import { Paths } from '../../configs/paths'
 import { EMode } from '../../constants'
 import { compileTypescript } from '../../utils/compileTypescript'
+
+const { existsSync } = fs
 
 interface ITransformUserConfigOpts {
   paths: Paths

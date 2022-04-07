@@ -1,5 +1,5 @@
 import { MFSU } from '@umijs/mfsu'
-import { merge } from 'lodash'
+import { lodash } from '@xn-sakina/xn-utils'
 import webpack from 'webpack'
 import Config from 'webpack-chain'
 import { EMode } from '../constants'
@@ -24,6 +24,8 @@ import { addOutput } from './output'
 import { getPaths } from './paths'
 import { addPlugins, getDefaultTitle } from './plugins'
 import { addResolve } from './resolve'
+
+const { merge } = lodash
 
 interface IGetConfigsOpts {
   root: string

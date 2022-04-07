@@ -1,5 +1,7 @@
-import { toNumber } from 'lodash'
+import { lodash } from '@xn-sakina/xn-utils'
 import { IConfigChainOpts } from './interface'
+
+const { toNumber } = lodash
 
 const redirectServedPath = require('react-dev-utils/redirectServedPathMiddleware')
 const noopServiceWorkerMiddleware = require('react-dev-utils/noopServiceWorkerMiddleware')

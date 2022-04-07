@@ -1,4 +1,4 @@
-import chalk from 'chalk'
+import { chalk } from '@xn-sakina/xn-utils'
 import webpack from 'webpack'
 import { getPaths } from '../configs/paths'
 import { EMode } from '../constants'

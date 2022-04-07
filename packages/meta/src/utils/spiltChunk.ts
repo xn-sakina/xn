@@ -1,4 +1,6 @@
-import { existsSync } from 'fs-extra'
+import { fs } from '@xn-sakina/xn-utils'
+
+const { existsSync } = fs
 
 export function getSplitChunksConfig({
   componentsDir,

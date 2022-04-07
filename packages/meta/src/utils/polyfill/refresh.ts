@@ -1,8 +1,10 @@
 // @ts-ignore
 import { transform } from '@babel/core'
-import { writeFile } from 'fs-extra'
+import { fs } from '@xn-sakina/xn-utils'
 import { join } from 'path'
 import { getCorejsVersion } from '../getCorejsVersion'
+
+const { writeFile } = fs
 
 const POLYFILL_MODULE_REG = /modules\/(.*)\.js/gim
 const INCLUDES_POLYFILL_FILE_PATH = join(__dirname, './polyfill.ts')

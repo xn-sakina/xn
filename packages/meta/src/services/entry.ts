@@ -1,9 +1,9 @@
-import { logger } from '@xn-sakina/xn-utils'
-import chalk from 'chalk'
+import { chalk, commander, logger } from '@xn-sakina/xn-utils'
 import { fork } from 'child_process'
-import { program } from 'commander'
 import { join } from 'path'
 import { registry } from './registry'
+
+const { program } = commander
 
 const pkgPath = join(__dirname, '../../package.json')
 const pkg = require(pkgPath)

@@ -1,10 +1,11 @@
+import { fs } from '@xn-sakina/xn-utils'
 import dotEnv from 'dotenv'
 import dotEnvExpand from 'dotenv-expand'
-import { existsSync } from 'fs-extra'
 import { getPaths } from '../configs/paths'
 import { DEFAULT_SERVER } from '../constants/server'
 import { processPrepare } from './prepare'
 
+const { existsSync } = fs
 const { choosePort } = require('react-dev-utils/WebpackDevServerUtils')
 
 function loadEnv({ root }: { root: string }) {

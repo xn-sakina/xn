@@ -1,6 +1,7 @@
-import { readJsonSync } from 'fs-extra'
+import { fs } from '@xn-sakina/xn-utils'
 import { join } from 'path'
 
+const { readJsonSync } = fs
 const pkgPath = join(__dirname, '../../package.json')
 
 export const getCorejsVersion = () => {

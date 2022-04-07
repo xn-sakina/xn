@@ -1,4 +1,4 @@
-import chalk from 'chalk'
+import { chalk } from '@xn-sakina/xn-utils'
 import type { Configuration } from 'webpack'
 import webpack from 'webpack'
 
