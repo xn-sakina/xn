@@ -1,6 +1,6 @@
 {
   "name": "create-xn-app",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Easy react bundle cli powered by swc & webpack5",
   "keywords": [
     "react",
