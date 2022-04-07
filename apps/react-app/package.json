@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^6.2.2"
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@types/node": "^16.0.0",

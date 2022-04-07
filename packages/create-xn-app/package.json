@@ -40,7 +40,7 @@
     "yargs-parser": "21.0.1"
   },
   "devDependencies": {
-    "@types/inquirer": "^8.2.0",
+    "@types/inquirer": "^8.2.1",
     "@types/mustache": "^4.1.2",
     "@types/yargs-parser": "^21.0.0"
   }
