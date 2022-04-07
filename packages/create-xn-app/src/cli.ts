@@ -1,5 +1,4 @@
-import yParser from 'yargs-parser'
-import inquirer from 'inquirer'
+import { inquirer, yParser } from '@xn-sakina/xn-utils'
 import { EAction, IOpts, IPrompt } from './type'
 import { initProject } from './actions/init'
 

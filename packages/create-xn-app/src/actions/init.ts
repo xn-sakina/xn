@@ -1,11 +1,10 @@
-import { logger } from '@xn-sakina/xn-utils'
-import chalk from 'chalk'
+import { logger, chalk, fs, inquirer } from '@xn-sakina/xn-utils'
 import { IOpts } from '../type'
 import { generator } from '../utils/generator'
 import { getPkg } from '../utils/getPkg'
 import { basename, join } from 'path'
-import { existsSync, removeSync } from 'fs-extra'
-import inquirer from 'inquirer'
+
+const { existsSync, removeSync } = fs
 
 interface IInitProjectData {
   xnVersion: string

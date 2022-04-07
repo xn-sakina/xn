@@ -28,20 +28,10 @@
   "scripts": {
     "build": "rimraf dist && tsc --declarationMap false",
     "dev": "tsc --watch",
-    "test": "node bin/create-xn.js",
+    "test": "node bin/create-xn-app.js",
     "test:local": "npm publish --registry=http://localhost:4873/"
   },
   "dependencies": {
-    "@xn-sakina/xn-utils": "workspace:*",
-    "chalk": "4.0.0",
-    "fs-extra": "10.0.1",
-    "inquirer": "8.2.2",
-    "mustache": "4.2.0",
-    "yargs-parser": "21.0.1"
-  },
-  "devDependencies": {
-    "@types/inquirer": "^8.2.1",
-    "@types/mustache": "^4.1.2",
-    "@types/yargs-parser": "^21.0.0"
+    "@xn-sakina/xn-utils": "workspace:*"
   }
 }

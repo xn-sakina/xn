@@ -28,6 +28,16 @@
     "dev": "tsc --watch"
   },
   "dependencies": {
-    "chalk": "4.0.0"
+    "chalk": "4.0.0",
+    "fs-extra": "10.0.1",
+    "inquirer": "8.2.2",
+    "mustache": "4.2.0",
+    "yargs-parser": "21.0.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^8.2.1",
+    "@types/mustache": "^4.1.2",
+    "@types/yargs-parser": "^21.0.0"
   }
 }

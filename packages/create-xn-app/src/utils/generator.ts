@@ -1,15 +1,14 @@
-import {
+import { logger, chalk, fs, mustache as Mustache } from '@xn-sakina/xn-utils'
+import { basename, join } from 'path'
+
+const {
   existsSync,
   mkdirpSync,
   readdirSync,
   readFileSync,
   statSync,
   writeFileSync,
-} from 'fs-extra'
-import { logger } from '@xn-sakina/xn-utils'
-import chalk from 'chalk'
-import { basename, join } from 'path'
-import Mustache from 'mustache'
+} = fs
 
 interface IGeneratorOpts {
   from: string
