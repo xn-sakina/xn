@@ -1,5 +1,5 @@
 import { defineConfig } from '@xn-sakina/meta'
-import fs from 'fs-extra'
+import fs from 'fs'
 
 export default defineConfig({
   webpackChain: (config) => {
