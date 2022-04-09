@@ -16,7 +16,7 @@
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",
     "@types/react-router-dom": "^5.3.3",
-    "@xn-sakina/meta": "{{{xnVersion}}}",
+    "@xn-sakina/meta": "^{{{xnVersion}}}",
     "typescript": "^4.6.3"
   }
 }
