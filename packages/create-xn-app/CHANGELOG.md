@@ -1,5 +1,11 @@
 # create-xn-app
 
+## 1.3.4
+
+### Patch Changes
+
+- fix svg type declare
+
 ## 1.3.3
 
 ## 1.3.1

@@ -1,5 +1,11 @@
 # @xn-sakina/meta
 
+## 1.3.4
+
+### Patch Changes
+
+- fix svg type declare
+
 ## 1.3.3
 
 ### Patch Changes
