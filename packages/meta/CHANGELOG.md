@@ -1,5 +1,11 @@
 # @xn-sakina/meta
 
+## 1.3.3
+
+### Patch Changes
+
+- extract .d.ts declare file
+
 ## 1.3.2
 
 ### Patch Changes

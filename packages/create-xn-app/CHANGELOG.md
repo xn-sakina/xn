@@ -1,5 +1,7 @@
 # create-xn-app
 
+## 1.3.3
+
 ## 1.3.1
 
 ### Patch Changes
