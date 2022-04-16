@@ -29,8 +29,8 @@
   },
   "dependencies": {
     "chalk": "4.0.0",
-    "commander": "9.1.0",
-    "fs-extra": "10.0.1",
+    "commander": "9.2.0",
+    "fs-extra": "10.1.0",
     "inquirer": "8.2.2",
     "lodash": "4.17.21",
     "mustache": "4.2.0",
