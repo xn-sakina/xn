@@ -1,5 +1,11 @@
 # create-xn-app
 
+## 1.3.5
+
+### Patch Changes
+
+- add dev loading and upgrade deps
+
 ## 1.3.4
 
 ### Patch Changes
