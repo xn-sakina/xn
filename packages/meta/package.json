@@ -44,7 +44,7 @@
     "@parcel/css": "1.8.1",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.5",
     "@svgr/webpack": "6.2.1",
-    "@swc/core": "1.2.165",
+    "@swc/core": "1.2.167",
     "@umijs/mfsu": "4.0.0-rc.12",
     "@xn-sakina/phoenix": "1.0.1",
     "@xn-sakina/xn-utils": "workspace:*",
