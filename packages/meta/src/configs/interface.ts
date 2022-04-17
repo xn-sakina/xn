@@ -100,3 +100,8 @@ export interface IConfigChainOpts {
   root: string
   mfsu?: MFSU
 }
+
+export interface IDevProgress {
+  percent: number
+  status: string
+}

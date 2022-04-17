@@ -26,7 +26,8 @@
   "files": [
     "dist",
     "bin",
-    "types"
+    "types",
+    "libs"
   ],
   "scripts": {
     "build": "rimraf dist && tsc --declarationMap false",

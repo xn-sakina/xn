@@ -1,5 +1,7 @@
 import { lodash } from '@xn-sakina/xn-utils'
-import { IConfigChainOpts } from './interface'
+import { ProgressPlugin } from 'webpack'
+import { IConfigChainOpts, IDevProgress } from './interface'
+import { devLoadingMiddleware } from './middlewares/devLoadingMiddleware'
 
 const { toNumber } = lodash
 
@@ -14,6 +16,17 @@ export const addDevServer = ({
   paths,
   mfsu,
 }: IConfigChainOpts) => {
+  const progress: IDevProgress = {
+    percent: 0,
+    status: 'waiting',
+  }
+  config.plugin('dev-progress').use(ProgressPlugin, [
+    (percent, msg) => {
+      progress.percent = percent
+      progress.status = msg
+    },
+  ])
+
   config.devServer
     .hot(true)
     .port(toNumber(envs.raw.PORT))
@@ -43,6 +56,8 @@ export const addDevServer = ({
       if (!devServer) {
         throw new Error('webpack-dev-server is not defined')
       }
+
+      middlewares.unshift(devLoadingMiddleware({ progress }))
 
       middlewares.unshift(
         ...(mfsu?.getMiddlewares() || []),
