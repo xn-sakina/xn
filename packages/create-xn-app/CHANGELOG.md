@@ -1,5 +1,13 @@
 # create-xn-app
 
+## 1.3.6
+
+### Patch Changes
+
+- upgrade deps
+- Updated dependencies
+  - @xn-sakina/xn-utils@1.3.2
+
 ## 1.3.5
 
 ### Patch Changes
