@@ -1,5 +1,13 @@
 # @xn-sakina/meta
 
+## 1.3.7
+
+### Patch Changes
+
+- upgrade deps
+- Updated dependencies
+  - @xn-sakina/xn-utils@1.3.3
+
 ## 1.3.6
 
 ### Patch Changes
