@@ -34,6 +34,7 @@ export const getBabelConfig = ({ envs }: IConfigChainOpts) => {
     compact: isDev ? false : true,
     cacheDirectory: true,
     cacheCompression: false,
+    babelrc: false,
   }
 
   return configs
