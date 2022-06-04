@@ -18,5 +18,17 @@
     "@types/react-router-dom": "^5.3.3",
     "@xn-sakina/meta": "^{{{xnVersion}}}",
     "typescript": "^4.6.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
