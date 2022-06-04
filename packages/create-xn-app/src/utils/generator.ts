@@ -8,6 +8,7 @@ const {
   readFileSync,
   statSync,
   writeFileSync,
+  copyFileSync,
 } = fs
 
 interface IGeneratorOpts {
@@ -53,6 +54,12 @@ export const generator = (opts: IGeneratorOpts) => {
       return
     }
     // file
+    if (!fromPath.endsWith('.tpl')) {
+      // only copy
+      logger.debug(`copy file ${chalk.yellow(dir)}`)
+      copyFileSync(fromPath, targetPath)
+      return
+    }
     const content = readFileSync(fromPath, 'utf-8')
     const output = Mustache.render(content, data)
     logger.debug(`write file ${chalk.yellow(dir)}`)
