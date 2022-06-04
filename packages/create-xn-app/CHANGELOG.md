@@ -1,5 +1,16 @@
 # create-xn-app
 
+## 1.4.0
+
+### Minor Changes
+
+- fix favicon cannot preview
+
+### Patch Changes
+
+- Updated dependencies
+  - @xn-sakina/xn-utils@1.4.0
+
 ## 1.3.7
 
 ### Patch Changes

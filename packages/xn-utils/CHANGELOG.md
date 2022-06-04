@@ -1,5 +1,11 @@
 # @xn-sakina/xn-utils
 
+## 1.4.0
+
+### Minor Changes
+
+- fix favicon cannot preview
+
 ## 1.3.3
 
 ### Patch Changes
