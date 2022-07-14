@@ -15,7 +15,7 @@
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.22.0",
+    "@changesets/cli": "^2.23.2",
     "@fz6m/eslint-plugin-sakina": "^2.0.2",
     "@types/fs-extra": "^9.0.13",
     "@types/lodash": "^4.14.182",
