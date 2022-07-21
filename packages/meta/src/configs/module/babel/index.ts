@@ -25,7 +25,6 @@ export const getBabelConfig = ({ envs }: IConfigChainOpts) => {
         {
           allowNamespaces: true,
           allowDeclareFields: true,
-          onlyRemoveTypeImports: true,
           optimizeConstEnums: true,
         },
       ],
