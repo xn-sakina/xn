@@ -43,8 +43,6 @@ export const getSwcConfigs = ({ root, envs }: IConfigChainOpts) => {
         decorators: ENABLE_DECO_FEATURE,
         tsx: true,
       },
-      // works like babel-preset-env loose mode
-      loose: true,
       target: 'es5',
       // not use @swc/helper
       externalHelpers: false,

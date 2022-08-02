@@ -1,3 +1,4 @@
+import parcelCSS from '@parcel/css'
 import { ParcelCssMinifyPlugin } from 'parcel-css-loader'
 import TerserPlugin from 'terser-webpack-plugin'
 import { getSplitChunksConfig } from '../utils/spiltChunk'
@@ -70,7 +71,11 @@ export const addOpti = ({
       opti.minimizer('css-mini-default').use(CssMinimizerPlugin)
     }
     if (userConfig.cssMinify === ECssMinify.parcelCss) {
-      opti.minimizer('css-mini-parcel').use(ParcelCssMinifyPlugin)
+      opti.minimizer('css-mini-parcel').use(ParcelCssMinifyPlugin, [
+        {
+          implementation: parcelCSS,
+        },
+      ])
     }
   }
 
