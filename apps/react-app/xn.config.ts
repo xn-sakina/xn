@@ -10,4 +10,5 @@ export default defineConfig({
   cssMinify: 'parcelCss',
   jsMinify: 'esbuild',
   compile: 'swc',
+  mfsu: true,
 })
