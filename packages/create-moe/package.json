@@ -1,0 +1,14 @@
+{
+  "name": "create-moe",
+  "version": "1.4.0",
+  "description": "React project cli",
+  "license": "MIT",
+  "author": "fz6m",
+  "bin": {
+    "create-moe": "bin/create-moe.js"
+  },
+  "scripts": {},
+  "dependencies": {
+    "create-xn-app": "workspace:*"
+  }
+}

@@ -71,6 +71,12 @@ importers:
       '@xn-sakina/meta': link:../../packages/meta
       typescript: registry.npmjs.org/typescript/4.6.4
 
+  packages/create-moe:
+    specifiers:
+      create-xn-app: workspace:*
+    dependencies:
+      create-xn-app: link:../create-xn-app
+
   packages/create-xn-app:
     specifiers:
       '@xn-sakina/xn-utils': workspace:*
