@@ -1,5 +1,16 @@
 # @xn-sakina/meta
 
+## 1.6.0
+
+### Minor Changes
+
+- upgrade deps version
+
+### Patch Changes
+
+- Updated dependencies
+  - @xn-sakina/xn-utils@1.6.0
+
 ## 1.5.0
 
 ### Minor Changes

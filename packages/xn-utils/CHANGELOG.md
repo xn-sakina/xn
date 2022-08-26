@@ -1,5 +1,11 @@
 # @xn-sakina/xn-utils
 
+## 1.6.0
+
+### Minor Changes
+
+- upgrade deps version
+
 ## 1.5.0
 
 ## 1.4.0
