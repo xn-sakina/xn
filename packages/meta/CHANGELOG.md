@@ -1,5 +1,13 @@
 # @xn-sakina/meta
 
+## 1.6.1
+
+### Patch Changes
+
+- migration `parcel-css-loader` to `lightningcss-loader`
+- Updated dependencies
+  - @xn-sakina/xn-utils@1.6.1
+
 ## 1.6.0
 
 ### Minor Changes
