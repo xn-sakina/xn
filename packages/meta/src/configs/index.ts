@@ -25,7 +25,7 @@ import { getPaths } from './paths'
 import { addPlugins, getDefaultTitle } from './plugins'
 import { addResolve } from './resolve'
 
-const { merge } = lodash
+const { merge, noop } = lodash
 
 interface IGetConfigsOpts {
   root: string
@@ -71,6 +71,7 @@ export const getConfigs = async ({
       implementor: webpack as any,
       buildDepWithESBuild: true,
       depBuildConfig: {},
+      startBuildWorker: noop as any,
     })
     // mfsu only support esbuild in `development` env
     userConfig.compile = ECompile.esbuild

@@ -1,4 +1,4 @@
-import parcelCSS from '@parcel/css'
+import LightningCss from 'lightningcss'
 import { REG } from '../../constants'
 import { IConfigChainOpts } from '../interface'
 import { getPostcssConfig } from './postcss'
@@ -14,7 +14,7 @@ const cssLoaderModulesOption = {
   getLocalIdent: getCSSModuleLocalIdent,
 }
 const postcssLoader = require.resolve('postcss-loader')
-const parcelCssLoader = require.resolve('parcel-css-loader')
+const lightningcssLoader = require.resolve('lightningcss-loader')
 
 const lessLoaderOptions = {
   lessOptions: {
@@ -106,8 +106,8 @@ export const addCssRule = ({ config, envs, userConfig }: IConfigChainOpts) => {
 
     // postcss loader
     if (useParcelCss) {
-      rule.use('parcel-css-loader').loader(parcelCssLoader).options({
-        implementation: parcelCSS,
+      rule.use('lightningcss-loader').loader(lightningcssLoader).options({
+        implementation: LightningCss,
       })
     } else {
       rule.use('postcss-loader').loader(postcssLoader).options({
