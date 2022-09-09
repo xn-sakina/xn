@@ -56,8 +56,8 @@ export const getConfigs = async ({
     webpackChain: (c) => c,
     mfsu: false,
     parcelCss: false,
-    jsMinify: EJsMinify.terser,
-    cssMinify: ECssMinify.cssMini,
+    jsMinify: EJsMinify.swc,
+    cssMinify: ECssMinify.parcelCss,
   }
   const userConfig = merge(defaultConfig, _userConfig) as InternalUserConfig
   // handle publicPath
