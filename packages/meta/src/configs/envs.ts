@@ -4,7 +4,7 @@ import { DEFAULT_SERVER } from '../constants/server'
 const XN_APP = /^XN_APP_/i
 
 export interface IEnvs {
-  raw: Record<string, string>
+  raw: { NODE_ENV: 'development' | 'production' } & Record<string, string>
   stringified: Record<string, string>
   isDev: boolean
   isProd: boolean

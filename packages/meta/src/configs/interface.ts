@@ -3,14 +3,14 @@ import Config from 'webpack-chain'
 import { IEnvs } from './envs'
 import { Paths } from './paths'
 
-type Compile = 'babel' | 'swc' | 'esbuild'
+type Compile = `${ECompile}`
 export enum ECompile {
   babel = 'babel',
   swc = 'swc',
   esbuild = 'esbuild',
 }
 
-type Jsminify = 'terser' | 'esbuild' | 'swc'
+type Jsminify = `${EJsMinify}`
 export enum EJsMinify {
   terser = 'terser',
   esbuild = 'esbuild',
