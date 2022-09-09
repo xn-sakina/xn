@@ -1,5 +1,11 @@
 # @xn-sakina/xn-utils
 
+## 2.0.0
+
+### Major Changes
+
+- Use parcel css for css minify, Use swc for js minify by default
+
 ## 1.6.1
 
 ### Patch Changes
