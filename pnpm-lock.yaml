@@ -105,7 +105,7 @@ importers:
       css-loader: 6.7.1
       css-minimizer-webpack-plugin: 4.0.0
       dotenv: 16.0.2
-      dotenv-expand: 8.0.3
+      dotenv-expand: 9.0.0
       esbuild: 0.15.7
       esbuild-loader: 2.20.0
       fork-ts-checker-webpack-plugin: 7.2.13
@@ -156,7 +156,7 @@ importers:
       css-loader: registry.npmjs.org/css-loader/6.7.1_webpack@5.74.0
       css-minimizer-webpack-plugin: registry.npmjs.org/css-minimizer-webpack-plugin/4.0.0_jocfejeu7nc2tbm3hu6gslcolu
       dotenv: registry.npmjs.org/dotenv/16.0.2
-      dotenv-expand: registry.npmjs.org/dotenv-expand/8.0.3
+      dotenv-expand: registry.npmjs.org/dotenv-expand/9.0.0
       esbuild: registry.npmjs.org/esbuild/0.15.7
       esbuild-loader: registry.npmjs.org/esbuild-loader/2.20.0_webpack@5.74.0
       fork-ts-checker-webpack-plugin: registry.npmjs.org/fork-ts-checker-webpack-plugin/7.2.13_webpack@5.74.0
@@ -202,7 +202,7 @@ importers:
       inquirer: 8.2.4
       lodash: 4.17.21
       mustache: 4.2.0
-      yargs-parser: 21.0.1
+      yargs-parser: 21.1.1
     dependencies:
       chalk: registry.npmjs.org/chalk/4.0.0
       commander: registry.npmjs.org/commander/9.4.0
@@ -210,7 +210,7 @@ importers:
       inquirer: registry.npmjs.org/inquirer/8.2.4
       lodash: registry.npmjs.org/lodash/4.17.21
       mustache: registry.npmjs.org/mustache/4.2.0
-      yargs-parser: registry.npmjs.org/yargs-parser/21.0.1
+      yargs-parser: registry.npmjs.org/yargs-parser/21.1.1
     devDependencies:
       '@types/fs-extra': registry.npmjs.org/@types/fs-extra/9.0.13
       '@types/inquirer': registry.npmjs.org/@types/inquirer/8.2.1
@@ -3750,7 +3750,7 @@ packages:
       fs-extra: registry.npmjs.org/fs-extra/10.1.0
       lodash: registry.npmjs.org/lodash/4.17.21
       v8-compile-cache: registry.npmjs.org/v8-compile-cache/2.3.0
-      yargs-parser: registry.npmjs.org/yargs-parser/21.0.1
+      yargs-parser: registry.npmjs.org/yargs-parser/21.1.1
     dev: true
 
   registry.npmjs.org/@xtuc/ieee754/1.2.0:
@@ -5411,10 +5411,10 @@ packages:
       tslib: registry.npmjs.org/tslib/2.4.0
     dev: false
 
-  registry.npmjs.org/dotenv-expand/8.0.3:
-    resolution: {integrity: sha512-SErOMvge0ZUyWd5B0NXMQlDkN+8r+HhVUsxgOO7IoPDOdDRD2JjExpN6y3KnFR66jsJMwSn1pqIivhU5rcJiNg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/dotenv-expand/-/dotenv-expand-8.0.3.tgz}
+  registry.npmjs.org/dotenv-expand/9.0.0:
+    resolution: {integrity: sha512-uW8Hrhp5ammm9x7kBLR6jDfujgaDarNA02tprvZdyrJ7MpdzD1KyrIHG4l+YoC2fJ2UcdFdNWNWIjt+sexBHJw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/dotenv-expand/-/dotenv-expand-9.0.0.tgz}
     name: dotenv-expand
-    version: 8.0.3
+    version: 9.0.0
     engines: {node: '>=12'}
     dev: false
 
@@ -12963,10 +12963,10 @@ packages:
       decamelize: registry.npmjs.org/decamelize/1.2.0
     dev: true
 
-  registry.npmjs.org/yargs-parser/21.0.1:
-    resolution: {integrity: sha512-9BK1jFpLzJROCI5TzwZL/TU4gqjK5xiHV/RfWLOahrjAko/e4DJkRDZQXfvqAsiZzzYhgAzbgz6lg48jcm4GLg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/yargs-parser/-/yargs-parser-21.0.1.tgz}
+  registry.npmjs.org/yargs-parser/21.1.1:
+    resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/yargs-parser/-/yargs-parser-21.1.1.tgz}
     name: yargs-parser
-    version: 21.0.1
+    version: 21.1.1
     engines: {node: '>=12'}
 
   registry.npmjs.org/yargs/15.4.1:
@@ -13000,7 +13000,7 @@ packages:
       require-directory: registry.npmjs.org/require-directory/2.1.1
       string-width: registry.npmjs.org/string-width/4.2.3
       y18n: registry.npmjs.org/y18n/5.0.8
-      yargs-parser: registry.npmjs.org/yargs-parser/21.0.1
+      yargs-parser: registry.npmjs.org/yargs-parser/21.1.1
     dev: true
 
   registry.npmjs.org/yocto-queue/0.1.0:
