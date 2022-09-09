@@ -1,3 +1,4 @@
+import type { JsMinifyOptions } from '@swc/core'
 import LightningCSS from 'lightningcss'
 import { LightningCssMinifyPlugin } from 'lightningcss-loader'
 import TerserPlugin from 'terser-webpack-plugin'
@@ -24,7 +25,6 @@ export const addOpti = ({
   const setEsbuildOpti = (opts: { cssMinify: boolean }) => {
     opti.minimizer('assets-mini-esbuild').use(ESBuildMinifyPlugin, [
       {
-        // todo: try es5
         target: ['es2015', 'chrome61'],
         legalComments: 'none',
         css: opts.cssMinify,
@@ -44,10 +44,16 @@ export const addOpti = ({
       setEsbuildOpti({ cssMinify: false })
     }
     if (userConfig.jsMinify === EJsMinify.swc) {
+      const swcMinifyOptions: JsMinifyOptions = {
+        compress: {
+          drop_console: true,
+        },
+      }
       opti.minimizer('js-mini-swc').use(TerserPlugin, [
         {
           minify: TerserPlugin.swcMinify,
           extractComments: true,
+          terserOptions: swcMinifyOptions as any,
         },
       ])
     }
