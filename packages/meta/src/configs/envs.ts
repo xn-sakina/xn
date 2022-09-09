@@ -3,8 +3,13 @@ import { DEFAULT_SERVER } from '../constants/server'
 
 const XN_APP = /^XN_APP_/i
 
+interface IEnvironments {
+  NODE_ENV: 'development' | 'production' | string
+  [key: string]: any
+}
+
 export interface IEnvs {
-  raw: { NODE_ENV: 'development' | 'production' } & Record<string, string>
+  raw: IEnvironments
   stringified: Record<string, string>
   isDev: boolean
   isProd: boolean
@@ -13,7 +18,7 @@ export interface IEnvs {
 export function getClientEnvironment(publicUrl: string): IEnvs {
   const raw = Object.keys(process.env)
     .filter((key) => XN_APP.test(key))
-    .reduce<Record<string, any>>(
+    .reduce<IEnvironments>(
       (env, key) => {
         env[key] = process.env[key]
         return env
