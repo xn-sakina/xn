@@ -1,8 +1,8 @@
-import browserslist from 'browserslist'
 import { getCorejsVersion } from '../getCorejsVersion'
+import { getBrowserTargets } from './getBrowserTargets'
 
 export const getPolyfills = ({ root, env }: { root: string; env: string }) => {
-  const browsers = browserslist(undefined, { path: root, env })
+  const browsers = getBrowserTargets({ root, env })
 
   const { list } = require('core-js-compat')({
     targets: browsers,
