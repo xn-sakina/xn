@@ -1,5 +1,12 @@
 # create-xn-app
 
+## 2.1.1
+
+### Patch Changes
+
+- fix create template dep version
+  - @xn-sakina/xn-utils@2.1.1
+
 ## 2.1.0
 
 ### Minor Changes
