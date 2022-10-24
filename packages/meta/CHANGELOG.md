@@ -1,5 +1,12 @@
 # @xn-sakina/meta
 
+## 2.1.2
+
+### Patch Changes
+
+- fix mfsu esbuild deps version
+  - @xn-sakina/xn-utils@2.1.2
+
 ## 2.1.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # create-moe
 
+## 2.1.2
+
+### Patch Changes
+
+- create-xn-app@2.1.2
+
 ## 2.1.1
 
 ### Patch Changes
