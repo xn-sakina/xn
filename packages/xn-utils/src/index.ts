@@ -5,6 +5,7 @@ import mustache from 'mustache'
 import yParser from 'yargs-parser'
 import lodash from 'lodash'
 import commander from 'commander'
+import findUp from 'find-up'
 
-export { chalk, fs, inquirer, mustache, yParser, lodash, commander }
+export { chalk, fs, inquirer, mustache, yParser, lodash, commander, findUp }
 export { logger } from './logger'

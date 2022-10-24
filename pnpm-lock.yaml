@@ -221,6 +221,7 @@ importers:
       '@types/yargs-parser': ^21.0.0
       chalk: 4.0.0
       commander: 9.4.0
+      find-up: 5.0.0
       fs-extra: 10.1.0
       inquirer: 8.2.4
       lodash: 4.17.21
@@ -229,6 +230,7 @@ importers:
     dependencies:
       chalk: registry.npmjs.org/chalk/4.0.0
       commander: registry.npmjs.org/commander/9.4.0
+      find-up: registry.npmjs.org/find-up/5.0.0
       fs-extra: registry.npmjs.org/fs-extra/10.1.0
       inquirer: registry.npmjs.org/inquirer/8.2.4
       lodash: registry.npmjs.org/lodash/4.17.21

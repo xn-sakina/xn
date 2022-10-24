@@ -30,6 +30,7 @@
   "dependencies": {
     "chalk": "4.0.0",
     "commander": "9.4.0",
+    "find-up": "5.0.0",
     "fs-extra": "10.1.0",
     "inquirer": "8.2.4",
     "lodash": "4.17.21",

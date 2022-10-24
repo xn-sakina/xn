@@ -3,6 +3,8 @@ import { lodash } from '@xn-sakina/xn-utils'
 import webpack from 'webpack'
 import Config from 'webpack-chain'
 import { EMode } from '../constants'
+import { findNpmClient } from '../utils/findNpmClient'
+import { detectMonorepo } from '../utils/monorepoInfo'
 import { addCache } from './cache'
 import { addDevServer } from './devServer'
 import { addEntry } from './entry'
@@ -51,7 +53,8 @@ export const getConfigs = async ({
     },
     compile: ECompile.babel,
     cache: false,
-    splitChunks: [],
+    // auto split chunks by default
+    splitChunks: true,
     analyzer: false,
     webpackChain: (c) => c,
     mfsu: false,
@@ -76,6 +79,8 @@ export const getConfigs = async ({
     // mfsu only support esbuild in `development` env
     userConfig.compile = ECompile.esbuild
   }
+  // get monorepo info
+  const monorepoInfo = detectMonorepo({ root })
   // opts
   const opts: IConfigChainOpts = {
     config,
@@ -84,6 +89,8 @@ export const getConfigs = async ({
     envs,
     root,
     mfsu,
+    monorepoInfo,
+    npmClient: findNpmClient({ projectRoot: monorepoInfo.monorepoRoot }),
   }
 
   // mode

@@ -1,4 +1,5 @@
 import { fs } from '@xn-sakina/xn-utils'
+import { ENpmClient } from '../constants'
 
 const { existsSync } = fs
 
@@ -44,5 +45,49 @@ export function getSplitChunksConfig({
     },
   }
 
+  return config
+}
+
+export function getAutoSplitChunksConfig({
+  npmClient,
+}: {
+  npmClient: ENpmClient
+}) {
+  const config = {
+    splitChunks: {
+      chunks: 'all',
+      maxInitialRequests: Infinity,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[/\\]node_modules[/\\]/,
+          name(module: { context: string }) {
+            if (npmClient === ENpmClient.pnpm) {
+              const path = module.context
+                .replace(/\\/g, '/')
+                .match(/node_modules\/\.pnpm\/(.+)/)![1]
+                .split('/')
+              // [@org+pkgname@version, node_modules, @org, pkgname, ...inner path]
+              if (path[0].startsWith('@')) {
+                return `npm-ns.${path[2].replace('@', '')}.${path[3]}`
+              }
+              // [pkgname@version, node_modules, pkgname, ...inner path]
+              return `npm.${path[2]}`
+            }
+
+            const path = module.context
+              .replace(/\\/g, '/')
+              .match(/node_modules\/(.+)/)![1]
+              .split('/')
+            // [@org, pkgname, ...inner path]
+            if (path[0].startsWith('@')) {
+              return `npm-ns.${path[0].replace('@', '')}.${path[1]}`
+            }
+            // [pkgname, ...inner path]
+            return `npm.${path[0]}`
+          },
+        },
+      },
+    },
+  }
   return config
 }

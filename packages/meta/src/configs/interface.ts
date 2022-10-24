@@ -1,5 +1,6 @@
 import type { MFSU } from '@umijs/mfsu'
 import Config from 'webpack-chain'
+import { ENpmClient } from '../constants'
 import { IEnvs } from './envs'
 import { Paths } from './paths'
 
@@ -59,9 +60,12 @@ export interface IXnConfig {
   cache?: boolean
   /**
    * webpack easy spilt chunk by keywords
-   * @default ['react','antd','rc']
+   * @example ['react','antd','rc'] : will split react,antd,rc chunks
+   * @example true  : will split all node_modules dep chunks
+   * @example false : not split chunks
+   * @default true
    */
-  splitChunks?: string[]
+  splitChunks?: string[] | boolean
   /**
    * open webpack analyzer plugin
    * @default false
@@ -98,10 +102,18 @@ export interface IConfigChainOpts {
   paths: Paths
   envs: IEnvs
   root: string
+  npmClient: ENpmClient
+  monorepoInfo: IMonorepoInfo
   mfsu?: MFSU
 }
 
 export interface IDevProgress {
   percent: number
   status: string
+}
+
+// for monorepo
+export interface IMonorepoInfo {
+  isMonorepo: boolean
+  monorepoRoot: string
 }

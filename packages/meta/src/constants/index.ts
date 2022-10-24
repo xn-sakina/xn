@@ -31,3 +31,9 @@ export const REG = {
 
 // resolve ext
 export const EXTS = ['.ts', '.tsx', '.js', '.jsx', '.json']
+
+export enum ENpmClient {
+  npm = 'npm',
+  yarn = 'yarn',
+  pnpm = 'pnpm',
+}
