@@ -1,6 +1,6 @@
 {
   "name": "@xn-sakina/meta",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Easy react bundle cli powered by swc & webpack5",
   "keywords": [
     "react",
@@ -57,7 +57,7 @@
     "css-minimizer-webpack-plugin": "4.2.2",
     "dotenv": "16.0.3",
     "dotenv-expand": "9.0.0",
-    "esbuild": "0.15.12",
+    "esbuild": "0.14.49",
     "esbuild-loader": "2.20.0",
     "fork-ts-checker-webpack-plugin": "7.2.13",
     "html-webpack-plugin": "5.5.0",
