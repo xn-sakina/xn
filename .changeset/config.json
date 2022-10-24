@@ -7,7 +7,7 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["react-app"],
+  "ignore": ["react-app", "react-app-18"],
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "updateInternalDependents": "always"
   }

@@ -1,5 +1,16 @@
 # create-moe
 
+## 2.1.0
+
+### Minor Changes
+
+- support auto split deps chunks
+
+### Patch Changes
+
+- Updated dependencies
+  - create-xn-app@2.1.0
+
 ## 2.0.0
 
 ### Major Changes
