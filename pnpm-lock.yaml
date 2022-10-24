@@ -71,6 +71,29 @@ importers:
       '@xn-sakina/meta': link:../../packages/meta
       typescript: registry.npmjs.org/typescript/4.6.4
 
+  apps/react-app-18:
+    specifiers:
+      '@types/node': ^18.11.4
+      '@types/react': ^18.0.21
+      '@types/react-dom': ^18.0.6
+      '@types/react-router-dom': ^5.3.3
+      '@xn-sakina/meta': workspace:*
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      react-router-dom: ^6.4.2
+      typescript: ^4.8.4
+    dependencies:
+      react: registry.npmjs.org/react/18.2.0
+      react-dom: registry.npmjs.org/react-dom/18.2.0_react@18.2.0
+      react-router-dom: registry.npmjs.org/react-router-dom/6.4.2_biqbaboplfbrettd7655fr4n2y
+    devDependencies:
+      '@types/node': registry.npmjs.org/@types/node/18.11.4
+      '@types/react': registry.npmjs.org/@types/react/18.0.21
+      '@types/react-dom': registry.npmjs.org/@types/react-dom/18.0.6
+      '@types/react-router-dom': registry.npmjs.org/@types/react-router-dom/5.3.3
+      '@xn-sakina/meta': link:../../packages/meta
+      typescript: registry.npmjs.org/typescript/4.8.4
+
   packages/create-moe:
     specifiers:
       create-xn-app: workspace:*
@@ -2536,6 +2559,13 @@ packages:
     version: 1.0.0-next.21
     dev: false
 
+  registry.npmjs.org/@remix-run/router/1.0.2:
+    resolution: {integrity: sha512-GRSOFhJzjGN+d4sKHTMSvNeUPoZiDHWmRnXfzaxrqe7dE/Nzlc8BiMSJdLDESZlndM7jIUrZ/F4yWqVYlI0rwQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@remix-run/router/-/router-1.0.2.tgz}
+    name: '@remix-run/router'
+    version: 1.0.2
+    engines: {node: '>=14'}
+    dev: false
+
   registry.npmjs.org/@rushstack/eslint-patch/1.1.3:
     resolution: {integrity: sha512-WiBSI6JBIhC6LRIsB2Kwh8DsGTlbBU+mLRxJmAe3LjHTdkDpwIbEOZgoXBbZilk/vlfjK8i6nKRAvIRn1XaIMw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.1.3.tgz}
     name: '@rushstack/eslint-patch'
@@ -3365,6 +3395,14 @@ packages:
       '@types/react': registry.npmjs.org/@types/react/17.0.45
     dev: true
 
+  registry.npmjs.org/@types/react-dom/18.0.6:
+    resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/react-dom/-/react-dom-18.0.6.tgz}
+    name: '@types/react-dom'
+    version: 18.0.6
+    dependencies:
+      '@types/react': registry.npmjs.org/@types/react/18.0.21
+    dev: true
+
   registry.npmjs.org/@types/react-router-dom/5.3.3:
     resolution: {integrity: sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/react-router-dom/-/react-router-dom-5.3.3.tgz}
     name: '@types/react-router-dom'
@@ -3388,6 +3426,16 @@ packages:
     resolution: {integrity: sha512-YfhQ22Lah2e3CHPsb93tRwIGNiSwkuz1/blk4e6QrWS0jQzCSNbGLtOEYhPg02W0yGTTmpajp7dCTbBAMN3qsg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/react/-/react-17.0.45.tgz}
     name: '@types/react'
     version: 17.0.45
+    dependencies:
+      '@types/prop-types': registry.npmjs.org/@types/prop-types/15.7.5
+      '@types/scheduler': registry.npmjs.org/@types/scheduler/0.16.2
+      csstype: registry.npmjs.org/csstype/3.0.11
+    dev: true
+
+  registry.npmjs.org/@types/react/18.0.21:
+    resolution: {integrity: sha512-7QUCOxvFgnD5Jk8ZKlUAhVcRj7GuJRjnjjiY/IUBWKgOlnvDvTMLD4RTF7NPyVmbRhNrbomZiOepg7M/2Kj1mA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/react/-/react-18.0.21.tgz}
+    name: '@types/react'
+    version: 18.0.21
     dependencies:
       '@types/prop-types': registry.npmjs.org/@types/prop-types/15.7.5
       '@types/scheduler': registry.npmjs.org/@types/scheduler/0.16.2
@@ -8285,12 +8333,6 @@ packages:
     version: 4.1.5
     dev: true
 
-  registry.npmjs.org/js-tokens/3.0.2:
-    resolution: {integrity: sha1-mGbfOVECEw449/mWvOtlRDIJwls=, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/js-tokens/-/js-tokens-3.0.2.tgz}
-    name: js-tokens
-    version: 3.0.2
-    dev: false
-
   registry.npmjs.org/js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz}
     name: js-tokens
@@ -8759,7 +8801,7 @@ packages:
     version: 1.4.0
     hasBin: true
     dependencies:
-      js-tokens: registry.npmjs.org/js-tokens/3.0.2
+      js-tokens: registry.npmjs.org/js-tokens/4.0.0
     dev: false
 
   registry.npmjs.org/lower-case/2.0.2:
@@ -10919,6 +10961,19 @@ packages:
       scheduler: registry.npmjs.org/scheduler/0.20.2
     dev: false
 
+  registry.npmjs.org/react-dom/18.2.0_react@18.2.0:
+    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz}
+    id: registry.npmjs.org/react-dom/18.2.0
+    name: react-dom
+    version: 18.2.0
+    peerDependencies:
+      react: ^18.2.0
+    dependencies:
+      loose-envify: registry.npmjs.org/loose-envify/1.4.0
+      react: registry.npmjs.org/react/18.2.0
+      scheduler: registry.npmjs.org/scheduler/0.23.0
+    dev: false
+
   registry.npmjs.org/react-error-overlay/6.0.11:
     resolution: {integrity: sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.11.tgz}
     name: react-error-overlay
@@ -10947,6 +11002,22 @@ packages:
       react-router: registry.npmjs.org/react-router/6.3.0_react@17.0.2
     dev: false
 
+  registry.npmjs.org/react-router-dom/6.4.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-yM1kjoTkpfjgczPrcyWrp+OuQMyB1WleICiiGfstnQYo/S8hPEEnVjr/RdmlH6yKK4Tnj1UGXFSa7uwAtmDoLQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.4.2.tgz}
+    id: registry.npmjs.org/react-router-dom/6.4.2
+    name: react-router-dom
+    version: 6.4.2
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      '@remix-run/router': registry.npmjs.org/@remix-run/router/1.0.2
+      react: registry.npmjs.org/react/18.2.0
+      react-dom: registry.npmjs.org/react-dom/18.2.0_react@18.2.0
+      react-router: registry.npmjs.org/react-router/6.4.2_react@18.2.0
+    dev: false
+
   registry.npmjs.org/react-router/6.3.0_react@17.0.2:
     resolution: {integrity: sha512-7Wh1DzVQ+tlFjkeo+ujvjSqSJmkt1+8JO+T5xklPlgrh70y7ogx75ODRW0ThWhY7S+6yEDks8TYrtQe/aoboBQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/react-router/-/react-router-6.3.0.tgz}
     id: registry.npmjs.org/react-router/6.3.0
@@ -10959,6 +11030,19 @@ packages:
       react: registry.npmjs.org/react/17.0.2
     dev: false
 
+  registry.npmjs.org/react-router/6.4.2_react@18.2.0:
+    resolution: {integrity: sha512-Rb0BAX9KHhVzT1OKhMvCDMw776aTYM0DtkxqUBP8dNBom3mPXlfNs76JNGK8wKJ1IZEY1+WGj+cvZxHVk/GiKw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/react-router/-/react-router-6.4.2.tgz}
+    id: registry.npmjs.org/react-router/6.4.2
+    name: react-router
+    version: 6.4.2
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      '@remix-run/router': registry.npmjs.org/@remix-run/router/1.0.2
+      react: registry.npmjs.org/react/18.2.0
+    dev: false
+
   registry.npmjs.org/react/17.0.2:
     resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/react/-/react-17.0.2.tgz}
     name: react
@@ -10967,6 +11051,15 @@ packages:
     dependencies:
       loose-envify: registry.npmjs.org/loose-envify/1.4.0
       object-assign: registry.npmjs.org/object-assign/4.1.1
+    dev: false
+
+  registry.npmjs.org/react/18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/react/-/react-18.2.0.tgz}
+    name: react
+    version: 18.2.0
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: registry.npmjs.org/loose-envify/1.4.0
     dev: false
 
   registry.npmjs.org/read-pkg-up/7.0.1:
@@ -11386,6 +11479,14 @@ packages:
     dependencies:
       loose-envify: registry.npmjs.org/loose-envify/1.4.0
       object-assign: registry.npmjs.org/object-assign/4.1.1
+    dev: false
+
+  registry.npmjs.org/scheduler/0.23.0:
+    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/scheduler/-/scheduler-0.23.0.tgz}
+    name: scheduler
+    version: 0.23.0
+    dependencies:
+      loose-envify: registry.npmjs.org/loose-envify/1.4.0
     dev: false
 
   registry.npmjs.org/schema-utils/2.7.0:
