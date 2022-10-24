@@ -16,7 +16,7 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "@types/react-router-dom": "^5.3.3",
-    "@xn-sakina/meta": "workspace:*",
+    "@xn-sakina/meta": "^{{{xnVersion}}}",
     "typescript": "^4.8.4"
   },
   "browserslist": {
