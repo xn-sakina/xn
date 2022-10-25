@@ -2,8 +2,10 @@ import type { JsMinifyOptions } from '@swc/core'
 import LightningCSS from 'lightningcss'
 import { LightningCssMinifyPlugin } from 'lightningcss-loader'
 import TerserPlugin from 'terser-webpack-plugin'
+import { ESplitStrategys } from '../constants'
 import {
   getAutoSplitChunksConfig,
+  getGranularSplitChunksConfigV2,
   getSplitChunksConfig,
 } from '../utils/spiltChunk'
 import { ECssMinify, EJsMinify, IConfigChainOpts } from './interface'
@@ -94,7 +96,12 @@ export const addOpti = ({
     return
   }
   const { splitChunks } =
-    userConfig.splitChunks === true
+    userConfig.splitChunks === ESplitStrategys.granular
+      ? getGranularSplitChunksConfigV2({
+          root: paths.root,
+          componentsDir: paths.componentsDir,
+        })
+      : userConfig.splitChunks === true
       ? getAutoSplitChunksConfig({ npmClient })
       : getSplitChunksConfig({
           componentsDir: paths.componentsDir,

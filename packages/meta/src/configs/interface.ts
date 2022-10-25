@@ -1,6 +1,6 @@
 import type { MFSU } from '@umijs/mfsu'
 import Config from 'webpack-chain'
-import { ENpmClient } from '../constants'
+import { ENpmClient, ESplitStrategys } from '../constants'
 import { IEnvs } from './envs'
 import { Paths } from './paths'
 
@@ -61,11 +61,12 @@ export interface IXnConfig {
   /**
    * webpack easy spilt chunk by keywords
    * @example ['react','antd','rc'] : will split react,antd,rc chunks
+   * @example 'granular'  : will use granular split chunk strategy
    * @example true  : will split all node_modules dep chunks
    * @example false : not split chunks
    * @default true
    */
-  splitChunks?: string[] | boolean
+  splitChunks?: string[] | boolean | `${ESplitStrategys.granular}`
   /**
    * open webpack analyzer plugin
    * @default false

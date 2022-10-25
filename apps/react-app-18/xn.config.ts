@@ -4,4 +4,5 @@ export default defineConfig({
   compile: "swc",
   cssMinify: "parcelCss",
   jsMinify: "esbuild",
+  splitChunks: "granular",
 });

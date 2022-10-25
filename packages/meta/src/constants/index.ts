@@ -37,3 +37,7 @@ export enum ENpmClient {
   yarn = 'yarn',
   pnpm = 'pnpm',
 }
+
+export enum ESplitStrategys {
+  granular = 'granular',
+}
