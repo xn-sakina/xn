@@ -1,5 +1,11 @@
 # @xn-sakina/xn-utils
 
+## 2.2.0
+
+### Minor Changes
+
+- support granular split chunk
+
 ## 2.1.2
 
 ## 2.1.1
