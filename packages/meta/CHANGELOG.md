@@ -1,5 +1,12 @@
 # @xn-sakina/meta
 
+## 2.2.1
+
+### Patch Changes
+
+- fix lightning css cannot find browserslist and upgrade deps
+  - @xn-sakina/xn-utils@2.2.1
+
 ## 2.2.0
 
 ### Minor Changes
