@@ -10,6 +10,7 @@
     "@arco-design/web-react": "^2.40.2",
     "@tanstack/react-query": "^4.13.0",
     "antd": "^4.23.6",
+    "lodash": "4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.2"
