@@ -25,7 +25,7 @@ export const addJavaScriptRule = (opts: IConfigChainOpts) => {
 
   rules.forEach((rule) => {
     if (userConfig.compile === ECompile.babel) {
-      const babelOptions = getBabelConfig(opts)
+      const babelOptions = userConfig.babelConfig(getBabelConfig(opts))
       rule.use('babel-loader').loader(babelLoader).options(babelOptions)
     } else if (userConfig.compile === ECompile.esbuild) {
       rule

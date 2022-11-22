@@ -56,6 +56,7 @@ export const getConfigs = async ({
     // auto split chunks by default
     splitChunks: true,
     analyzer: false,
+    babelConfig: (c) => c,
     webpackChain: (c) => c,
     mfsu: false,
     parcelCss: false,

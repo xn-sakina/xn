@@ -1,10 +1,10 @@
 import { getCorejsVersion } from '../../../utils/getCorejsVersion'
-import { IConfigChainOpts } from '../../interface'
+import { IBabelConfig, IConfigChainOpts } from '../../interface'
 
 export const getBabelConfig = ({ envs }: IConfigChainOpts) => {
   const isDev = envs.isDev
 
-  const configs: Record<string, any> = {
+  const configs: IBabelConfig = {
     presets: [
       [
         require.resolve('@babel/preset-env'),

@@ -73,6 +73,10 @@ export interface IXnConfig {
    */
   analyzer?: boolean
   /**
+   * modify babel config, only valid `compile: 'babel'`
+   */
+  babelConfig?: (config: IBabelConfig) => IBabelConfig
+  /**
    * custom webpack config
    * @default (c)=>c
    */
@@ -117,4 +121,14 @@ export interface IDevProgress {
 export interface IMonorepoInfo {
   isMonorepo: boolean
   monorepoRoot: string
+}
+
+export interface IBabelConfig {
+  presets: any[]
+  plugins: any[]
+  compact: boolean
+  cacheDirectory: boolean | string
+  cacheCompression: boolean
+  babelrc: boolean
+  [key: string]: any
 }
