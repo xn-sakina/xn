@@ -1,3 +1,4 @@
+import { existsSync } from 'fs'
 import { join } from 'path'
 import { tryPaths } from '../utils/tryPath'
 
@@ -13,6 +14,8 @@ export const getPaths = ({ root }: { root: string }) => {
     join(root, 'src/component'),
   ])
 
+  const tsconfigFilePath = join(root, 'tsconfig.json')
+
   const paths = {
     root,
     srcPath: join(root, 'src'),
@@ -23,6 +26,7 @@ export const getPaths = ({ root }: { root: string }) => {
     packageJson: join(root, 'package.json'),
     componentsDir,
     envFile: join(root, '.env'),
+    tsconfigFile: existsSync(tsconfigFilePath) && tsconfigFilePath,
   }
 
   return paths
