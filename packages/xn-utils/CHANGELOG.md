@@ -1,5 +1,11 @@
 # @xn-sakina/xn-utils
 
+## 2.3.0
+
+### Minor Changes
+
+- support modify babel config and improve cache
+
 ## 2.2.1
 
 ## 2.2.0

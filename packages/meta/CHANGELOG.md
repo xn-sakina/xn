@@ -1,5 +1,16 @@
 # @xn-sakina/meta
 
+## 2.3.0
+
+### Minor Changes
+
+- support modify babel config and improve cache
+
+### Patch Changes
+
+- Updated dependencies
+  - @xn-sakina/xn-utils@2.3.0
+
 ## 2.2.1
 
 ### Patch Changes
