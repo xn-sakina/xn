@@ -1,9 +1,9 @@
 import { defineConfig } from "@xn-sakina/meta";
 
 export default defineConfig({
-  compile: "swc",
+  // compile: "swc",
   cssMinify: "parcelCss",
   jsMinify: "esbuild",
-  splitChunks: "granular",
+  // splitChunks: "granular",
   // mfsu: true
 });
