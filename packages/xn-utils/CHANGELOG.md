@@ -1,5 +1,11 @@
 # @xn-sakina/xn-utils
 
+## 2.3.1
+
+### Patch Changes
+
+- deps upgrade
+
 ## 2.3.0
 
 ### Minor Changes

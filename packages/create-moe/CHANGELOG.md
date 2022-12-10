@@ -1,5 +1,13 @@
 # create-moe
 
+## 2.3.1
+
+### Patch Changes
+
+- deps upgrade
+- Updated dependencies
+  - create-xn-app@2.3.1
+
 ## 2.3.0
 
 ### Minor Changes

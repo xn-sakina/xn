@@ -1,6 +1,6 @@
 {
   "name": "@xn-sakina/xn-utils",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Easy react bundle cli powered by swc & webpack5",
   "keywords": [
     "react",
