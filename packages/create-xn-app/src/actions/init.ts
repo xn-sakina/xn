@@ -1,13 +1,14 @@
 import { logger, chalk, fs, inquirer } from '@xn-sakina/xn-utils'
 import { IOpts } from '../type'
 import { generator } from '../utils/generator'
-import { getPkg } from '../utils/getPkg'
+import { getPkg, getXnMetaPkgJson } from '../utils/getPkg'
 import { basename, join } from 'path'
 
 const { existsSync, removeSync } = fs
 
 interface IInitProjectData {
   xnVersion: string
+  esbuildVersion: string
 }
 
 const pkg = getPkg()
@@ -16,8 +17,11 @@ export const initProject = async (opts: IOpts) => {
   const tplPath = join(__dirname, '../../templates/simple')
   const targetPath = name ? join(cwd, name) : cwd
 
+  const xnMetaPkgJson = await getXnMetaPkgJson()
+
   const data: IInitProjectData = {
     xnVersion: pkg.version,
+    esbuildVersion: xnMetaPkgJson?.dependencies?.esbuild,
   }
 
   // confirm

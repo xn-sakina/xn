@@ -30,5 +30,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "pnpm": {
+    "overrides": {
+      "esbuild": "{{{esbuildVersion}}}"
+    }
   }
 }
