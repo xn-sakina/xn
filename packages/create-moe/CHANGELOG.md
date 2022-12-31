@@ -1,5 +1,13 @@
 # create-moe
 
+## 2.3.2
+
+### Patch Changes
+
+- lock esbuild version for mfsu and upgrade deps
+- Updated dependencies
+  - create-xn-app@2.3.2
+
 ## 2.3.1
 
 ### Patch Changes
