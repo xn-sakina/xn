@@ -9,5 +9,11 @@ export const getPolyfills = ({ root, env }: { root: string; env: string }) => {
     version: getCorejsVersion(),
   })
 
-  return list as string[]
+  const filteredList = (list as string[]).filter((line) => {
+    // https://github.com/zloirock/core-js/issues/1091
+    // Prevent `Math.DEG_PER_RAD` / `Math.RAD_PER_DEG` constant override problem in qiankun micro app
+    return !line.startsWith('esnext.math.')
+  })
+
+  return filteredList
 }
