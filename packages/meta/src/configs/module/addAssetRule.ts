@@ -23,17 +23,17 @@ export const addAssetRule = (opts: IConfigChainOpts) => {
   topRule
     .oneOf('image')
     .test(REG.imageReg)
-    .set('type', isSinglePack ? EAssetType.inline : 'asset')
+    .set('type', isSinglePack ? EAssetType.inline : EAssetType.auto)
 
   // font
   topRule
     .oneOf('font')
     .test(REG.fontReg)
-    .set('type', isSinglePack ? EAssetType.inline : 'asset/resource')
+    .set('type', isSinglePack ? EAssetType.inline : EAssetType.resource)
 
   // video
   topRule
     .oneOf('video')
     .test(REG.videoReg)
-    .set('type', isSinglePack ? EAssetType.inline : 'asset')
+    .set('type', isSinglePack ? EAssetType.inline : EAssetType.auto)
 }
