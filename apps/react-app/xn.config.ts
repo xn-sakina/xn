@@ -11,4 +11,5 @@ export default defineConfig({
   jsMinify: 'swc',
   compile: 'swc',
   mfsu: true,
+  // singlePack: true
 })

@@ -33,9 +33,11 @@ interface IRuleBase {
 
 export const addCssRule = ({ config, envs, userConfig }: IConfigChainOpts) => {
   const useParcelCss = userConfig.parcelCss
-  const styleLoader = envs.isDev
-    ? originStyleLoader
-    : MiniCssExtractPlugin.loader
+  // [single_pack::css]: inline all css
+  const styleLoader =
+    envs.isDev || userConfig.singlePack
+      ? originStyleLoader
+      : MiniCssExtractPlugin.loader
   const postcssOptions = getPostcssConfig()
 
   const cssRule: IRuleBase[] = [

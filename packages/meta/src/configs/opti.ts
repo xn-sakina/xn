@@ -92,7 +92,11 @@ export const addOpti = ({
   }
 
   // split chunks
-  if (!userConfig.splitChunks) {
+  if (
+    !userConfig.splitChunks ||
+    // [single_pack::js]: if single pack, not split chunks
+    userConfig.singlePack
+  ) {
     return
   }
   const { splitChunks } =

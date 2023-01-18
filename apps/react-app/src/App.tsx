@@ -1,12 +1,14 @@
 import React from 'react'
 import Logo from './logo.svg'
 import './App.css'
+import { Example } from './Example'
 
-const Example = React.lazy(() =>
-  import('./Example').then(({ Example }) => ({
-    default: Example,
-  }))
-)
+// async load
+// const Example = React.lazy(() =>
+//   import('./Example').then(({ Example }) => ({
+//     default: Example,
+//   }))
+// )
 
 function App() {
   const a = async () => {

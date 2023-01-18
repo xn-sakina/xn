@@ -97,6 +97,11 @@ export interface IXnConfig {
    * @enum cssMini | esbuild | parcelCss
    */
   cssMinify?: CssMinify
+  /**
+   * inline .js and .css to bundle html
+   * @default false
+   */
+  singlePack?: boolean
 }
 
 export type InternalUserConfig = Required<IXnConfig>

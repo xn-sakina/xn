@@ -62,12 +62,19 @@ export const getConfigs = async ({
     parcelCss: false,
     jsMinify: EJsMinify.swc,
     cssMinify: ECssMinify.parcelCss,
+    singlePack: false,
   }
   const userConfig = merge(defaultConfig, _userConfig) as InternalUserConfig
   // handle publicPath
   handleUserConfig({ userConfig })
   // get envs
   const envs = getClientEnvironment(userConfig.publicPath.slice(0, -1))
+
+  // [single-pack::config] single pack valid at build env only
+  if (envs.isDev) {
+    userConfig.singlePack = false
+  }
+
   // mfsu
   let mfsu: MFSU | undefined
   if (envs.isDev && userConfig.mfsu) {
