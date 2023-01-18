@@ -1,5 +1,15 @@
 # @xn-sakina/meta
 
+## 2.4.0
+
+### Minor Changes
+
+- upgrade deps version and support single pack mode
+
+### Patch Changes
+
+- @xn-sakina/xn-utils@2.4.0
+
 ## 2.3.2
 
 ### Patch Changes
