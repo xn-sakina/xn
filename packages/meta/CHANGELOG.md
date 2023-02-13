@@ -1,5 +1,12 @@
 # @xn-sakina/meta
 
+## 2.4.1
+
+### Patch Changes
+
+- upgrade deps version to latest
+  - @xn-sakina/xn-utils@2.4.1
+
 ## 2.4.0
 
 ### Minor Changes
