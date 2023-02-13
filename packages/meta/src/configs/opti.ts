@@ -11,7 +11,7 @@ import {
 import { ECssMinify, EJsMinify, IConfigChainOpts } from './interface'
 
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const { ESBuildMinifyPlugin } = require('esbuild-loader')
+const { EsbuildPlugin } = require('esbuild-loader')
 const esbuild = require('esbuild')
 
 export const addOpti = ({
@@ -29,7 +29,7 @@ export const addOpti = ({
   opti.minimize(true)
 
   const setEsbuildOpti = (opts: { cssMinify: boolean }) => {
-    opti.minimizer('assets-mini-esbuild').use(ESBuildMinifyPlugin, [
+    opti.minimizer('assets-mini-esbuild').use(EsbuildPlugin, [
       {
         target: ['es2015', 'chrome61'],
         legalComments: 'none',
