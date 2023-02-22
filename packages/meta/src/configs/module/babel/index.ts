@@ -31,9 +31,13 @@ export const getBabelConfig = ({ envs }: IConfigChainOpts) => {
     ],
     plugins: [isDev && require.resolve('react-refresh/babel')].filter(Boolean),
     compact: isDev ? false : true,
+    sourceType: 'unambiguous',
+    // babel cache
     cacheDirectory: true,
     cacheCompression: false,
+    // config file
     babelrc: false,
+    configFile: false,
   }
 
   return configs
