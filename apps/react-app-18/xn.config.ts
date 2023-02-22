@@ -5,5 +5,5 @@ export default defineConfig({
   cssMinify: "parcelCss",
   jsMinify: "esbuild",
   // splitChunks: "granular",
-  // mfsu: true
+  mfsu: true,
 });

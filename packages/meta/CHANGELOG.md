@@ -1,5 +1,12 @@
 # @xn-sakina/meta
 
+## 2.4.2
+
+### Patch Changes
+
+- improve babel config and upgrade deps
+  - @xn-sakina/xn-utils@2.4.2
+
 ## 2.4.1
 
 ### Patch Changes
