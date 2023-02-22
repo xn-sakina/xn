@@ -31,6 +31,7 @@ export const addOpti = ({
   const setEsbuildOpti = (opts: { cssMinify: boolean }) => {
     opti.minimizer('assets-mini-esbuild').use(EsbuildPlugin, [
       {
+        // TODO: support high ecma level syntax, like bigint 100000n
         target: ['es2015', 'chrome61'],
         legalComments: 'none',
         css: opts.cssMinify,
