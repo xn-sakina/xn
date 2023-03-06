@@ -13,7 +13,9 @@
     "lodash": "4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.5"
+    "react-router-dom": "^6.4.5",
+    "@xn-sakina/example-lib": "workspace:*",
+    "react-app": "1.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.13",

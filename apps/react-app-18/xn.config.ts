@@ -6,4 +6,5 @@ export default defineConfig({
   jsMinify: "esbuild",
   // splitChunks: "granular",
   mfsu: true,
+  monorepoRedirect: true,
 });
