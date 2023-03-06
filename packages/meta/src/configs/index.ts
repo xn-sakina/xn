@@ -1,5 +1,5 @@
 import { MFSU } from '@umijs/mfsu'
-import { lodash } from '@xn-sakina/xn-utils'
+import { fs, lodash } from '@xn-sakina/xn-utils'
 import webpack from 'webpack'
 import Config from 'webpack-chain'
 import { EMode } from '../constants'
@@ -9,6 +9,7 @@ import { addCache } from './cache'
 import { addDevServer } from './devServer'
 import { addEntry } from './entry'
 import { getClientEnvironment } from './envs'
+import { getMonorepoRedirectAlias } from './features/monorepoRedirect'
 import { handleUserConfig } from './handler/userConfig'
 import {
   ECompile,
@@ -63,6 +64,7 @@ export const getConfigs = async ({
     jsMinify: EJsMinify.swc,
     cssMinify: ECssMinify.parcelCss,
     singlePack: false,
+    monorepoRedirect: false,
   }
   const userConfig = merge(defaultConfig, _userConfig) as InternalUserConfig
   // handle publicPath
@@ -74,6 +76,22 @@ export const getConfigs = async ({
   if (envs.isDev) {
     userConfig.singlePack = false
   }
+  // pkg
+  const pkgContent = fs.readJsonSync(paths.packageJson, 'utf-8')
+  // get monorepo info
+  const monorepoInfo = detectMonorepo({ root })
+
+  // monorepo redirect
+  let monorepoRedirectAlias: Record<string, string> = {}
+  if (userConfig.monorepoRedirect) {
+    monorepoRedirectAlias = await getMonorepoRedirectAlias({
+      root,
+      monorepoInfo,
+      pkg: pkgContent,
+    })
+    // add alias
+    config.resolve.alias.merge(monorepoRedirectAlias)
+  }
 
   // mfsu
   let mfsu: MFSU | undefined
@@ -83,14 +101,14 @@ export const getConfigs = async ({
       buildDepWithESBuild: true,
       depBuildConfig: {},
       startBuildWorker: noop as any,
+      unMatchLibs: [...Object.keys(monorepoRedirectAlias)],
     })
     // mfsu only support esbuild in `development` env
     userConfig.compile = ECompile.esbuild
   }
-  // get monorepo info
-  const monorepoInfo = detectMonorepo({ root })
   // opts
   const opts: IConfigChainOpts = {
+    pkg: pkgContent,
     config,
     userConfig,
     paths,

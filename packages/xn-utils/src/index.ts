@@ -8,6 +8,8 @@ import commander from 'commander'
 import findUp from 'find-up'
 import fetch from 'node-fetch'
 import crossSpawn from 'cross-spawn'
+import resolve from 'resolve'
+import * as manyPkg from '@manypkg/get-packages'
 
 export {
   chalk,
@@ -20,5 +22,7 @@ export {
   findUp,
   fetch,
   crossSpawn,
+  resolve,
+  manyPkg,
 }
 export { logger } from './logger'

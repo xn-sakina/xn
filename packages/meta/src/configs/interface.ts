@@ -102,11 +102,28 @@ export interface IXnConfig {
    * @default false
    */
   singlePack?: boolean
+  /**
+   * monorepo redirect
+   * @refer See https://blog.csdn.net/qq_21567385/article/details/125357074
+   * @default false
+   */
+  monorepoRedirect?: boolean
 }
 
 export type InternalUserConfig = Required<IXnConfig>
 
+export interface IPkg {
+  name?: string
+  version?: string
+  private?: boolean
+  dependencies?: Record<string, string>
+  devDependencies?: Record<string, string>
+  peerDependencies?: Record<string, string>
+  [key: string]: any
+}
+
 export interface IConfigChainOpts {
+  pkg: IPkg
   config: Config
   userConfig: InternalUserConfig
   paths: Paths
