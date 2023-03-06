@@ -1,5 +1,11 @@
 # @xn-sakina/xn-utils
 
+## 2.5.0
+
+### Minor Changes
+
+- Support monorepo redirect and upgrade deps
+
 ## 2.4.2
 
 ## 2.4.1

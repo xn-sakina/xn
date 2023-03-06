@@ -1,5 +1,16 @@
 # @xn-sakina/meta
 
+## 2.5.0
+
+### Minor Changes
+
+- Support monorepo redirect and upgrade deps
+
+### Patch Changes
+
+- Updated dependencies
+  - @xn-sakina/xn-utils@2.5.0
+
 ## 2.4.2
 
 ### Patch Changes
