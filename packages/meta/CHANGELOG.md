@@ -1,5 +1,13 @@
 # @xn-sakina/meta
 
+## 2.5.1
+
+### Patch Changes
+
+- Fixed React core deps alias
+- Updated dependencies
+  - @xn-sakina/xn-utils@2.5.1
+
 ## 2.5.0
 
 ### Minor Changes
