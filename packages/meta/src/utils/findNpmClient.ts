@@ -1,3 +1,4 @@
+import { whichNpmClient } from '@xn-sakina/xn-utils'
 import { existsSync } from 'fs'
 import { join } from 'path'
 import { ENpmClient } from '../constants'
@@ -15,5 +16,6 @@ export const findNpmClient = ({ projectRoot }: { projectRoot: string }) => {
   if (existsSync(packageLock)) {
     return ENpmClient.npm
   }
-  return ENpmClient.npm
+  const name = whichNpmClient()?.name as ENpmClient | undefined
+  return name?.length ? name : ENpmClient.npm
 }

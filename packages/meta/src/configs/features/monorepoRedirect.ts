@@ -1,6 +1,6 @@
-import { chalk, logger, manyPkg, resolve } from '@xn-sakina/xn-utils'
+import { chalk, logger, manyPkg, tryResolveDep } from '@xn-sakina/xn-utils'
 import { existsSync, statSync } from 'fs'
-import { basename, dirname, join } from 'path'
+import { basename, join } from 'path'
 import { IConfigChainOpts } from '../interface'
 
 interface IConfigs {
@@ -152,15 +152,4 @@ async function collectAllProjects(opts: IOpts) {
     }
     return obj
   }, {})
-}
-
-function tryResolveDep(opts: { name: string; from: string }) {
-  const { name, from } = opts
-  try {
-    return dirname(
-      resolve.sync(`${name}/package.json`, {
-        basedir: from,
-      }),
-    )
-  } catch {}
 }

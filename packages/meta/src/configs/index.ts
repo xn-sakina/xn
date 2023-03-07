@@ -80,6 +80,7 @@ export const getConfigs = async ({
   const pkgContent = fs.readJsonSync(paths.packageJson, 'utf-8')
   // get monorepo info
   const monorepoInfo = detectMonorepo({ root })
+  const npmClient = findNpmClient({ projectRoot: monorepoInfo.monorepoRoot })
 
   // monorepo redirect
   let monorepoRedirectAlias: Record<string, string> = {}
@@ -116,7 +117,7 @@ export const getConfigs = async ({
     root,
     mfsu,
     monorepoInfo,
-    npmClient: findNpmClient({ projectRoot: monorepoInfo.monorepoRoot }),
+    npmClient,
   }
 
   // mode

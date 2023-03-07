@@ -26,3 +26,5 @@ export {
   manyPkg,
 }
 export { logger } from './logger'
+export * from './whichNpmClient'
+export * from './tryResolveDep'
