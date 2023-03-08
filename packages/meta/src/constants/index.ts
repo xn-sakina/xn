@@ -5,7 +5,7 @@ export enum EMode {
 
 export const REG = {
   // js
-  jsReg: /\.js$/,
+  jsReg: /\.(js|mjs|cjs)$/,
   // ts
   tsReg: /\.(ts|tsx|jsx)$/,
   // node_modules
@@ -67,7 +67,16 @@ export const RSPACK_CONST = {
 } as const
 
 // resolve ext
-export const EXTS = ['.ts', '.tsx', '.js', '.jsx', '.json']
+export const EXTS = [
+  '.ts',
+  '.tsx',
+  '.js',
+  '.jsx',
+  '.mjs',
+  '.cjs',
+  '.json',
+  '.wasm',
+] as const
 
 export enum ENpmClient {
   npm = 'npm',
