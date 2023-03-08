@@ -89,6 +89,7 @@
     "webpackbar": "5.0.2"
   },
   "devDependencies": {
-    "@types/express": "^4.17.17"
+    "@types/express": "^4.17.17",
+    "@xn-sakina/bundler-rspack": "workspace:*"
   }
 }

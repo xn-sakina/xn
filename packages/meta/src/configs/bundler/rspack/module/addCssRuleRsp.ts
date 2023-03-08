@@ -1,20 +1,9 @@
-import LightningCss from 'lightningcss'
-import { PACKAGES, REG } from '../../constants'
-import { IConfigChainOpts } from '../interface'
-import { getPostcssConfig } from './postcss'
+import { PACKAGES, REG, RSPACK_CONST } from '../../../../constants'
+import { IConfigChainOpts } from '../../../interface'
+import { getPostcssConfig } from '../../../module/postcss'
+import { RspConfig, WebpackConfig } from '../interface'
 
-const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent')
-
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const originStyleLoader = require.resolve('style-loader')
-const cssLoader = require.resolve('css-loader')
-const cssLoaderModulesOption = {
-  getLocalIdent: getCSSModuleLocalIdent,
-}
-const postcssLoader = require.resolve('postcss-loader')
-const lightningcssLoader = require.resolve('lightningcss-loader')
-
-interface IRuleBase {
+interface IRuleBaseRsp {
   name: string
   test: RegExp
   exclude?: RegExp
@@ -23,18 +12,10 @@ interface IRuleBase {
   options?: Record<string, any>
 }
 
-export const addCssRule = ({ config, envs, userConfig }: IConfigChainOpts) => {
+export function addCssRuleFromWebpack({ config }: IConfigChainOpts) {
   const lessLoaderOptions = PACKAGES.loader.lessLoaderOptions()
 
-  const useParcelCss = userConfig.parcelCss
-  // [single_pack::css]: inline all css
-  const styleLoader =
-    envs.isDev || userConfig.singlePack
-      ? originStyleLoader
-      : MiniCssExtractPlugin.loader
-  const postcssOptions = getPostcssConfig()
-
-  const cssRule: IRuleBase[] = [
+  const cssRule: IRuleBaseRsp[] = [
     // css
     {
       name: 'css',
@@ -79,37 +60,25 @@ export const addCssRule = ({ config, envs, userConfig }: IConfigChainOpts) => {
     },
   ]
 
+  const postcssLoader = RSPACK_CONST.loader.postcssLoader()
+  const postcssOptions = getPostcssConfig()
   const topRule = config.module.rule('css')
-
   cssRule.forEach(({ name, test, exclude, loader, isCssModule, options }) => {
     const rule = topRule.oneOf(name)
     rule.test(test)
     if (exclude) {
       rule.exclude.add(exclude)
     }
-    // style loader
-    rule.use('style-loader').loader(styleLoader)
+    // not need style loader
 
-    // css loader
-    const preLoaderCount = loader ? 2 : 1
-    rule
-      .use('css-loader')
-      .loader(cssLoader)
-      .options({
-        importLoaders: preLoaderCount,
-        ...(isCssModule ? { modules: cssLoaderModulesOption } : {}),
-      })
+    // not need css loader
+
+    rule.set('type', RSPACK_CONST.type.css)
 
     // postcss loader
-    if (useParcelCss) {
-      rule.use('lightningcss-loader').loader(lightningcssLoader).options({
-        implementation: LightningCss,
-      })
-    } else {
-      rule.use('postcss-loader').loader(postcssLoader).options({
-        postcssOptions,
-      })
-    }
+    rule.use('postcss-loader').loader(postcssLoader).options({
+      postcssOptions,
+    })
 
     // current loader
     if (loader) {
@@ -125,4 +94,9 @@ export const addCssRule = ({ config, envs, userConfig }: IConfigChainOpts) => {
       rule.set('sideEffects', true)
     }
   })
+}
+
+export function addCssRuleRsp(rawConfig: WebpackConfig, config: RspConfig) {
+  const cssRule = rawConfig.module!.rules![0]
+  config.module!.rules!.push(cssRule as any)
 }

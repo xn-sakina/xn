@@ -1,8 +1,9 @@
-import { fs } from '@xn-sakina/xn-utils'
+import { fs, lodash } from '@xn-sakina/xn-utils'
 import crypto from 'crypto'
 import { ENpmClient } from '../constants'
 
 const { existsSync } = fs
+const { uniq } = lodash
 
 const CORE_DEPS = ['react', 'react-dom']
 
@@ -93,7 +94,7 @@ export function getSplitChunksConfig({
   componentsDir?: string
   extraSplitChunk?: string[]
 }) {
-  const defaultSplitKeywords = ['react', 'antd', 'rc', ...extraSplitChunk]
+  const defaultSplitKeywords = uniq(['react', 'antd', 'rc', ...extraSplitChunk])
   const depsSplit: Record<string, any> = {}
   defaultSplitKeywords.forEach((depName) => {
     depsSplit[depName] = {

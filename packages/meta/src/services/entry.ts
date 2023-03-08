@@ -9,8 +9,8 @@ const pkgPath = join(__dirname, '../../package.json')
 const pkg = require(pkgPath)
 
 const scriptsPath = {
-  dev: join(__dirname, './dev.js'),
-  build: join(__dirname, './build.js'),
+  dev: join(__dirname, './dev/dev.js'),
+  build: join(__dirname, './build/build.js'),
 }
 const cwd = process.cwd()
 

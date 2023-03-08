@@ -1,16 +1,31 @@
 import { chalk } from '@xn-sakina/xn-utils'
-import type { Configuration } from 'webpack'
-import webpack from 'webpack'
+import {
+  CompilerImpl,
+  DevServerImpl,
+  InstanceImpl,
+} from '../../configs/bundler/rspack/interface'
+import { ConfigMix, EBundler } from '../../configs/interface'
+import { Paths } from '../../configs/paths'
+import { EMode } from '../../constants'
+import { checkHtmlExists } from '../prepare'
+import { transformUserConfig } from '../transform/transformUserConfig'
 
 const clearConsole = require('react-dev-utils/clearConsole')
 const formatWebpackMessages = require('react-dev-utils/formatWebpackMessages')
 
 const isInteractive = process.stdout.isTTY
 
-export function createCompiler({ config }: { config: Configuration }) {
-  let compiler
+export function createCompiler({
+  config,
+  instanceImpl,
+}: {
+  config: ConfigMix
+  instanceImpl: InstanceImpl
+}) {
+  let compiler: CompilerImpl
   try {
-    compiler = webpack(config)
+    // @ts-expect-error
+    compiler = instanceImpl(config)
   } catch (err: any) {
     console.log(chalk.red('Failed to compile.'))
     console.log()
@@ -26,7 +41,7 @@ export function createCompiler({ config }: { config: Configuration }) {
     console.log('Compiling...')
   })
 
-  compiler.hooks.done.tap('done', async (stats) => {
+  compiler.hooks.done.tap('done', async (stats: any) => {
     const statsData = stats.toJson({
       all: false,
       warnings: true,
@@ -66,4 +81,54 @@ export function createCompiler({ config }: { config: Configuration }) {
   })
 
   return compiler
+}
+
+interface ICreateInstanceImpl {
+  config: ConfigMix
+  instanceImpl: InstanceImpl
+  devServerImpl: DevServerImpl
+}
+
+export async function createInstanceImpl(opts: {
+  paths: Paths
+  mode: EMode
+}): Promise<ICreateInstanceImpl> {
+  const { paths, mode } = opts
+
+  // read config
+  const configFactory = await transformUserConfig({ paths })
+  const { bundler, config } = await configFactory({ mode })
+
+  let instanceImpl: InstanceImpl
+  let devServerImpl: DevServerImpl
+  if (bundler === EBundler.webpack) {
+    // check index.html
+    checkHtmlExists({
+      migrateToRoot: false,
+      paths,
+    })
+
+    instanceImpl = require('webpack')
+    devServerImpl = require('webpack-dev-server')
+  } else if (bundler === EBundler.rspack) {
+    // ensure rspack installed
+    const mod: typeof import('@xn-sakina/bundler-rspack') = require('@xn-sakina/bundler-rspack')
+
+    // check index.html
+    checkHtmlExists({
+      migrateToRoot: true,
+      paths,
+    })
+
+    instanceImpl = mod.rspack.rspack
+    devServerImpl = mod.rspackDevServer.RspackDevServer
+  } else {
+    throw new Error('Never')
+  }
+
+  return {
+    instanceImpl,
+    devServerImpl,
+    config,
+  }
 }

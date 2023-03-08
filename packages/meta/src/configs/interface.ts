@@ -1,6 +1,7 @@
 import type { MFSU } from '@umijs/mfsu'
 import Config from 'webpack-chain'
 import { EMode, ENpmClient, ESplitStrategys } from '../constants'
+import { RspConfig, WebpackConfig } from './bundler/rspack/interface'
 import { IEnvs } from './envs'
 import { Paths } from './paths'
 
@@ -169,3 +170,14 @@ export interface IBabelConfig {
   babelrc: boolean
   [key: string]: any
 }
+
+export type ConfigMix = WebpackConfig | RspConfig
+export interface IConfigMixWebpack {
+  bundler: EBundler.webpack
+  config: WebpackConfig
+}
+export interface IConfigMixRspack {
+  bundler: EBundler.rspack
+  config: RspConfig
+}
+export type GetConfigs = IConfigMixWebpack | IConfigMixRspack

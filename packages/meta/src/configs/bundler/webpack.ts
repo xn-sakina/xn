@@ -1,10 +1,16 @@
 import { MFSU } from '@umijs/mfsu'
 import { lodash } from '@xn-sakina/xn-utils'
 import webpack from 'webpack'
-import { EMode } from '../../constants'
 import { addCache } from '../cache'
-import { addDevServer } from '../devServer'
-import { addEntry } from '../entry'
+import { createAddDevServer, createProgressPlugin } from '../devServer'
+import {
+  addBail,
+  addContext,
+  addDevtools,
+  addEntry,
+  addMode,
+  addTarget,
+} from '../entry'
 import { ECompile, IConfigChainOpts } from '../interface'
 import { addAssetRule } from '../module/addAssetRule'
 import { addCssRule } from '../module/addCssRule'
@@ -13,6 +19,7 @@ import { addOpti } from '../opti'
 import { addOutput } from '../output'
 import { addPlugins } from '../plugins'
 import { addResolve } from '../resolve'
+import { addStats } from '../stats'
 
 const { noop } = lodash
 
@@ -34,16 +41,16 @@ export const applyWebpackConfig = async (opts: IConfigChainOpts) => {
   }
 
   // mode
-  config.mode(mode === EMode.dev ? 'development' : 'production')
+  addMode(opts)
 
   // bail
-  config.bail(envs.isProd)
+  addBail(opts)
 
   // entry
   addEntry(opts)
 
   // context
-  config.context(paths.root)
+  addContext(opts)
 
   // output
   addOutput(opts)
@@ -63,24 +70,24 @@ export const applyWebpackConfig = async (opts: IConfigChainOpts) => {
   addOpti(opts)
 
   // devtool
-  config.devtool(envs.isDev ? 'cheap-module-source-map' : false)
+  addDevtools(opts)
 
   // dev server
+  const { progress } = createProgressPlugin(opts)
+  const addDevServer = createAddDevServer({
+    progress,
+    enableDevLoadingMiddleware: true,
+  })
   addDevServer(opts)
 
   // target
-  config.set('target', envs.isDev ? 'web' : ['web', 'es5'])
+  addTarget(opts)
 
   // cache
   addCache(opts)
 
   // stats
-  config.stats('errors-warnings')
-
-  // infra log
-  config.set('infrastructureLogging', {
-    level: 'error',
-  })
+  addStats(opts)
 
   // chain modify
   userConfig.webpackChain(config)

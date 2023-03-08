@@ -1,12 +1,8 @@
 import { chalk } from '@xn-sakina/xn-utils'
-import WebpackDevServer from 'webpack-dev-server'
-import { getPaths } from '../configs/paths'
-import { EMode } from '../constants'
-import { createCompiler } from './compiler/createCompiler'
-import { processPrepare } from './prepare'
-import { transformUserConfig } from './transform/transformUserConfig'
-
-const checkRequiredFiles = require('react-dev-utils/checkRequiredFiles')
+import { getPaths } from '../../configs/paths'
+import { EMode } from '../../constants'
+import { createCompiler, createInstanceImpl } from '../compiler/createCompiler'
+import { processPrepare } from '../prepare'
 
 async function dev() {
   processPrepare()
@@ -18,23 +14,21 @@ async function dev() {
   const root = process.cwd()
   const paths = getPaths({ root })
 
-  // check index.html
-  if (!checkRequiredFiles([paths.indexHtml])) {
-    process.exit(1)
-  }
+  // create impl
+  const { config, devServerImpl, instanceImpl } = await createInstanceImpl({
+    mode: EMode.dev,
+    paths,
+  })
 
-  // read config
-  const configFactory = await transformUserConfig({ paths })
-  const config = await configFactory({ mode: EMode.dev })
   const serverConfig = config.devServer
 
   // Create a webpack compiler that is configured with custom messages.
   const compiler = createCompiler({
     config,
+    instanceImpl,
   })
 
-  const devServer = new WebpackDevServer(serverConfig, compiler)
-  // Launch WebpackDevServer.
+  const devServer = new devServerImpl(serverConfig as any, compiler as any)
   devServer.startCallback(() => {
     console.log(chalk.cyan('Starting the development server...\n'))
     console.log(

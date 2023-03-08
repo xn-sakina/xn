@@ -16,13 +16,18 @@ export const getPaths = ({ root }: { root: string }) => {
 
   const tsconfigFilePath = join(root, 'tsconfig.json')
 
+  const indexHtml = tryPaths([
+    join(root, 'public/index.html'),
+    join(root, 'index.html'),
+  ])!
+
   const paths = {
     root,
     srcPath: join(root, 'src'),
     outputDir: join(root, 'dist'),
     configFile,
     publicDirPath: join(root, 'public'),
-    indexHtml: join(root, 'public/index.html'),
+    indexHtml,
     packageJson: join(root, 'package.json'),
     componentsDir,
     envFile: join(root, '.env'),

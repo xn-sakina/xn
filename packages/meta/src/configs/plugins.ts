@@ -59,6 +59,7 @@ export const addPlugins = ({
           from: paths.publicDirPath,
           to: paths.outputDir,
           toType: 'dir',
+          noErrorOnMissing: true,
           globOptions: {
             ignore: [
               // https://github.com/xn-sakina/xn/issues/3

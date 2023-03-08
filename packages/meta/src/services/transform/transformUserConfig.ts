@@ -1,8 +1,7 @@
 import { chalk, fs, logger } from '@xn-sakina/xn-utils'
 import { basename } from 'path'
-import type { Configuration } from 'webpack'
 import { getConfigs } from '../../configs'
-import { IXnConfig } from '../../configs/interface'
+import { GetConfigs, IXnConfig } from '../../configs/interface'
 import { Paths } from '../../configs/paths'
 import { EMode } from '../../constants'
 import { compileTypescript } from '../../utils/compileTypescript'
@@ -13,7 +12,7 @@ interface ITransformUserConfigOpts {
   paths: Paths
 }
 
-type ConfigFactory = (opts: { mode: EMode }) => Promise<Configuration>
+type ConfigFactory = (opts: { mode: EMode }) => Promise<GetConfigs>
 
 export const transformUserConfig = async ({
   paths,

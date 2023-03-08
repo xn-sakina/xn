@@ -11,6 +11,7 @@ import {
   ECompile,
   ECssMinify,
   EJsMinify,
+  GetConfigs,
   IConfigChainOpts,
   InternalUserConfig,
   IXnConfig,
@@ -30,7 +31,7 @@ export const getConfigs = async ({
   root,
   mode,
   userConfig: _userConfig,
-}: IGetConfigsOpts) => {
+}: IGetConfigsOpts): Promise<GetConfigs> => {
   const config = new Config()
 
   const paths = getPaths({ root })
@@ -99,12 +100,18 @@ export const getConfigs = async ({
 
   if (bundler === EBundler.webpack) {
     const mod: typeof import('./bundler/webpack') = require('./bundler/webpack')
-    return mod.applyWebpackConfig(opts)
+    return {
+      bundler: EBundler.webpack,
+      config: await mod.applyWebpackConfig(opts),
+    }
   }
 
   if (bundler === EBundler.rspack) {
     const mod: typeof import('./bundler/rspack') = require('./bundler/rspack')
-    return mod.applyRspackConfig(opts)
+    return {
+      bundler: EBundler.rspack,
+      config: await mod.applyRspackConfig(opts),
+    }
   }
 
   throw new Error('invalid bundler')
