@@ -1,6 +1,6 @@
 import type { MFSU } from '@umijs/mfsu'
 import Config from 'webpack-chain'
-import { ENpmClient, ESplitStrategys } from '../constants'
+import { EMode, ENpmClient, ESplitStrategys } from '../constants'
 import { IEnvs } from './envs'
 import { Paths } from './paths'
 
@@ -23,6 +23,12 @@ export enum ECssMinify {
   cssMini = 'cssMini',
   esbuild = 'esbuild',
   parcelCss = 'parcelCss',
+}
+
+type Bundler = `${EBundler}`
+export enum EBundler {
+  webpack = 'webpack',
+  rspack = 'rspack',
 }
 
 export interface IXnConfig {
@@ -108,6 +114,13 @@ export interface IXnConfig {
    * @default false
    */
   monorepoRedirect?: boolean
+  /**
+   * change bundler
+   * @default webpack
+   * @enum 'webpack' | 'rspack'
+   * @description if you want to use rspack, you need to install `@xn-sakina/bundler-rspack`
+   */
+  bundler?: Bundler
 }
 
 export type InternalUserConfig = Required<IXnConfig>
@@ -123,6 +136,7 @@ export interface IPkg {
 }
 
 export interface IConfigChainOpts {
+  mode: EMode
   pkg: IPkg
   config: Config
   userConfig: InternalUserConfig
@@ -143,6 +157,7 @@ export interface IDevProgress {
 export interface IMonorepoInfo {
   isMonorepo: boolean
   monorepoRoot: string
+  redirectAlias?: Record<string, string>
 }
 
 export interface IBabelConfig {

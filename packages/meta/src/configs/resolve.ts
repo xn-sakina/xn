@@ -13,7 +13,12 @@ const FIXED_ALIAS_DEPS = [
   'react-router-dom',
 ] as const
 
-export const addResolve = ({ config, userConfig, root }: IConfigChainOpts) => {
+export const addResolve = ({
+  config,
+  userConfig,
+  root,
+  monorepoInfo,
+}: IConfigChainOpts) => {
   const fixedCoreDepsAlias = FIXED_ALIAS_DEPS.reduce<Record<string, string>>(
     (memo, cur) => {
       const target = tryResolveDep({
@@ -34,6 +39,7 @@ export const addResolve = ({ config, userConfig, root }: IConfigChainOpts) => {
     .alias.merge({
       'regenerator-runtime': asyncPolyfill,
       'core-js': corejsPolyfill,
+      ...(monorepoInfo.redirectAlias || {}),
       ...fixedCoreDepsAlias,
       ...userConfig.alias,
     })

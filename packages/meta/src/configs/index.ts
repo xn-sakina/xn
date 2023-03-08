@@ -1,17 +1,13 @@
-import { MFSU } from '@umijs/mfsu'
 import { fs, lodash } from '@xn-sakina/xn-utils'
-import webpack from 'webpack'
 import Config from 'webpack-chain'
 import { EMode } from '../constants'
 import { findNpmClient } from '../utils/findNpmClient'
 import { detectMonorepo } from '../utils/monorepoInfo'
-import { addCache } from './cache'
-import { addDevServer } from './devServer'
-import { addEntry } from './entry'
 import { getClientEnvironment } from './envs'
 import { getMonorepoRedirectAlias } from './features/monorepoRedirect'
 import { handleUserConfig } from './handler/userConfig'
 import {
+  EBundler,
   ECompile,
   ECssMinify,
   EJsMinify,
@@ -19,16 +15,10 @@ import {
   InternalUserConfig,
   IXnConfig,
 } from './interface'
-import { addAssetRule } from './module/addAssetRule'
-import { addCssRule } from './module/addCssRule'
-import { addJavaScriptRule } from './module/addJavaScriptRule'
-import { addOpti } from './opti'
-import { addOutput } from './output'
 import { getPaths } from './paths'
-import { addPlugins, getDefaultTitle } from './plugins'
-import { addResolve } from './resolve'
+import { getDefaultTitle } from './plugins'
 
-const { merge, noop } = lodash
+const { merge } = lodash
 
 interface IGetConfigsOpts {
   root: string
@@ -65,6 +55,7 @@ export const getConfigs = async ({
     cssMinify: ECssMinify.parcelCss,
     singlePack: false,
     monorepoRedirect: false,
+    bundler: EBundler.webpack,
   }
   const userConfig = merge(defaultConfig, _userConfig) as InternalUserConfig
   // handle publicPath
@@ -83,100 +74,38 @@ export const getConfigs = async ({
   const npmClient = findNpmClient({ projectRoot: monorepoInfo.monorepoRoot })
 
   // monorepo redirect
-  let monorepoRedirectAlias: Record<string, string> = {}
   if (userConfig.monorepoRedirect) {
-    monorepoRedirectAlias = await getMonorepoRedirectAlias({
+    monorepoInfo.redirectAlias = await getMonorepoRedirectAlias({
       root,
       monorepoInfo,
       pkg: pkgContent,
     })
-    // add alias
-    config.resolve.alias.merge(monorepoRedirectAlias)
   }
 
-  // mfsu
-  let mfsu: MFSU | undefined
-  if (envs.isDev && userConfig.mfsu) {
-    mfsu = new MFSU({
-      implementor: webpack as any,
-      buildDepWithESBuild: true,
-      depBuildConfig: {},
-      startBuildWorker: noop as any,
-      unMatchLibs: [...Object.keys(monorepoRedirectAlias)],
-    })
-    // mfsu only support esbuild in `development` env
-    userConfig.compile = ECompile.esbuild
-  }
   // opts
   const opts: IConfigChainOpts = {
+    mode,
     pkg: pkgContent,
     config,
     userConfig,
     paths,
     envs,
     root,
-    mfsu,
     monorepoInfo,
     npmClient,
   }
 
-  // mode
-  config.mode(mode === EMode.dev ? 'development' : 'production')
+  const bundler = userConfig.bundler
 
-  // bail
-  config.bail(envs.isProd)
-
-  // entry
-  addEntry(opts)
-
-  // context
-  config.context(paths.root)
-
-  // output
-  addOutput(opts)
-
-  // resolve
-  addResolve(opts)
-
-  // module
-  addJavaScriptRule(opts)
-  addCssRule(opts)
-  addAssetRule(opts)
-
-  // plugins
-  addPlugins(opts)
-
-  // opti
-  addOpti(opts)
-
-  // devtool
-  config.devtool(envs.isDev ? 'cheap-module-source-map' : false)
-
-  // dev server
-  addDevServer(opts)
-
-  // target
-  config.set('target', envs.isDev ? 'web' : ['web', 'es5'])
-
-  // cache
-  addCache(opts)
-
-  // stats
-  config.stats('errors-warnings')
-
-  // infra log
-  config.set('infrastructureLogging', {
-    level: 'error',
-  })
-
-  // chain modify
-  userConfig.webpackChain(config)
-
-  // mfsu
-  const configObj = config.toConfig()
-  if (mfsu) {
-    await mfsu.setWebpackConfig({ config: configObj } as any)
+  if (bundler === EBundler.webpack) {
+    const mod: typeof import('./bundler/webpack') = require('./bundler/webpack')
+    return mod.applyWebpackConfig(opts)
   }
 
-  return configObj
+  if (bundler === EBundler.rspack) {
+    const mod: typeof import('./bundler/rspack') = require('./bundler/rspack')
+    return mod.applyRspackConfig(opts)
+  }
+
+  throw new Error('invalid bundler')
 }
