@@ -1,0 +1,40 @@
+{
+  "name": "@xn-sakina/example-rspack",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "xn dev",
+    "build": "xn build"
+  },
+  "dependencies": {
+    "@arco-design/web-react": "^2.42.2",
+    "@tanstack/react-query": "^4.19.1",
+    "antd": "^4.24.0",
+    "lodash": "4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.5",
+    "@xn-sakina/example-lib": "workspace:*",
+    "react-app": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.13",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@types/react-router-dom": "^5.3.3",
+    "@xn-sakina/meta": "workspace:*",
+    "typescript": "^4.9.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
