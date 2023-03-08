@@ -50,6 +50,9 @@ export const checkHtmlExists = (opts: {
       fs.copySync(publicHtml, rootHtml)
       // remove public/index.html
       fs.removeSync(publicHtml)
+      // exit
+      logger.info(chalk.green(`Migration completed, please restart.`))
+      process.exit(0)
     } else {
       // check root/index.html
       if (!checkRequiredFiles([rootHtml])) {

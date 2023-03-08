@@ -17,8 +17,8 @@ export const getPaths = ({ root }: { root: string }) => {
   const tsconfigFilePath = join(root, 'tsconfig.json')
 
   const indexHtml = tryPaths([
-    join(root, 'public/index.html'),
     join(root, 'index.html'),
+    join(root, 'public/index.html'),
   ])!
 
   const paths = {
@@ -27,11 +27,11 @@ export const getPaths = ({ root }: { root: string }) => {
     outputDir: join(root, 'dist'),
     configFile,
     publicDirPath: join(root, 'public'),
-    indexHtml,
     packageJson: join(root, 'package.json'),
     componentsDir,
     envFile: join(root, '.env'),
     tsconfigFile: existsSync(tsconfigFilePath) && tsconfigFilePath,
+    indexHtml,
   }
 
   return paths
