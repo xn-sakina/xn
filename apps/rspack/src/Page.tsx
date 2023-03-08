@@ -2,6 +2,8 @@ import { Button } from "antd";
 import { Button as ArcoButton } from "@arco-design/web-react";
 import { add } from "lodash";
 import { a as libA } from "@xn-sakina/example-lib";
+import { some } from "./a";
+import { some2 } from "./a1";
 
 import imgUrl from "./img.jpg";
 import SvgUrl from "./s.svg";
@@ -19,6 +21,8 @@ export default function Page() {
       <ArcoButton>button</ArcoButton>
       lib-a:{libA}
       <div className={styles.red}>red text</div>
+      <div>a-js: {some}</div>
+      <div>a-js: {some2}</div>
     </div>
   );
 }
