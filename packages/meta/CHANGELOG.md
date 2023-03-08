@@ -1,5 +1,12 @@
 # @xn-sakina/meta
 
+## 3.0.2
+
+### Patch Changes
+
+- Support mjs and cjs
+  - @xn-sakina/xn-utils@3.0.2
+
 ## 3.0.1
 
 ### Patch Changes
