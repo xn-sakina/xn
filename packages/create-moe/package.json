@@ -1,6 +1,6 @@
 {
   "name": "create-moe",
-  "version": "2.5.1",
+  "version": "3.0.0",
   "description": "Easy react bundle cli powered by swc & webpack5",
   "keywords": [
     "react",
@@ -22,7 +22,7 @@
     "create-moe": "bin/create-moe.js"
   },
   "scripts": {
-    "build": "rimraf dist && tsc --declarationMap false"
+    "build": "echo build"
   },
   "dependencies": {
     "create-xn-app": "workspace:*"

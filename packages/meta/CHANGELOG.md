@@ -1,5 +1,16 @@
 # @xn-sakina/meta
 
+## 3.0.0
+
+### Major Changes
+
+- Support rspack bundler
+
+### Patch Changes
+
+- Updated dependencies
+  - @xn-sakina/xn-utils@3.0.0
+
 ## 2.5.1
 
 ### Patch Changes
