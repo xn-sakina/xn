@@ -27,6 +27,10 @@
     "build": "rimraf dist && tsc --declarationMap false",
     "dev": "tsc --watch"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@rspack/core": "0.0.23",
+    "@rspack/postcss-loader": "0.0.23",
+    "@rspack/dev-server": "0.0.23",
+    "@rspack/plugin-html": "0.0.23"
+  }
 }
