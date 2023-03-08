@@ -1,3 +1,4 @@
+import { winPath } from '@xn-sakina/xn-utils'
 import { DefinePlugin, ProvidePlugin } from 'webpack'
 import { IConfigChainOpts } from './interface'
 import { Paths } from './paths'
@@ -59,7 +60,11 @@ export const addPlugins = ({
           to: paths.outputDir,
           toType: 'dir',
           globOptions: {
-            ignore: [paths.indexHtml, '.DS_Store'],
+            ignore: [
+              // https://github.com/xn-sakina/xn/issues/3
+              winPath(paths.indexHtml),
+              '**/.DS_Store',
+            ],
           },
         },
       ],

@@ -28,3 +28,4 @@ export {
 export { logger } from './logger'
 export * from './whichNpmClient'
 export * from './tryResolveDep'
+export * from './winPath'
