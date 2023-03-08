@@ -60,6 +60,21 @@ export default defineConfig({
 });
 ```
 
+#### Use `rspack`
+
+```bash
+  pnpm add -D @xn-sakina/bundler-rspack
+```
+
+```ts
+// xn.config.ts
+import { defineConfig } from "@xn-sakina/meta";
+
+export default defineConfig({
+  bundler: "rspack",
+});
+```
+
 ### License
 
 MIT
