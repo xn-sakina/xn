@@ -7,7 +7,12 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["@xn-sakina/example-lib", "react-app", "react-app-18"],
+  "ignore": [
+    "@xn-sakina/example-lib",
+    "react-app",
+    "react-app-18",
+    "@xn-sakina/example-rspack"
+  ],
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "updateInternalDependents": "always"
   }

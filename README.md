@@ -13,14 +13,50 @@ Easy react bundle cli powered by swc & webpack5
 
 ### Config
 
+Example:
+
 ```ts
 // xn.config.ts
 import { defineConfig } from "@xn-sakina/meta";
 
 export default defineConfig({
-  cache: true,
-  mfsu: true,
+  title: "Html Title",
+
+  publicPath: "/path",
+
+  alias: {},
+
+  // swc | esbuild | babel
   compile: "swc",
+
+  mfsu: true,
+
+  // enable webpack 5 persist cache
+  cache: true,
+
+  // true | [] | 'granular'
+  splitChunks: ["react-query"],
+
+  analyzer: true,
+
+  babelConfig: (config) => config,
+
+  webpackChain: (config) => config,
+
+  parcelCss: true,
+
+  // terser | esbuild | swc
+  jsMinify: "esbuild",
+
+  // cssMini | esbuild | parcelCss
+  cssMinify: "parcelCss",
+
+  singlePack: false,
+
+  monorepoRedirect: true,
+
+  // webpack | rspack
+  bundler: "rspack",
 });
 ```
 
