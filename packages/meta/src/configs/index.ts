@@ -57,6 +57,7 @@ export const getConfigs = async ({
     singlePack: false,
     monorepoRedirect: false,
     bundler: EBundler.webpack,
+    svgr: true,
     // rspack feature
     rspackConfig: (c) => c,
   }

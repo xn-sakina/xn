@@ -129,6 +129,11 @@ export interface IXnConfig extends IXnConfigRspack {
    * @description if you want to use rspack, you need to install `@xn-sakina/bundler-rspack`
    */
   bundler?: Bundler
+  /**
+   * use svgr
+   * @default true
+   */
+  svgr?: boolean
 }
 
 export type InternalUserConfig = Required<IXnConfig>

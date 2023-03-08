@@ -17,7 +17,12 @@ export const addAssetRule = (opts: IConfigChainOpts) => {
   const isSinglePack = opts.userConfig.singlePack
 
   // svg
-  topRule.oneOf('svg').test(REG.svgReg).use('svg-loader').loader(svgrWebpack)
+  const svgRule = topRule.oneOf('svg').test(REG.svgReg)
+  if (opts.userConfig.svgr) {
+    svgRule.use('svg-loader').loader(svgrWebpack)
+  } else {
+    svgRule.set('type', isSinglePack ? EAssetType.inline : EAssetType.auto)
+  }
 
   // image
   topRule

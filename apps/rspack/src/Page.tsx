@@ -6,7 +6,7 @@ import { some } from "./a";
 import { some2 } from "./a1";
 
 import imgUrl from "./img.jpg";
-import SvgUrl from "./s.svg";
+import svgUrl from "./s.svg";
 
 import styles from "./sass.module.scss";
 import "./sass.scss";
@@ -16,7 +16,7 @@ export default function Page() {
     <div>
       {add(1, 2)}
       <img src={imgUrl} alt="img" />
-      <SvgUrl />
+      <img src={svgUrl} alt="img" />
       <Button>button</Button>
       <ArcoButton>button</ArcoButton>
       lib-a:{libA}

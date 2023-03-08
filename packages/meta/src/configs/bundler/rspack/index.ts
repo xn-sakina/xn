@@ -97,7 +97,7 @@ export const applyRspackConfig = async (
         rspackConfig.module.rules ||= []
         addJavaScriptRuleRsp(rspackConfig)
         addCssRuleRsp(rawConfig, rspackConfig)
-        addAssetRuleRsp(rawConfig, rspackConfig)
+        addAssetRuleRsp({ opts, rawConfig, config: rspackConfig })
       },
     ],
     plugins: [

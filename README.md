@@ -20,41 +20,56 @@ Example:
 import { defineConfig } from "@xn-sakina/meta";
 
 export default defineConfig({
+  // default: `${package.json#name}`
   title: "Html Title",
 
   publicPath: "/path",
 
   alias: {},
 
+  // default: 'babel'
   // swc | esbuild | babel
   compile: "swc",
 
+  // default: false
   mfsu: true,
 
+  // default: false
   // enable webpack 5 persist cache
   cache: true,
 
+  // default: true
   // true | [] | 'granular'
   splitChunks: ["react-query"],
 
+  // default: false
   analyzer: true,
 
   babelConfig: (config) => config,
 
   webpackChain: (config) => config,
 
+  // default: false
   parcelCss: true,
 
+  // default: 'swc'
   // terser | esbuild | swc
   jsMinify: "esbuild",
 
+  // default: 'parcelCss'
   // cssMini | esbuild | parcelCss
   cssMinify: "parcelCss",
 
+  // default: false
   singlePack: false,
 
+  // default: false
   monorepoRedirect: true,
 
+  // default: `true`
+  svgr: true,
+
+  // default: 'webpack'
   // webpack | rspack
   bundler: "rspack",
 });
