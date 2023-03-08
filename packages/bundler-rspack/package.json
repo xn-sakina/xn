@@ -1,5 +1,5 @@
 {
-  "name": "create-moe",
+  "name": "@xn-sakina/bundler-rspack",
   "version": "2.5.1",
   "description": "Easy react bundle cli powered by swc & webpack5",
   "keywords": [
@@ -11,20 +11,22 @@
     "react-app",
     "react-cli"
   ],
-  "homepage": "https://github.com/xn-sakina/xn/tree/main/packages/create-moe#README",
+  "homepage": "https://github.com/xn-sakina/xn/tree/main/packages/bundler-rspack#README",
   "repository": {
     "type": "git",
     "url": "https://github.com/xn-sakina/xn"
   },
   "license": "MIT",
   "author": "fz6m",
-  "bin": {
-    "create-moe": "bin/create-moe.js"
-  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "rimraf dist && tsc --declarationMap false"
+    "build": "rimraf dist && tsc --declarationMap false",
+    "dev": "tsc --watch"
   },
-  "dependencies": {
-    "create-xn-app": "workspace:*"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }

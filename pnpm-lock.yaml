@@ -156,6 +156,8 @@ importers:
         specifier: ^4.9.4
         version: registry.npmjs.org/typescript@4.9.4
 
+  packages/bundler-rspack: {}
+
   packages/create-moe:
     dependencies:
       create-xn-app:

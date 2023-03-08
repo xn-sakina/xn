@@ -3,7 +3,7 @@ import { getPkgs } from "./getPkgs";
 import sortPkg from "sort-package-json";
 
 const run = async () => {
-  const nameList: string[] = [];
+  // const nameList: string[] = [];
 
   getPkgs().forEach((p) => {
     const pkg = path.join(p, "package.json");
@@ -52,13 +52,13 @@ See more info at [xn-sakina/xn](https://github.com/xn-sakina/xn)
       "utf-8"
     );
 
-    nameList.push(newPkgJson.name);
+    // nameList.push(newPkgJson.name);
   });
 
   // refresh fixed version
   const csConfigPath = path.join(__dirname, "../.changeset/config.json");
   const changesetsConfig = require(csConfigPath);
-  changesetsConfig.fixed = [nameList];
+  changesetsConfig.fixed = [["**"]];
   fs.writeFileSync(
     csConfigPath,
     `${JSON.stringify(changesetsConfig, null, 2)}\n`,

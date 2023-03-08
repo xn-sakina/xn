@@ -1,4 +1,4 @@
-# create-moe
+# @xn-sakina/bundler-rspack
 
 Easy react bundle cli powered by swc & webpack5
 
