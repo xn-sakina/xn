@@ -1,3 +1,4 @@
+import { logger } from '@xn-sakina/xn-utils'
 import { Configuration as WebpackConfig } from 'webpack'
 import { createAddDevServer } from '../../devServer'
 import {
@@ -7,7 +8,7 @@ import {
   addMode,
   addTarget,
 } from '../../entry'
-import { IConfigChainOpts } from '../../interface'
+import { EBundler, IConfigChainOpts, IXnConfig } from '../../interface'
 import { addAssetRule } from '../../module/addAssetRule'
 import { addOpti } from '../../opti'
 import { addOutput } from '../../output'
@@ -31,9 +32,6 @@ export const applyRspackConfig = async (
   opts: IConfigChainOpts,
 ): Promise<RspConfig> => {
   const { config } = opts
-
-  // check config
-  // todo
 
   // apply config
   const rspackConfig: RspConfig = {}
@@ -164,9 +162,6 @@ export const applyRspackConfig = async (
     ],
   }
 
-  // modify rspack config
-  // todo
-
   // generate webpack config
   Object.entries(configChain).forEach(([_, call]) => {
     call[0]()
@@ -177,5 +172,33 @@ export const applyRspackConfig = async (
     call[1](rawConfig)
   })
 
-  return rspackConfig
+  // modify rspack config
+  const modifiedRspackConfig = await opts.userConfig.rspackConfig(rspackConfig)
+
+  return modifiedRspackConfig
+}
+
+export function checkConfigForRspack(originUserConfig: IXnConfig) {
+  if (originUserConfig?.bundler !== EBundler.rspack) {
+    return
+  }
+
+  const notSupportOptions = [
+    'compile',
+    'mfsu',
+    'cache',
+    'babelConfig',
+    'webpackChain',
+    'parcelCss',
+    'jsMinify',
+    'cssMinify',
+    'singlePack',
+  ]
+  notSupportOptions.forEach((option) => {
+    // @ts-ignore
+    if (originUserConfig?.[option]) {
+      logger.error(`rspack not support '${option}'`)
+      throw new Error(`rspack not support '${option}'`)
+    }
+  })
 }

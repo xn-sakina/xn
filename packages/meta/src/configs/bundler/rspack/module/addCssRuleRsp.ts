@@ -73,8 +73,6 @@ export function addCssRuleFromWebpack({ config }: IConfigChainOpts) {
 
     // not need css loader
 
-    rule.set('type', RSPACK_CONST.type.css)
-
     // postcss loader
     rule.use('postcss-loader').loader(postcssLoader).options({
       postcssOptions,
@@ -89,9 +87,12 @@ export function addCssRuleFromWebpack({ config }: IConfigChainOpts) {
         currentLoader.options(options)
       }
     }
-    // side effects
     if (!isCssModule) {
+      // side effects
       rule.set('sideEffects', true)
+      rule.set('type', RSPACK_CONST.type.css)
+    } else {
+      rule.set('type', RSPACK_CONST.type.cssModule)
     }
   })
 }

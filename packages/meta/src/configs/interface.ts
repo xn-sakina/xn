@@ -32,7 +32,14 @@ export enum EBundler {
   rspack = 'rspack',
 }
 
-export interface IXnConfig {
+export interface IXnConfigRspack {
+  /**
+   * modify rspack config
+   */
+  rspackConfig?: (config: RspConfig) => RspConfig | Promise<RspConfig>
+}
+
+export interface IXnConfig extends IXnConfigRspack {
   /**
    * index.html title auto inject
    * @default require('package.json').name

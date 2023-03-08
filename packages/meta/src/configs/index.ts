@@ -57,6 +57,8 @@ export const getConfigs = async ({
     singlePack: false,
     monorepoRedirect: false,
     bundler: EBundler.webpack,
+    // rspack feature
+    rspackConfig: (c) => c,
   }
   const userConfig = merge(defaultConfig, _userConfig) as InternalUserConfig
   // handle publicPath
@@ -108,6 +110,8 @@ export const getConfigs = async ({
 
   if (bundler === EBundler.rspack) {
     const mod: typeof import('./bundler/rspack') = require('./bundler/rspack')
+    // check config for rspack
+    mod.checkConfigForRspack(_userConfig)
     return {
       bundler: EBundler.rspack,
       config: await mod.applyRspackConfig(opts),
