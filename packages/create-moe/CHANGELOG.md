@@ -1,5 +1,11 @@
 # create-moe
 
+## 3.1.0
+
+### Patch Changes
+
+- create-xn-app@3.1.0
+
 ## 3.0.2
 
 ### Patch Changes
