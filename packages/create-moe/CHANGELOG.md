@@ -1,5 +1,12 @@
 # create-moe
 
+## 3.0.1
+
+### Patch Changes
+
+- Updated dependencies
+  - create-xn-app@3.0.1
+
 ## 3.0.0
 
 ### Patch Changes

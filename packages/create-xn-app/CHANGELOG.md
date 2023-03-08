@@ -1,5 +1,12 @@
 # create-xn-app
 
+## 3.0.1
+
+### Patch Changes
+
+- move index.html to root by default
+  - @xn-sakina/xn-utils@3.0.1
+
 ## 3.0.0
 
 ### Patch Changes
