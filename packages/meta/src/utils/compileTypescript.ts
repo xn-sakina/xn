@@ -1,10 +1,16 @@
-import { EsbuildPhoenix } from '@xn-sakina/phoenix'
+import { loadConfig } from 'c12'
 
-const esbuild = require('esbuild')
-
-export const compileTypescript = ({ filePath }: { filePath: string }) => {
-  const ins = new EsbuildPhoenix({ implementor: esbuild, target: 'es2019' })
-  const module = require(filePath)
-  ins.restore()
-  return module?.default || module || {}
+export const compileTypescript = async ({
+  filePath,
+  cwd,
+}: {
+  filePath: string
+  cwd: string
+}) => {
+  const result = await loadConfig({
+    rcFile: false,
+    configFile: filePath,
+    cwd,
+  })
+  return result?.layers?.[0]?.config || {}
 }

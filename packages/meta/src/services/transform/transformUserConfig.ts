@@ -34,8 +34,11 @@ export const transformUserConfig = async ({
   if (paths.configFile?.length && existsSync(paths.configFile)) {
     // compile config file
     try {
-      const configExport = compileTypescript({ filePath: paths.configFile })
-      config = await configExport
+      const configExport = await compileTypescript({
+        filePath: paths.configFile,
+        cwd: paths.root,
+      })
+      config = configExport
     } catch (e: any) {
       console.log(e)
       console.log()
