@@ -1,5 +1,11 @@
 # @xn-sakina/meta
 
+## 3.1.1
+
+### Patch Changes
+
+- @xn-sakina/xn-utils@3.1.1
+
 ## 3.1.0
 
 ### Minor Changes

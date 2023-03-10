@@ -1,6 +1,6 @@
 {
   "name": "@xn-sakina/bundler-rspack",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Easy react bundle cli powered by swc & webpack5",
   "keywords": [
     "react",
@@ -28,9 +28,9 @@
     "dev": "tsc --watch"
   },
   "dependencies": {
-    "@rspack/core": "0.0.23",
-    "@rspack/postcss-loader": "0.0.23",
-    "@rspack/dev-server": "0.0.23",
-    "@rspack/plugin-html": "0.0.23"
+    "@rspack/core": "0.1.0",
+    "@rspack/postcss-loader": "0.1.0",
+    "@rspack/dev-server": "0.1.0",
+    "@rspack/plugin-html": "0.1.0"
   }
 }
