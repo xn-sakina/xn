@@ -189,7 +189,6 @@ export function checkConfigForRspack(originUserConfig: IXnConfig) {
     'cache',
     'babelConfig',
     'webpackChain',
-    'parcelCss',
     'jsMinify',
     'cssMinify',
     'singlePack',

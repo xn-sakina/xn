@@ -1,3 +1,4 @@
+import LightningCss from 'lightningcss'
 import { PACKAGES, REG, RSPACK_CONST } from '../../../../constants'
 import { IConfigChainOpts } from '../../../interface'
 import { getPostcssConfig } from '../../../module/postcss'
@@ -12,7 +13,10 @@ interface IRuleBaseRsp {
   options?: Record<string, any>
 }
 
-export function addCssRuleFromWebpack({ config }: IConfigChainOpts) {
+export function addCssRuleFromWebpack({
+  config,
+  userConfig,
+}: IConfigChainOpts) {
   const lessLoaderOptions = PACKAGES.loader.lessLoaderOptions()
 
   const cssRule: IRuleBaseRsp[] = [
@@ -60,8 +64,7 @@ export function addCssRuleFromWebpack({ config }: IConfigChainOpts) {
     },
   ]
 
-  const postcssLoader = RSPACK_CONST.loader.postcssLoader()
-  const postcssOptions = getPostcssConfig()
+  const useParcelCss = userConfig.parcelCss
   const topRule = config.module.rule('css')
   cssRule.forEach(({ name, test, exclude, loader, isCssModule, options }) => {
     const rule = topRule.oneOf(name)
@@ -73,10 +76,25 @@ export function addCssRuleFromWebpack({ config }: IConfigChainOpts) {
 
     // not need css loader
 
-    // postcss loader
-    rule.use('postcss-loader').loader(postcssLoader).options({
-      postcssOptions,
-    })
+    // postcss loader or parcel css loader
+    if (useParcelCss) {
+      rule
+        .use('lightningcss-loader')
+        .loader(PACKAGES.loader.lightningcssLoader)
+        .options({
+          implementation: LightningCss,
+        })
+    } else {
+      // FIXME: if you use rspack postcss loader, vert slow
+      //          https://github.com/web-infra-dev/rspack/issues/2180
+      //        if you use original postcss loader, will get warning
+      //          https://github.com/web-infra-dev/rspack/issues/2181
+      const postcssLoader = require('@xn-sakina/bundler-rspack').rsPostcssLoader
+      const postcssOptions = getPostcssConfig()
+      rule.use('postcss-loader').loader(postcssLoader).options({
+        postcssOptions,
+      })
+    }
 
     // current loader
     if (loader) {

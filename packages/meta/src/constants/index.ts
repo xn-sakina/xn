@@ -39,6 +39,8 @@ export const PACKAGES = {
   loader: {
     scssLoader: require.resolve('sass-loader'),
     lessLoader: require.resolve('less-loader'),
+    postcssLoader: require.resolve('postcss-loader'),
+    lightningcssLoader: require.resolve('lightningcss-loader'),
     lessLoaderOptions: () => {
       return {
         lessOptions: {
@@ -57,12 +59,6 @@ export const RSPACK_CONST = {
     tsx: 'tsx',
     css: 'css',
     cssModule: 'css/module',
-  },
-  loader: {
-    postcssLoader: () => {
-      const pkg: typeof import('@xn-sakina/bundler-rspack') = require('@xn-sakina/bundler-rspack')
-      return pkg.rsPostcssLoader
-    },
   },
 } as const
 

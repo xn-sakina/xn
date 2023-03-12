@@ -11,8 +11,6 @@ const cssLoader = require.resolve('css-loader')
 const cssLoaderModulesOption = {
   getLocalIdent: getCSSModuleLocalIdent,
 }
-const postcssLoader = require.resolve('postcss-loader')
-const lightningcssLoader = require.resolve('lightningcss-loader')
 
 interface IRuleBase {
   name: string
@@ -102,11 +100,14 @@ export const addCssRule = ({ config, envs, userConfig }: IConfigChainOpts) => {
 
     // postcss loader
     if (useParcelCss) {
-      rule.use('lightningcss-loader').loader(lightningcssLoader).options({
-        implementation: LightningCss,
-      })
+      rule
+        .use('lightningcss-loader')
+        .loader(PACKAGES.loader.lightningcssLoader)
+        .options({
+          implementation: LightningCss,
+        })
     } else {
-      rule.use('postcss-loader').loader(postcssLoader).options({
+      rule.use('postcss-loader').loader(PACKAGES.loader.postcssLoader).options({
         postcssOptions,
       })
     }

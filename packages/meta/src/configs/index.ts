@@ -35,6 +35,7 @@ export const getConfigs = async ({
   const config = new Config()
 
   const paths = getPaths({ root })
+  const useRspack = _userConfig.bundler === EBundler.rspack
 
   // user config default values
   const defaultConfig: InternalUserConfig = {
@@ -51,7 +52,8 @@ export const getConfigs = async ({
     babelConfig: (c) => c,
     webpackChain: (c) => c,
     mfsu: false,
-    parcelCss: false,
+    // FIXME: postcss loader very slow
+    parcelCss: useRspack ? true : false,
     jsMinify: EJsMinify.swc,
     cssMinify: ECssMinify.parcelCss,
     singlePack: false,
