@@ -32,9 +32,9 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 5 version",
+      ">0.1%",
+      "ie 10"
     ]
   }
 }
