@@ -1,5 +1,12 @@
 # @xn-sakina/meta
 
+## 3.1.2
+
+### Patch Changes
+
+- Default use parcel css loader instead of postcss loader
+  - @xn-sakina/xn-utils@3.1.2
+
 ## 3.1.1
 
 ### Patch Changes
