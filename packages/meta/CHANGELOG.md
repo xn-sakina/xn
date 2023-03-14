@@ -1,5 +1,12 @@
 # @xn-sakina/meta
 
+## 3.1.3
+
+### Patch Changes
+
+- Webpack CVE
+  - @xn-sakina/xn-utils@3.1.3
+
 ## 3.1.2
 
 ### Patch Changes
