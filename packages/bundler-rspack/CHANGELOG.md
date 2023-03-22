@@ -1,5 +1,11 @@
 # @xn-sakina/bundler-rspack
 
+## 3.2.0
+
+### Minor Changes
+
+- Fix rspack postcss loader very slow
+
 ## 3.1.3
 
 ## 3.1.2

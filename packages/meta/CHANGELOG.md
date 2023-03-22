@@ -1,5 +1,15 @@
 # @xn-sakina/meta
 
+## 3.2.0
+
+### Minor Changes
+
+- Fix rspack postcss loader very slow
+
+### Patch Changes
+
+- @xn-sakina/xn-utils@3.2.0
+
 ## 3.1.3
 
 ### Patch Changes
