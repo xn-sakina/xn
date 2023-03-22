@@ -28,9 +28,9 @@
     "dev": "tsc --watch"
   },
   "dependencies": {
-    "@rspack/core": "0.1.0",
-    "@rspack/postcss-loader": "0.1.0",
-    "@rspack/dev-server": "0.1.0",
-    "@rspack/plugin-html": "0.1.0"
+    "@rspack/core": "0.1.2",
+    "@rspack/postcss-loader": "0.1.2",
+    "@rspack/dev-server": "0.1.2",
+    "@rspack/plugin-html": "0.1.2"
   }
 }

@@ -85,11 +85,13 @@ export function addCssRuleFromWebpack({
           implementation: LightningCss,
         })
     } else {
-      // FIXME: if you use rspack postcss loader, vert slow
-      //          https://github.com/web-infra-dev/rspack/issues/2180
-      //        if you use original postcss loader, will get warning
-      //          https://github.com/web-infra-dev/rspack/issues/2181
-      const postcssLoader = require('@xn-sakina/bundler-rspack').rsPostcssLoader
+      // Why not use rspack postcss loader?
+      // Because impl of rspack postcss loader is incomplete
+      // const postcssLoader = require('@xn-sakina/bundler-rspack').rsPostcssLoader
+
+      // this issue has been fixed in version >= 0.1.2
+      // but import minified css is still a little bit slow
+      const postcssLoader = PACKAGES.loader.postcssLoader
       const postcssOptions = getPostcssConfig()
       rule.use('postcss-loader').loader(postcssLoader).options({
         postcssOptions,
