@@ -28,9 +28,11 @@ export const addOptiRsp = ({ opts, rawConfig, config }: IRspContext) => {
     const willSplitChunks = Array.isArray(userConfig.splitChunks)
       ? userConfig.splitChunks
       : []
-    config.optimization.splitChunks = getSplitChunksConfig({
+    // rspack currently only supprot easy splitChunks config
+    const { splitChunks } = getSplitChunksConfig({
       componentsDir: paths.componentsDir,
       extraSplitChunk: willSplitChunks,
-    }) as any
+    })
+    config.optimization.splitChunks = splitChunks as any
   }
 }
