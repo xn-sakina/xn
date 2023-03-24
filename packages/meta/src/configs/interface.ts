@@ -94,7 +94,10 @@ export interface IXnConfig extends IXnConfigRspack {
    * custom webpack config
    * @default (c)=>c
    */
-  webpackChain?: (config: Config) => Config
+  webpackChain?: (
+    config: Config,
+    { webpack }: { webpack: typeof import('webpack') },
+  ) => Config
   /**
    * open parcel css instead `postcss`
    */

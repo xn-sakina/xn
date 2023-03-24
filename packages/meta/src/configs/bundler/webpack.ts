@@ -90,7 +90,7 @@ export const applyWebpackConfig = async (opts: IConfigChainOpts) => {
   addStats(opts)
 
   // chain modify
-  userConfig.webpackChain(config)
+  userConfig.webpackChain(config, { webpack })
 
   // mfsu
   const configObj = config.toConfig()
