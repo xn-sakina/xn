@@ -1,5 +1,7 @@
 # @xn-sakina/bundler-rspack
 
+## 3.2.1
+
 ## 3.2.0
 
 ### Minor Changes

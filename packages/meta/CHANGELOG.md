@@ -1,5 +1,12 @@
 # @xn-sakina/meta
 
+## 3.2.1
+
+### Patch Changes
+
+- fix build exit code
+  - @xn-sakina/xn-utils@3.2.1
+
 ## 3.2.0
 
 ### Minor Changes
