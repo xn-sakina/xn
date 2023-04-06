@@ -34,7 +34,8 @@ export const checkHtmlExists = (opts: {
   migrateToRoot?: boolean
   paths: Paths
 }) => {
-  // TODO: if use rspack, index.html must in root dir, we auto migrate it, so cannot check it
+  // rspack support builtins.copy globOptions.ignore when version >= 0.1.6
+  // we don't need to migrate index.html to root dir
   const { migrateToRoot, paths } = opts
   const checkRequiredFiles = require('react-dev-utils/checkRequiredFiles')
   if (migrateToRoot) {

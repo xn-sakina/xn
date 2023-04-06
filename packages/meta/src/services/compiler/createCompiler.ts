@@ -116,7 +116,7 @@ export async function createInstanceImpl(opts: {
 
     // check index.html
     checkHtmlExists({
-      migrateToRoot: true,
+      migrateToRoot: false,
       paths,
     })
 

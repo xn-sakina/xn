@@ -1,4 +1,4 @@
-import { lodash } from '@xn-sakina/xn-utils'
+import { lodash, winPath } from '@xn-sakina/xn-utils'
 import { IRspContext, RspBuiltins } from './interface'
 
 const { set } = lodash
@@ -83,10 +83,9 @@ export const addPluginsRsp = ({ opts, config }: IRspContext) => {
         to: paths.outputDir,
         toType: 'dir',
         noErrorOnMissing: true,
-        // TODO: rspack current not support `globOptions`
-        // globOptions: {
-        //   ignore: [winPath(paths.indexHtml), '**/.DS_Store'],
-        // },
+        globOptions: {
+          ignore: [winPath(paths.indexHtml), '**/.DS_Store'],
+        },
       },
     ],
   } satisfies RspBuiltins['copy'])
