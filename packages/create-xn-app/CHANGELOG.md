@@ -1,5 +1,15 @@
 # create-xn-app
 
+## 3.3.0
+
+### Minor Changes
+
+- Upgrade deps version and improve rspack copy files
+
+### Patch Changes
+
+- @xn-sakina/xn-utils@3.3.0
+
 ## 3.2.1
 
 ### Patch Changes

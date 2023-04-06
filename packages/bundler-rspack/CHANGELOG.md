@@ -1,5 +1,11 @@
 # @xn-sakina/bundler-rspack
 
+## 3.3.0
+
+### Minor Changes
+
+- Upgrade deps version and improve rspack copy files
+
 ## 3.2.1
 
 ## 3.2.0
