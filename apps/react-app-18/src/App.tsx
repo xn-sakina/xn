@@ -1,5 +1,4 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import "antd/dist/antd.css";
 import { ConfigProvider as AntdConfigProvider } from "antd";
 import { ConfigProvider } from "@arco-design/web-react";
 import "@arco-design/web-react/dist/css/arco.css";
