@@ -14,7 +14,7 @@
   "devDependencies": {
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.33",
-    "@types/react-dom": "^18.0.111",
+    "@types/react-dom": "^18.0.11",
     "@types/react-router-dom": "^5.3.3",
     "@xn-sakina/meta": "^{{{xnVersion}}}",
     "typescript": "^5.0.3"
