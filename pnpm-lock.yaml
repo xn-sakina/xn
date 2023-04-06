@@ -208,17 +208,17 @@ importers:
   packages/bundler-rspack:
     dependencies:
       '@rspack/core':
-        specifier: 0.1.2
-        version: registry.npmjs.org/@rspack/core@0.1.2(@swc/core@1.3.22)(esbuild@0.17.15)
+        specifier: 0.1.6
+        version: registry.npmjs.org/@rspack/core@0.1.6
       '@rspack/dev-server':
-        specifier: 0.1.2
-        version: registry.npmjs.org/@rspack/dev-server@0.1.2(@rspack/core@0.1.2)(@swc/core@1.3.22)(esbuild@0.17.15)(webpack@5.78.0)
+        specifier: 0.1.6
+        version: registry.npmjs.org/@rspack/dev-server@0.1.6(@rspack/core@0.1.6)(@swc/core@1.3.22)(esbuild@0.17.15)
       '@rspack/plugin-html':
-        specifier: 0.1.2
-        version: registry.npmjs.org/@rspack/plugin-html@0.1.2(@swc/core@1.3.22)(esbuild@0.17.15)
+        specifier: 0.1.6
+        version: registry.npmjs.org/@rspack/plugin-html@0.1.6
       '@rspack/postcss-loader':
-        specifier: 0.1.2
-        version: registry.npmjs.org/@rspack/postcss-loader@0.1.2
+        specifier: 0.1.6
+        version: registry.npmjs.org/@rspack/postcss-loader@0.1.6
 
   packages/create-moe:
     dependencies:
@@ -3659,120 +3659,119 @@ packages:
     engines: {node: '>=14'}
     dev: false
 
-  registry.npmjs.org/@rspack/binding-darwin-arm64@0.1.2:
-    resolution: {integrity: sha512-HD4Vms+P3C9Sdgx01wHkwxOmiY635+gcUqFbW71awiPGHN08lPkMhqQgMRLpUm5hguxq+1+wAkvBtYd+IOpocw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-darwin-arm64/-/binding-darwin-arm64-0.1.2.tgz}
+  registry.npmjs.org/@rspack/binding-darwin-arm64@0.1.6:
+    resolution: {integrity: sha512-uw6YohrQ4W8G67YW9w85WWbr3/FXd2xrcni7kNaBAg682o+sHcKo6oAgzzphzKfsdwUyX5xi/PJTTF8uPyG5Ww==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-darwin-arm64/-/binding-darwin-arm64-0.1.6.tgz}
     name: '@rspack/binding-darwin-arm64'
-    version: 0.1.2
+    version: 0.1.6
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  registry.npmjs.org/@rspack/binding-darwin-x64@0.1.2:
-    resolution: {integrity: sha512-BeUfY9RPi3mGgfIwpzWpGchCnptC0g9Q/RA6W7pQ710y5REqgmNs/KC6PeVKPatZcVcPxm5USN/JQHZneXtdCg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-darwin-x64/-/binding-darwin-x64-0.1.2.tgz}
+  registry.npmjs.org/@rspack/binding-darwin-x64@0.1.6:
+    resolution: {integrity: sha512-Xsjgka6kRZXnA1rwoo/K+7JzcH2X537vww5HD2FIRrII8VvgP/on9/VvnyQVJIcT9QJeRP4yZj+S88cCPxFtjw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-darwin-x64/-/binding-darwin-x64-0.1.6.tgz}
     name: '@rspack/binding-darwin-x64'
-    version: 0.1.2
+    version: 0.1.6
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  registry.npmjs.org/@rspack/binding-linux-arm64-gnu@0.1.2:
-    resolution: {integrity: sha512-OYgSMDy6dxUCa8CV5oNMmDdKmYZ83P//xCaKc/GfU/UnGEj7E+P8oD9gOsAV/HYnio/GfUkW0+xyo5CKLgrs3g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-linux-arm64-gnu/-/binding-linux-arm64-gnu-0.1.2.tgz}
+  registry.npmjs.org/@rspack/binding-linux-arm64-gnu@0.1.6:
+    resolution: {integrity: sha512-g28AiYQZJ9SqStRdhE+EPfbKtOKwdsX022AaeWcqUd+b4R0Hpo52zoeYnydJC3VigGfkvhz/oFdXSTSSPfOsHw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-linux-arm64-gnu/-/binding-linux-arm64-gnu-0.1.6.tgz}
     name: '@rspack/binding-linux-arm64-gnu'
-    version: 0.1.2
+    version: 0.1.6
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  registry.npmjs.org/@rspack/binding-linux-arm64-musl@0.1.2:
-    resolution: {integrity: sha512-RVnpUfLE5mHJcEbKeGLNakOZBWFLM0JgKB+EUTBGtSNvxH1eTRjja69AFYCGXBAglpWmdpBXMTApErGFySZXeA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-linux-arm64-musl/-/binding-linux-arm64-musl-0.1.2.tgz}
+  registry.npmjs.org/@rspack/binding-linux-arm64-musl@0.1.6:
+    resolution: {integrity: sha512-cEZmbznvY3NwZRsCymAkonD7o6K+iv2NA502j9f/X4TycukL95TAZSkw3UAY5pncXfqLSXsIVEYY5NU76DHPAg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-linux-arm64-musl/-/binding-linux-arm64-musl-0.1.6.tgz}
     name: '@rspack/binding-linux-arm64-musl'
-    version: 0.1.2
+    version: 0.1.6
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  registry.npmjs.org/@rspack/binding-linux-x64-gnu@0.1.2:
-    resolution: {integrity: sha512-Pn6nrx29pLD51/2XUp/w2aPhaNAHTDEGIaw96jlo4RKY0jt9IFkRNjHZR33+Ww2g4y7BHCY39veF5kR8WSB2Rg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-linux-x64-gnu/-/binding-linux-x64-gnu-0.1.2.tgz}
+  registry.npmjs.org/@rspack/binding-linux-x64-gnu@0.1.6:
+    resolution: {integrity: sha512-x53Sl2+k69tAVdxnpvA0OsTubMp5H85Fh4qfVRpIXZp1dUJKXwpvOAW0NJQk9QZ1C1re+6N47xt7I70aa7lxDg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-linux-x64-gnu/-/binding-linux-x64-gnu-0.1.6.tgz}
     name: '@rspack/binding-linux-x64-gnu'
-    version: 0.1.2
+    version: 0.1.6
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  registry.npmjs.org/@rspack/binding-linux-x64-musl@0.1.2:
-    resolution: {integrity: sha512-2xnfCrrxo/cDghHLy8jYXbtSl7UPVWHGcOeLeksP72qs++lmnSMGLujoZAhXNY3E2q6PtqlVuwpBUOg1WJI3LA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-linux-x64-musl/-/binding-linux-x64-musl-0.1.2.tgz}
+  registry.npmjs.org/@rspack/binding-linux-x64-musl@0.1.6:
+    resolution: {integrity: sha512-LXCBfz0RoAkpWYB3F4oIefBddfon5EZDpU+RrezHPb0WJArI0hmhUGjFR8ru8yqYuMadcCLyUDTOjaVqznVkAw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-linux-x64-musl/-/binding-linux-x64-musl-0.1.6.tgz}
     name: '@rspack/binding-linux-x64-musl'
-    version: 0.1.2
+    version: 0.1.6
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  registry.npmjs.org/@rspack/binding-win32-arm64-msvc@0.1.2:
-    resolution: {integrity: sha512-UNKa6QPHw4NlufnvyBIUwZk2lweE7fQamwdeBAI6KyIbHH+LC5MuFxLqb2xzvViCKkrQx+ryIYaz2MWsvoFdTg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-win32-arm64-msvc/-/binding-win32-arm64-msvc-0.1.2.tgz}
+  registry.npmjs.org/@rspack/binding-win32-arm64-msvc@0.1.6:
+    resolution: {integrity: sha512-C5A/LO8GqxTnfOunptQtSYOJ/NfL+lJX0ynfHds04e2ASoT2LMAg/aavR2Zj5O1a8KGRy4N40D+hwvauilDxGQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-win32-arm64-msvc/-/binding-win32-arm64-msvc-0.1.6.tgz}
     name: '@rspack/binding-win32-arm64-msvc'
-    version: 0.1.2
+    version: 0.1.6
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     dev: false
     optional: true
 
-  registry.npmjs.org/@rspack/binding-win32-ia32-msvc@0.1.2:
-    resolution: {integrity: sha512-av4T7LGHoUb0rH4S0kUB5hv+kc8fjRmv1+/umiglWMEjHjFTiV5UXehakJlu4g/otlnnwgtnJiZdmtimXuG6wg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-win32-ia32-msvc/-/binding-win32-ia32-msvc-0.1.2.tgz}
+  registry.npmjs.org/@rspack/binding-win32-ia32-msvc@0.1.6:
+    resolution: {integrity: sha512-YhSfwk+Mmf1GnsZa1bykdVVRkdhYqYDPgi4O67KN2tH5QwVcVeEXL0+W3STYjCEJSI2CpuN48sSodS3t/yhLlw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-win32-ia32-msvc/-/binding-win32-ia32-msvc-0.1.6.tgz}
     name: '@rspack/binding-win32-ia32-msvc'
-    version: 0.1.2
+    version: 0.1.6
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
     dev: false
     optional: true
 
-  registry.npmjs.org/@rspack/binding-win32-x64-msvc@0.1.2:
-    resolution: {integrity: sha512-X0iziaauHr3H9saXOoxfJSQmd5rJ20ozyekJISZf1oX40l928oYlegB1JzD3974VylhnJZTRrML+YB5coZZBrw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-win32-x64-msvc/-/binding-win32-x64-msvc-0.1.2.tgz}
+  registry.npmjs.org/@rspack/binding-win32-x64-msvc@0.1.6:
+    resolution: {integrity: sha512-YOWNKbH+CFpiaTwDpc/kKQwHeT4N+rgUeZ0szBDJpSuJVd7LLoN3jrrD9ZbVrmlExuWsGD6STgW1ia8sXCA48g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding-win32-x64-msvc/-/binding-win32-x64-msvc-0.1.6.tgz}
     name: '@rspack/binding-win32-x64-msvc'
-    version: 0.1.2
+    version: 0.1.6
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: false
     optional: true
 
-  registry.npmjs.org/@rspack/binding@0.1.2:
-    resolution: {integrity: sha512-7YXo++7bZbGINbjHreUAVKJEp1hrAAmP5H9vL0AwGv+nmql3yXRPE6pNrBaEyk5yO33meqsR7U7nnDd0QAb6iQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding/-/binding-0.1.2.tgz}
+  registry.npmjs.org/@rspack/binding@0.1.6:
+    resolution: {integrity: sha512-UvsbiJNeIpIIzNjaiIm0b6WsKvUCghb3zgaRJGblfiLX/M5/9JwmLQxOYk1jVYHmlG9/bWm++rJVVuiQlMLAAA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/binding/-/binding-0.1.6.tgz}
     name: '@rspack/binding'
-    version: 0.1.2
+    version: 0.1.6
     optionalDependencies:
-      '@rspack/binding-darwin-arm64': registry.npmjs.org/@rspack/binding-darwin-arm64@0.1.2
-      '@rspack/binding-darwin-x64': registry.npmjs.org/@rspack/binding-darwin-x64@0.1.2
-      '@rspack/binding-linux-arm64-gnu': registry.npmjs.org/@rspack/binding-linux-arm64-gnu@0.1.2
-      '@rspack/binding-linux-arm64-musl': registry.npmjs.org/@rspack/binding-linux-arm64-musl@0.1.2
-      '@rspack/binding-linux-x64-gnu': registry.npmjs.org/@rspack/binding-linux-x64-gnu@0.1.2
-      '@rspack/binding-linux-x64-musl': registry.npmjs.org/@rspack/binding-linux-x64-musl@0.1.2
-      '@rspack/binding-win32-arm64-msvc': registry.npmjs.org/@rspack/binding-win32-arm64-msvc@0.1.2
-      '@rspack/binding-win32-ia32-msvc': registry.npmjs.org/@rspack/binding-win32-ia32-msvc@0.1.2
-      '@rspack/binding-win32-x64-msvc': registry.npmjs.org/@rspack/binding-win32-x64-msvc@0.1.2
+      '@rspack/binding-darwin-arm64': registry.npmjs.org/@rspack/binding-darwin-arm64@0.1.6
+      '@rspack/binding-darwin-x64': registry.npmjs.org/@rspack/binding-darwin-x64@0.1.6
+      '@rspack/binding-linux-arm64-gnu': registry.npmjs.org/@rspack/binding-linux-arm64-gnu@0.1.6
+      '@rspack/binding-linux-arm64-musl': registry.npmjs.org/@rspack/binding-linux-arm64-musl@0.1.6
+      '@rspack/binding-linux-x64-gnu': registry.npmjs.org/@rspack/binding-linux-x64-gnu@0.1.6
+      '@rspack/binding-linux-x64-musl': registry.npmjs.org/@rspack/binding-linux-x64-musl@0.1.6
+      '@rspack/binding-win32-arm64-msvc': registry.npmjs.org/@rspack/binding-win32-arm64-msvc@0.1.6
+      '@rspack/binding-win32-ia32-msvc': registry.npmjs.org/@rspack/binding-win32-ia32-msvc@0.1.6
+      '@rspack/binding-win32-x64-msvc': registry.npmjs.org/@rspack/binding-win32-x64-msvc@0.1.6
     dev: false
 
-  registry.npmjs.org/@rspack/core@0.1.2(@swc/core@1.3.22)(esbuild@0.17.15):
-    resolution: {integrity: sha512-epnYVst5vExxioWApkGgdhfZGyTzdI6NDYzONeQCHT/gfOxEFEz7hp8PKZVutMyaGTv2Xhp9YMcnSXbpfMT9KQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/core/-/core-0.1.2.tgz}
-    id: registry.npmjs.org/@rspack/core/0.1.2
+  registry.npmjs.org/@rspack/core@0.1.6:
+    resolution: {integrity: sha512-zRCGYQSQLMgjIdlZqjptTDNUVCAmHy0Jx5OGn3xm0m/MCgEbCEgN8STg3tYas/Elj6UYswTqUUnabcpQ3dKo5Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/core/-/core-0.1.6.tgz}
     name: '@rspack/core'
-    version: 0.1.2
+    version: 0.1.6
     dependencies:
-      '@rspack/binding': registry.npmjs.org/@rspack/binding@0.1.2
-      '@rspack/dev-client': registry.npmjs.org/@rspack/dev-client@0.1.2(@rspack/core@0.1.2)(@swc/core@1.3.22)(esbuild@0.17.15)(react-refresh@0.14.0)
+      '@rspack/binding': registry.npmjs.org/@rspack/binding@0.1.6
+      '@rspack/dev-client': registry.npmjs.org/@rspack/dev-client@0.1.6(react-refresh@0.14.0)
       '@swc/helpers': registry.npmjs.org/@swc/helpers@0.4.13
       browserslist: registry.npmjs.org/browserslist@4.21.5
       enhanced-resolve: registry.npmjs.org/enhanced-resolve@5.12.0
@@ -3783,83 +3782,52 @@ packages:
       tapable: registry.npmjs.org/tapable@2.2.1
       watchpack: registry.npmjs.org/watchpack@2.4.0
       webpack-sources: registry.npmjs.org/webpack-sources@3.2.3
-    transitivePeerDependencies:
-      - '@swc/core'
-      - bufferutil
-      - debug
-      - esbuild
-      - supports-color
-      - uglify-js
-      - utf-8-validate
-      - webpack-cli
     dev: false
 
-  registry.npmjs.org/@rspack/dev-client@0.1.2(@rspack/core@0.1.2)(@swc/core@1.3.22)(esbuild@0.17.15)(react-refresh@0.14.0):
-    resolution: {integrity: sha512-ZzVFsOGRAjHACqkfdlg47e1FWpjNy0/RDRhk4tYL7aKgmGujjbs3R1gNvmvogK5b43PW34k9euqrIinPvmEryQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/dev-client/-/dev-client-0.1.2.tgz}
-    id: registry.npmjs.org/@rspack/dev-client/0.1.2
+  registry.npmjs.org/@rspack/dev-client@0.1.6(react-refresh@0.14.0):
+    resolution: {integrity: sha512-REMeVaE/4AYi5rH0eyXF4xmJVUpYhi1Q6W9f4uamqIJ2qMXZRcqvzB7F9Azll6U/29YxO44EX1oa2tpmL9NN4Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/dev-client/-/dev-client-0.1.6.tgz}
+    id: registry.npmjs.org/@rspack/dev-client/0.1.6
     name: '@rspack/dev-client'
-    version: 0.1.2
+    version: 0.1.6
     peerDependencies:
-      '@rspack/core': '*'
       react-refresh: '>=0.10.0 <1.0.0'
     peerDependenciesMeta:
       react-refresh:
         optional: true
     dependencies:
-      '@rspack/core': registry.npmjs.org/@rspack/core@0.1.2(@swc/core@1.3.22)(esbuild@0.17.15)
-      events: registry.npmjs.org/events@3.3.0
       react-refresh: registry.npmjs.org/react-refresh@0.14.0
-      webpack: registry.npmjs.org/webpack@5.74.0(@swc/core@1.3.22)(esbuild@0.17.15)
-      webpack-dev-server: registry.npmjs.org/webpack-dev-server@4.11.1(webpack@5.74.0)
-      ws: registry.npmjs.org/ws@8.8.1
-    transitivePeerDependencies:
-      - '@swc/core'
-      - bufferutil
-      - debug
-      - esbuild
-      - supports-color
-      - uglify-js
-      - utf-8-validate
-      - webpack-cli
     dev: false
 
-  registry.npmjs.org/@rspack/dev-middleware@0.1.2(@swc/core@1.3.22)(esbuild@0.17.15)(webpack@5.78.0):
-    resolution: {integrity: sha512-wg4FnnaTEqTvxZGuw1KBhTwPbHTw+5wH3STSDunE/i5ZKy4Ji8nZUSrr78sryeguIjVPI7q29znieaLw1+WnfA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/dev-middleware/-/dev-middleware-0.1.2.tgz}
-    id: registry.npmjs.org/@rspack/dev-middleware/0.1.2
+  registry.npmjs.org/@rspack/dev-middleware@0.1.6(webpack@5.74.0):
+    resolution: {integrity: sha512-qzaJ/y/mcyKgML8x13qhVr7/yOIoB2Uk9d4fx+pgi7tZCW78u2XMb3nJNGyLhNf07ZOZGUNNgyuvFUZBhsEvmw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/dev-middleware/-/dev-middleware-0.1.6.tgz}
+    id: registry.npmjs.org/@rspack/dev-middleware/0.1.6
     name: '@rspack/dev-middleware'
-    version: 0.1.2
+    version: 0.1.6
     dependencies:
-      '@rspack/core': registry.npmjs.org/@rspack/core@0.1.2(@swc/core@1.3.22)(esbuild@0.17.15)
+      '@rspack/core': registry.npmjs.org/@rspack/core@0.1.6
       mime-types: registry.npmjs.org/mime-types@2.1.35
-      webpack-dev-middleware: registry.npmjs.org/webpack-dev-middleware@6.0.2(webpack@5.78.0)
+      webpack-dev-middleware: registry.npmjs.org/webpack-dev-middleware@6.0.2(webpack@5.74.0)
     transitivePeerDependencies:
-      - '@swc/core'
-      - bufferutil
-      - debug
-      - esbuild
-      - supports-color
-      - uglify-js
-      - utf-8-validate
       - webpack
-      - webpack-cli
     dev: false
 
-  registry.npmjs.org/@rspack/dev-server@0.1.2(@rspack/core@0.1.2)(@swc/core@1.3.22)(esbuild@0.17.15)(webpack@5.78.0):
-    resolution: {integrity: sha512-a7wuAw+s1f0uUTjct8wX1nB0Hc3N5Br84TzuYlOasbUHnv5dID4mZrmtlbf6ou+oIGL8EE1C6GeXncmTXN4wcw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/dev-server/-/dev-server-0.1.2.tgz}
-    id: registry.npmjs.org/@rspack/dev-server/0.1.2
+  registry.npmjs.org/@rspack/dev-server@0.1.6(@rspack/core@0.1.6)(@swc/core@1.3.22)(esbuild@0.17.15):
+    resolution: {integrity: sha512-c0R78Yr12OMRWVNROxbSBAuPaSs3B/EXidR67QanNIwgOQU7kZW9y+Obm21McNhxOw/V3XOzEkm+ddCII5qSlw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/dev-server/-/dev-server-0.1.6.tgz}
+    id: registry.npmjs.org/@rspack/dev-server/0.1.6
     name: '@rspack/dev-server'
-    version: 0.1.2
+    version: 0.1.6
     peerDependencies:
       '@rspack/core': '*'
     dependencies:
-      '@rspack/core': registry.npmjs.org/@rspack/core@0.1.2(@swc/core@1.3.22)(esbuild@0.17.15)
-      '@rspack/dev-client': registry.npmjs.org/@rspack/dev-client@0.1.2(@rspack/core@0.1.2)(@swc/core@1.3.22)(esbuild@0.17.15)(react-refresh@0.14.0)
-      '@rspack/dev-middleware': registry.npmjs.org/@rspack/dev-middleware@0.1.2(@swc/core@1.3.22)(esbuild@0.17.15)(webpack@5.78.0)
+      '@rspack/core': registry.npmjs.org/@rspack/core@0.1.6
+      '@rspack/dev-client': registry.npmjs.org/@rspack/dev-client@0.1.6(react-refresh@0.14.0)
+      '@rspack/dev-middleware': registry.npmjs.org/@rspack/dev-middleware@0.1.6(webpack@5.74.0)
       chokidar: registry.npmjs.org/chokidar@3.5.3
       connect-history-api-fallback: registry.npmjs.org/connect-history-api-fallback@2.0.0
       express: registry.npmjs.org/express@4.18.1
       http-proxy-middleware: registry.npmjs.org/http-proxy-middleware@2.0.6(@types/express@4.17.17)
-      webpack-dev-server: registry.npmjs.org/webpack-dev-server@4.13.1(webpack@5.78.0)
+      webpack: registry.npmjs.org/webpack@5.74.0(@swc/core@1.3.22)(esbuild@0.17.15)
+      webpack-dev-server: registry.npmjs.org/webpack-dev-server@4.13.1(webpack@5.74.0)
       ws: registry.npmjs.org/ws@8.8.1
     transitivePeerDependencies:
       - '@swc/core'
@@ -3871,39 +3839,28 @@ packages:
       - supports-color
       - uglify-js
       - utf-8-validate
-      - webpack
       - webpack-cli
     dev: false
 
-  registry.npmjs.org/@rspack/plugin-html@0.1.2(@swc/core@1.3.22)(esbuild@0.17.15):
-    resolution: {integrity: sha512-41qufjnveoDsQSdSH/J5OEuN84ThYteGvlAe06TAeAcT3Rr3FWOawLCqja7ktpTC5fBWByjCk1RhZGgB9y/cHA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/plugin-html/-/plugin-html-0.1.2.tgz}
-    id: registry.npmjs.org/@rspack/plugin-html/0.1.2
+  registry.npmjs.org/@rspack/plugin-html@0.1.6:
+    resolution: {integrity: sha512-e0UUtc9b3uKd3aViguGaG/V+F1FOrsea7/tGzI84V00PRReZxMH9IIBulgweWn3u7PP+9wNIlQqEAE2rqxaDnQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/plugin-html/-/plugin-html-0.1.6.tgz}
     name: '@rspack/plugin-html'
-    version: 0.1.2
+    version: 0.1.6
     dependencies:
-      '@rspack/core': registry.npmjs.org/@rspack/core@0.1.2(@swc/core@1.3.22)(esbuild@0.17.15)
+      '@rspack/core': registry.npmjs.org/@rspack/core@0.1.6
       '@types/html-minifier-terser': registry.npmjs.org/@types/html-minifier-terser@7.0.0
       html-minifier-terser: registry.npmjs.org/html-minifier-terser@7.0.0
       lodash.template: registry.npmjs.org/lodash.template@4.5.0
       parse5: registry.npmjs.org/parse5@7.1.1
       tapable: registry.npmjs.org/tapable@2.2.1
-    transitivePeerDependencies:
-      - '@swc/core'
-      - bufferutil
-      - debug
-      - esbuild
-      - supports-color
-      - uglify-js
-      - utf-8-validate
-      - webpack-cli
     dev: false
 
-  registry.npmjs.org/@rspack/postcss-loader@0.1.2:
-    resolution: {integrity: sha512-SinHg6JDO+FdgRnLVQO3lcJA49w1kr72SBYG1uvcj7zaByDnml/hTIJfYW3AV7T2kyzgvup7kfPjZw3dNImlrg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/postcss-loader/-/postcss-loader-0.1.2.tgz}
+  registry.npmjs.org/@rspack/postcss-loader@0.1.6:
+    resolution: {integrity: sha512-FTdc3/OPNASFUVO1Hp0g9yBoTkT5nETNHIPw6fxzMCPNWH1ypg50i7ms7OVdhfqK8IzYuOkJ4pYl5ogp4FjMCw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/postcss-loader/-/postcss-loader-0.1.6.tgz}
     name: '@rspack/postcss-loader'
-    version: 0.1.2
+    version: 0.1.6
     dependencies:
-      '@rspack/binding': registry.npmjs.org/@rspack/binding@0.1.2
+      '@rspack/binding': registry.npmjs.org/@rspack/binding@0.1.6
       postcss: registry.npmjs.org/postcss@8.4.21
       postcss-modules: registry.npmjs.org/postcss-modules@5.0.0(postcss@8.4.21)
       postcss-pxtorem: registry.npmjs.org/postcss-pxtorem@6.0.0(postcss@8.4.21)
@@ -10454,6 +10411,7 @@ packages:
     resolution: {integrity: sha512-z+cPxW0QGUp0mcqcsgQyLVRDoXFQbXOwBaqyF7VIgI4TWNQsDHrBpUQslRmIfAoYWdYzs6UlKJtB2XJpTaNSpQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/object-inspect/-/object-inspect-1.12.2.tgz}
     name: object-inspect
     version: 1.12.2
+    dev: false
 
   registry.npmjs.org/object-inspect@1.12.3:
     resolution: {integrity: sha512-geUvdk7c+eizMNUDkRpW1wJwgfOiOeHbxBR/hLXK1aT6zmVSO0jsQcs7fj6MGw89jC/cjGfLcNOrtMYtGqm81g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/object-inspect/-/object-inspect-1.12.3.tgz}
@@ -14013,7 +13971,7 @@ packages:
     dependencies:
       call-bind: registry.npmjs.org/call-bind@1.0.2
       get-intrinsic: registry.npmjs.org/get-intrinsic@1.1.1
-      object-inspect: registry.npmjs.org/object-inspect@1.12.2
+      object-inspect: registry.npmjs.org/object-inspect@1.12.3
 
   registry.npmjs.org/signal-exit@3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz}
@@ -14651,35 +14609,6 @@ packages:
       webpack: registry.npmjs.org/webpack@5.74.0(@swc/core@1.3.22)(esbuild@0.17.15)
     dev: false
 
-  registry.npmjs.org/terser-webpack-plugin@5.3.7(@swc/core@1.3.22)(esbuild@0.17.15)(webpack@5.78.0):
-    resolution: {integrity: sha512-AfKwIktyP7Cu50xNjXF/6Qb5lBNzYaWpU6YfoX3uZicTx0zTy0stDDCsvjDapKsSDvOeWo5MEq4TmdBy2cNoHw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/terser-webpack-plugin/-/terser-webpack-plugin-5.3.7.tgz}
-    id: registry.npmjs.org/terser-webpack-plugin/5.3.7
-    name: terser-webpack-plugin
-    version: 5.3.7
-    engines: {node: '>= 10.13.0'}
-    peerDependencies:
-      '@swc/core': '*'
-      esbuild: '*'
-      uglify-js: '*'
-      webpack: ^5.1.0
-    peerDependenciesMeta:
-      '@swc/core':
-        optional: true
-      esbuild:
-        optional: true
-      uglify-js:
-        optional: true
-    dependencies:
-      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.17
-      '@swc/core': registry.npmjs.org/@swc/core@1.3.22
-      esbuild: registry.npmjs.org/esbuild@0.17.15
-      jest-worker: registry.npmjs.org/jest-worker@27.5.1
-      schema-utils: registry.npmjs.org/schema-utils@3.1.1
-      serialize-javascript: registry.npmjs.org/serialize-javascript@6.0.1
-      terser: registry.npmjs.org/terser@5.16.6
-      webpack: registry.npmjs.org/webpack@5.78.0(@swc/core@1.3.22)(esbuild@0.17.15)
-    dev: false
-
   registry.npmjs.org/terser-webpack-plugin@5.3.7(@swc/core@1.3.46)(esbuild@0.17.15)(webpack@5.78.0):
     resolution: {integrity: sha512-AfKwIktyP7Cu50xNjXF/6Qb5lBNzYaWpU6YfoX3uZicTx0zTy0stDDCsvjDapKsSDvOeWo5MEq4TmdBy2cNoHw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/terser-webpack-plugin/-/terser-webpack-plugin-5.3.7.tgz}
     id: registry.npmjs.org/terser-webpack-plugin/5.3.7
@@ -15292,7 +15221,7 @@ packages:
       webpack: registry.npmjs.org/webpack@5.78.0(@swc/core@1.3.46)(esbuild@0.17.15)
     dev: false
 
-  registry.npmjs.org/webpack-dev-middleware@6.0.2(webpack@5.78.0):
+  registry.npmjs.org/webpack-dev-middleware@6.0.2(webpack@5.74.0):
     resolution: {integrity: sha512-iOddiJzPcQC6lwOIu60vscbGWth8PCRcWRCwoQcTQf9RMoOWBHg5EyzpGdtSmGMrSPd5vHEfFXmVErQEmkRngQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/webpack-dev-middleware/-/webpack-dev-middleware-6.0.2.tgz}
     id: registry.npmjs.org/webpack-dev-middleware/6.0.2
     name: webpack-dev-middleware
@@ -15309,61 +15238,10 @@ packages:
       mime-types: registry.npmjs.org/mime-types@2.1.35
       range-parser: registry.npmjs.org/range-parser@1.2.1
       schema-utils: registry.npmjs.org/schema-utils@4.0.0
-      webpack: registry.npmjs.org/webpack@5.78.0(@swc/core@1.3.22)(esbuild@0.17.15)
-    dev: false
-
-  registry.npmjs.org/webpack-dev-server@4.11.1(webpack@5.74.0):
-    resolution: {integrity: sha512-lILVz9tAUy1zGFwieuaQtYiadImb5M3d+H+L1zDYalYoDl0cksAB1UNyuE5MMWJrG6zR1tXkCP2fitl7yoUJiw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/webpack-dev-server/-/webpack-dev-server-4.11.1.tgz}
-    id: registry.npmjs.org/webpack-dev-server/4.11.1
-    name: webpack-dev-server
-    version: 4.11.1
-    engines: {node: '>= 12.13.0'}
-    hasBin: true
-    peerDependencies:
-      webpack: ^4.37.0 || ^5.0.0
-      webpack-cli: '*'
-    peerDependenciesMeta:
-      webpack-cli:
-        optional: true
-    dependencies:
-      '@types/bonjour': registry.npmjs.org/@types/bonjour@3.5.10
-      '@types/connect-history-api-fallback': registry.npmjs.org/@types/connect-history-api-fallback@1.3.5
-      '@types/express': registry.npmjs.org/@types/express@4.17.17
-      '@types/serve-index': registry.npmjs.org/@types/serve-index@1.9.1
-      '@types/serve-static': registry.npmjs.org/@types/serve-static@1.13.10
-      '@types/sockjs': registry.npmjs.org/@types/sockjs@0.3.33
-      '@types/ws': registry.npmjs.org/@types/ws@8.5.3
-      ansi-html-community: registry.npmjs.org/ansi-html-community@0.0.8
-      bonjour-service: registry.npmjs.org/bonjour-service@1.0.12
-      chokidar: registry.npmjs.org/chokidar@3.5.3
-      colorette: registry.npmjs.org/colorette@2.0.19
-      compression: registry.npmjs.org/compression@1.7.4
-      connect-history-api-fallback: registry.npmjs.org/connect-history-api-fallback@2.0.0
-      default-gateway: registry.npmjs.org/default-gateway@6.0.3
-      express: registry.npmjs.org/express@4.18.1
-      graceful-fs: registry.npmjs.org/graceful-fs@4.2.10
-      html-entities: registry.npmjs.org/html-entities@2.3.3
-      http-proxy-middleware: registry.npmjs.org/http-proxy-middleware@2.0.6(@types/express@4.17.17)
-      ipaddr.js: registry.npmjs.org/ipaddr.js@2.0.1
-      open: registry.npmjs.org/open@8.4.0
-      p-retry: registry.npmjs.org/p-retry@4.6.2
-      rimraf: registry.npmjs.org/rimraf@3.0.2
-      schema-utils: registry.npmjs.org/schema-utils@4.0.0
-      selfsigned: registry.npmjs.org/selfsigned@2.1.1
-      serve-index: registry.npmjs.org/serve-index@1.9.1
-      sockjs: registry.npmjs.org/sockjs@0.3.24
-      spdy: registry.npmjs.org/spdy@4.0.2
       webpack: registry.npmjs.org/webpack@5.74.0(@swc/core@1.3.22)(esbuild@0.17.15)
-      webpack-dev-middleware: registry.npmjs.org/webpack-dev-middleware@5.3.1(webpack@5.74.0)
-      ws: registry.npmjs.org/ws@8.13.0
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - supports-color
-      - utf-8-validate
     dev: false
 
-  registry.npmjs.org/webpack-dev-server@4.13.1(webpack@5.78.0):
+  registry.npmjs.org/webpack-dev-server@4.13.1(webpack@5.74.0):
     resolution: {integrity: sha512-5tWg00bnWbYgkN+pd5yISQKDejRBYGEw15RaEEslH+zdbNDxxaZvEAO2WulaSaFKb5n3YG8JXsGaDsut1D0xdA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/webpack-dev-server/-/webpack-dev-server-4.13.1.tgz}
     id: registry.npmjs.org/webpack-dev-server/4.13.1
     name: webpack-dev-server
@@ -15407,8 +15285,8 @@ packages:
       serve-index: registry.npmjs.org/serve-index@1.9.1
       sockjs: registry.npmjs.org/sockjs@0.3.24
       spdy: registry.npmjs.org/spdy@4.0.2
-      webpack: registry.npmjs.org/webpack@5.78.0(@swc/core@1.3.22)(esbuild@0.17.15)
-      webpack-dev-middleware: registry.npmjs.org/webpack-dev-middleware@5.3.1(webpack@5.78.0)
+      webpack: registry.npmjs.org/webpack@5.74.0(@swc/core@1.3.22)(esbuild@0.17.15)
+      webpack-dev-middleware: registry.npmjs.org/webpack-dev-middleware@5.3.1(webpack@5.74.0)
       ws: registry.npmjs.org/ws@8.13.0
     transitivePeerDependencies:
       - bufferutil
@@ -15522,49 +15400,6 @@ packages:
       schema-utils: registry.npmjs.org/schema-utils@3.1.1
       tapable: registry.npmjs.org/tapable@2.2.1
       terser-webpack-plugin: registry.npmjs.org/terser-webpack-plugin@5.3.7(@swc/core@1.3.22)(esbuild@0.17.15)(webpack@5.74.0)
-      watchpack: registry.npmjs.org/watchpack@2.4.0
-      webpack-sources: registry.npmjs.org/webpack-sources@3.2.3
-    transitivePeerDependencies:
-      - '@swc/core'
-      - esbuild
-      - uglify-js
-    dev: false
-
-  registry.npmjs.org/webpack@5.78.0(@swc/core@1.3.22)(esbuild@0.17.15):
-    resolution: {integrity: sha512-gT5DP72KInmE/3azEaQrISjTvLYlSM0j1Ezhht/KLVkrqtv10JoP/RXhwmX/frrutOPuSq3o5Vq0ehR/4Vmd1g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/webpack/-/webpack-5.78.0.tgz}
-    id: registry.npmjs.org/webpack/5.78.0
-    name: webpack
-    version: 5.78.0
-    engines: {node: '>=10.13.0'}
-    hasBin: true
-    peerDependencies:
-      webpack-cli: '*'
-    peerDependenciesMeta:
-      webpack-cli:
-        optional: true
-    dependencies:
-      '@types/eslint-scope': registry.npmjs.org/@types/eslint-scope@3.7.3
-      '@types/estree': registry.npmjs.org/@types/estree@0.0.51
-      '@webassemblyjs/ast': registry.npmjs.org/@webassemblyjs/ast@1.11.1
-      '@webassemblyjs/wasm-edit': registry.npmjs.org/@webassemblyjs/wasm-edit@1.11.1
-      '@webassemblyjs/wasm-parser': registry.npmjs.org/@webassemblyjs/wasm-parser@1.11.1
-      acorn: registry.npmjs.org/acorn@8.8.2
-      acorn-import-assertions: registry.npmjs.org/acorn-import-assertions@1.8.0(acorn@8.8.2)
-      browserslist: registry.npmjs.org/browserslist@4.21.5
-      chrome-trace-event: registry.npmjs.org/chrome-trace-event@1.0.3
-      enhanced-resolve: registry.npmjs.org/enhanced-resolve@5.12.0
-      es-module-lexer: registry.npmjs.org/es-module-lexer@0.9.3
-      eslint-scope: registry.npmjs.org/eslint-scope@5.1.1
-      events: registry.npmjs.org/events@3.3.0
-      glob-to-regexp: registry.npmjs.org/glob-to-regexp@0.4.1
-      graceful-fs: registry.npmjs.org/graceful-fs@4.2.10
-      json-parse-even-better-errors: registry.npmjs.org/json-parse-even-better-errors@2.3.1
-      loader-runner: registry.npmjs.org/loader-runner@4.3.0
-      mime-types: registry.npmjs.org/mime-types@2.1.35
-      neo-async: registry.npmjs.org/neo-async@2.6.2
-      schema-utils: registry.npmjs.org/schema-utils@3.1.1
-      tapable: registry.npmjs.org/tapable@2.2.1
-      terser-webpack-plugin: registry.npmjs.org/terser-webpack-plugin@5.3.7(@swc/core@1.3.22)(esbuild@0.17.15)(webpack@5.78.0)
       watchpack: registry.npmjs.org/watchpack@2.4.0
       webpack-sources: registry.npmjs.org/webpack-sources@3.2.3
     transitivePeerDependencies:
