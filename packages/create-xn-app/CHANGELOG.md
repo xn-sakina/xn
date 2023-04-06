@@ -1,5 +1,12 @@
 # create-xn-app
 
+## 3.3.1
+
+### Patch Changes
+
+- Fix template deps version
+  - @xn-sakina/xn-utils@3.3.1
+
 ## 3.3.0
 
 ### Minor Changes
