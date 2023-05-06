@@ -1,6 +1,6 @@
 {
   "name": "@xn-sakina/bundler-rspack",
-  "version": "3.3.1",
+  "version": "3.3.2",
   "description": "Easy react bundle cli powered by swc & webpack5",
   "keywords": [
     "react",
