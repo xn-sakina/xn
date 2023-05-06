@@ -139,6 +139,7 @@ export const applyRspackConfig = async (
         addTarget(opts)
       },
       (rawConfig) => {
+        // @ts-expect-error
         rspackConfig.target = rawConfig.target
       },
     ],
