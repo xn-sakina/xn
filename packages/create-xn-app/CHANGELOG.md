@@ -1,5 +1,11 @@
 # create-xn-app
 
+## 3.4.0
+
+### Patch Changes
+
+- @xn-sakina/xn-utils@3.4.0
+
 ## 3.3.2
 
 ### Patch Changes

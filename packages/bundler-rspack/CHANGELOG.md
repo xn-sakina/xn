@@ -1,5 +1,11 @@
 # @xn-sakina/bundler-rspack
 
+## 3.4.0
+
+### Minor Changes
+
+- Add babel 7.22. breaking change cheker and Upgreade deps
+
 ## 3.3.2
 
 ### Patch Changes

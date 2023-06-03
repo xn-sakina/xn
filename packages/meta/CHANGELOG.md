@@ -1,5 +1,15 @@
 # @xn-sakina/meta
 
+## 3.4.0
+
+### Minor Changes
+
+- Add babel 7.22. breaking change cheker and Upgreade deps
+
+### Patch Changes
+
+- @xn-sakina/xn-utils@3.4.0
+
 ## 3.3.2
 
 ### Patch Changes
