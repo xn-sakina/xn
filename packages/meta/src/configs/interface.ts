@@ -173,6 +173,7 @@ export interface IDevProgress {
 export interface IMonorepoInfo {
   isMonorepo: boolean
   monorepoRoot: string
+  rootPkg?: IPkg
   redirectAlias?: Record<string, string>
 }
 

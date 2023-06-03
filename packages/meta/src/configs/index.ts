@@ -4,6 +4,7 @@ import { EMode } from '../constants'
 import { findNpmClient } from '../utils/findNpmClient'
 import { detectMonorepo } from '../utils/monorepoInfo'
 import { getClientEnvironment } from './envs'
+import { babel722BreakingCheker } from './features/babel722'
 import { getMonorepoRedirectAlias } from './features/monorepoRedirect'
 import { handleUserConfig } from './handler/userConfig'
 import {
@@ -13,8 +14,8 @@ import {
   EJsMinify,
   GetConfigs,
   IConfigChainOpts,
-  InternalUserConfig,
   IXnConfig,
+  InternalUserConfig,
 } from './interface'
 import { getPaths } from './paths'
 import { getDefaultTitle } from './plugins'
@@ -100,6 +101,9 @@ export const getConfigs = async ({
   }
 
   const bundler = userConfig.bundler
+
+  // breaking change check
+  babel722BreakingCheker(opts)
 
   if (bundler === EBundler.webpack) {
     const mod: typeof import('./bundler/webpack') = require('./bundler/webpack')

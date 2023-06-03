@@ -14,7 +14,8 @@ export const detectMonorepo = ({ root }: { root: string }): IMonorepoInfo => {
   const pnpmWorkspaceFile = join(pkgDir, 'pnpm-workspace.yaml')
   const lernaWorkspaceFile = join(pkgDir, 'lerna.json')
   if (existsSync(pnpmWorkspaceFile) || existsSync(lernaWorkspaceFile)) {
-    return { monorepoRoot: pkgDir, isMonorepo: true }
+    const pkg = require(parentPath)
+    return { monorepoRoot: pkgDir, isMonorepo: true, rootPkg: pkg }
   }
   return detectMonorepo({ root: pkgDir })
 }
