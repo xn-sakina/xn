@@ -23,7 +23,7 @@ export const addPluginsRsp = ({ opts, config }: IRspContext) => {
 
       // builtin define
 
-      // not need provide
+      // builtin provide
 
       // builtin html
       new HtmlPlugin({
@@ -62,6 +62,11 @@ export const addPluginsRsp = ({ opts, config }: IRspContext) => {
     'builtins.define',
     envs.stringified satisfies RspBuiltins['define'],
   )
+
+  // provide
+  set(config, 'builtins.provide', {
+    process: require.resolve('process/browser'),
+  } satisfies RspBuiltins['provide'])
 
   // html
   // Why we not use builtins.html ?
