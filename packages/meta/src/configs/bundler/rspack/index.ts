@@ -158,7 +158,8 @@ export const applyRspackConfig = async (
         // stats
         rspackConfig.stats = rawConfig.stats as RspStats
         // infra log
-        rspackConfig.infrastructureLogging = rawConfig.infrastructureLogging
+        rspackConfig.infrastructureLogging =
+          rawConfig.infrastructureLogging as RspConfig['infrastructureLogging']
       },
     ],
   }
