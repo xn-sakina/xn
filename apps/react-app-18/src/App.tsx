@@ -5,6 +5,10 @@ import "@arco-design/web-react/dist/css/arco.css";
 import zhCN from "@arco-design/web-react/es/locale/zh-CN";
 import React from "react";
 
+console.log("process: ", process);
+console.log("process.env: ", process.env);
+console.log("process.env.NODE_ENV: ", process.env.NODE_ENV);
+
 const Page = React.lazy(() => import("./Page"));
 
 const queryClient = new QueryClient();
