@@ -1,5 +1,13 @@
 # create-moe
 
+## 3.4.1
+
+### Patch Changes
+
+- Upgrade deps version and support rspack provide
+- Updated dependencies
+  - create-xn-app@3.4.1
+
 ## 3.4.0
 
 ### Patch Changes
