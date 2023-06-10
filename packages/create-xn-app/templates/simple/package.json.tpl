@@ -9,15 +9,15 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.10.0"
+    "react-router-dom": "^6.12.1"
   },
   "devDependencies": {
-    "@types/node": "^18.15.11",
-    "@types/react": "^18.0.33",
-    "@types/react-dom": "^18.0.11",
+    "@types/node": "^20.2.6",
+    "@types/react": "^18.2.9",
+    "@types/react-dom": "^18.2.4",
     "@types/react-router-dom": "^5.3.3",
     "@xn-sakina/meta": "^{{{xnVersion}}}",
-    "typescript": "^5.0.3"
+    "typescript": "^5.1.3"
   },
   "browserslist": {
     "production": [
