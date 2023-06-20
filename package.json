@@ -19,11 +19,11 @@
     "@fz6m/eslint-plugin-sakina": "^2.0.2",
     "@types/fs-extra": "^11.0.1",
     "@types/lodash": "^4.14.195",
-    "@types/node": "^20.2.6",
+    "@types/node": "^20.3.1",
     "@xn-sakina/vary": "^1.1.1",
     "chalk": "^4.1.2",
     "commit-verify": "^1.0.3",
-    "eslint": "^8.42.0",
+    "eslint": "^8.43.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "lodash": "4.17.21",
@@ -36,7 +36,7 @@
     "swno": "^1.3.2",
     "typescript": "^5.1.3",
     "zx": "^7.2.2",
-    "esbuild": "0.18.0"
+    "esbuild": "0.18.5"
   },
   "lint-staged": {
     "*.{jsx,less,md,json}": [
