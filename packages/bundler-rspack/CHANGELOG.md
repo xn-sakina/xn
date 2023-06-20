@@ -1,5 +1,11 @@
 # @xn-sakina/bundler-rspack
 
+## 3.5.0
+
+### Minor Changes
+
+- Upgrade deps version and add some experiment feature
+
 ## 3.4.1
 
 ## 3.4.0
