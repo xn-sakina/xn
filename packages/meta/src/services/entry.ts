@@ -52,7 +52,7 @@ export const run = () => {
   program.parse(process.argv)
 }
 
-function forkScript(scriptPath: string) {
+export function forkScript(scriptPath: string) {
   const child = fork(scriptPath, {
     cwd,
     env: {
@@ -63,6 +63,7 @@ function forkScript(scriptPath: string) {
   child.on('exit', (code) => {
     process.exit(code || 0)
   })
+  return child
 }
 
 function startTip() {
