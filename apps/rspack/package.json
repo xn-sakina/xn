@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "xn dev",
+    "dev:swc": "XN_USE_RSPACK_BUILTIN_SWC_LOADER=1 xn dev",
     "build": "xn build"
   },
   "dependencies": {

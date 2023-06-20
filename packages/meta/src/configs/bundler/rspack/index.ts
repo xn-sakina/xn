@@ -95,7 +95,7 @@ export const applyRspackConfig = async (
       (rawConfig) => {
         rspackConfig.module ||= {}
         rspackConfig.module.rules ||= []
-        addJavaScriptRuleRsp(rspackConfig)
+        addJavaScriptRuleRsp({ opts, rawConfig, config: rspackConfig })
         addCssRuleRsp(rawConfig, rspackConfig)
         addAssetRuleRsp({ opts, rawConfig, config: rspackConfig })
       },

@@ -59,6 +59,10 @@ export const RSPACK_CONST = {
     tsx: 'tsx',
     css: 'css',
     cssModule: 'css/module',
+    jsAuto: 'javascript/auto',
+  },
+  builtinLoader: {
+    swc: 'builtin:swc-loader',
   },
 } as const
 
