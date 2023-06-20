@@ -5,6 +5,6 @@ export default defineConfig({
   cssMinify: "parcelCss",
   jsMinify: "swc",
   // splitChunks: "granular",
-  mfsu: true,
+  // mfsu: true,
   monorepoRedirect: true,
 });

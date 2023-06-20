@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "@rspack/core": "0.2.3",
-    "@rspack/postcss-loader": "0.2.3",
     "@rspack/dev-server": "0.2.3",
     "@rspack/plugin-html": "0.2.3"
   }

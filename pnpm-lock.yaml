@@ -220,9 +220,6 @@ importers:
       '@rspack/plugin-html':
         specifier: 0.2.3
         version: registry.npmjs.org/@rspack/plugin-html@0.2.3(@rspack/core@0.2.3)
-      '@rspack/postcss-loader':
-        specifier: 0.2.3
-        version: registry.npmjs.org/@rspack/postcss-loader@0.2.3
 
   packages/create-moe:
     dependencies:
@@ -4147,17 +4144,6 @@ packages:
       lodash.template: registry.npmjs.org/lodash.template@4.5.0
       parse5: registry.npmjs.org/parse5@7.1.1
       tapable: registry.npmjs.org/tapable@2.2.1
-    dev: false
-
-  registry.npmjs.org/@rspack/postcss-loader@0.2.3:
-    resolution: {integrity: sha512-08EIUpvSKtyeHddUA31b/2kL3pI/QZZ3qAO5JUFftd23OsMtujq4eCB3IP+qBgfm9kzwh19/6snXPdjZ9Zuzbw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rspack/postcss-loader/-/postcss-loader-0.2.3.tgz}
-    name: '@rspack/postcss-loader'
-    version: 0.2.3
-    dependencies:
-      '@rspack/binding': registry.npmjs.org/@rspack/binding@0.2.3
-      postcss: registry.npmjs.org/postcss@8.4.24
-      postcss-modules: registry.npmjs.org/postcss-modules@5.0.0(postcss@8.4.24)
-      postcss-pxtorem: registry.npmjs.org/postcss-pxtorem@6.0.0(postcss@8.4.24)
     dev: false
 
   registry.npmjs.org/@rushstack/eslint-patch@1.1.3:
@@ -8626,14 +8612,6 @@ packages:
     hasBin: true
     dev: true
 
-  registry.npmjs.org/generic-names@4.0.0:
-    resolution: {integrity: sha512-ySFolZQfw9FoDb3ed9d80Cm9f0+r7qj+HJkWjeD9RBfpxEVTlVhol+gvaQB/78WbwYfbnNh8nWHHBSlg072y6A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/generic-names/-/generic-names-4.0.0.tgz}
-    name: generic-names
-    version: 4.0.0
-    dependencies:
-      loader-utils: registry.npmjs.org/loader-utils@3.2.0
-    dev: false
-
   registry.npmjs.org/gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/gensync/-/gensync-1.0.0-beta.2.tgz}
     name: gensync
@@ -9199,12 +9177,6 @@ packages:
       safer-buffer: registry.npmjs.org/safer-buffer@2.1.2
     dev: false
     optional: true
-
-  registry.npmjs.org/icss-replace-symbols@1.1.0:
-    resolution: {integrity: sha512-chIaY3Vh2mh2Q3RGXttaDIzeiPvaVXJ+C4DAh/w3c37SKZ/U6PGMmuicR2EQQp9bKG8zLMCl7I+PtIoOOPp8Gg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/icss-replace-symbols/-/icss-replace-symbols-1.1.0.tgz}
-    name: icss-replace-symbols
-    version: 1.1.0
-    dev: false
 
   registry.npmjs.org/icss-utils@5.1.0(postcss@8.4.24):
     resolution: {integrity: sha512-soFhflCVWLfRNOPU3iv5Z9VUdT44xFRbzjLsEzSr5AQmgqPMTHdU3PMT1Cf1ssx8fLNJDA1juftYl+PUcv3MqA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/icss-utils/-/icss-utils-5.1.0.tgz}
@@ -10239,12 +10211,6 @@ packages:
     resolution: {integrity: sha512-xYHt68QRoYGjeeM/XOE1uJtvXQAgvszfBhjV4yvsQH0u2i9I6cI6c6/eG4Hh3UAOVn0y/xAXwmTzEay49Q//HA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz}
     name: lodash._reinterpolate
     version: 3.0.0
-    dev: false
-
-  registry.npmjs.org/lodash.camelcase@4.3.0:
-    resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz}
-    name: lodash.camelcase
-    version: 4.3.0
     dev: false
 
   registry.npmjs.org/lodash.debounce@4.0.8:
@@ -12132,25 +12098,6 @@ packages:
       postcss: registry.npmjs.org/postcss@8.4.24
     dev: false
 
-  registry.npmjs.org/postcss-modules@5.0.0(postcss@8.4.24):
-    resolution: {integrity: sha512-rGvpTDOM3//3Ysn3Xtvhzaj8ab984wKCpP02TEF559tLbUjNay3RQDpPxb7BREmfBtJm3/1WbQOZ7fSXwYLZ/w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/postcss-modules/-/postcss-modules-5.0.0.tgz}
-    id: registry.npmjs.org/postcss-modules/5.0.0
-    name: postcss-modules
-    version: 5.0.0
-    peerDependencies:
-      postcss: ^8.0.0
-    dependencies:
-      generic-names: registry.npmjs.org/generic-names@4.0.0
-      icss-replace-symbols: registry.npmjs.org/icss-replace-symbols@1.1.0
-      lodash.camelcase: registry.npmjs.org/lodash.camelcase@4.3.0
-      postcss: registry.npmjs.org/postcss@8.4.24
-      postcss-modules-extract-imports: registry.npmjs.org/postcss-modules-extract-imports@3.0.0(postcss@8.4.24)
-      postcss-modules-local-by-default: registry.npmjs.org/postcss-modules-local-by-default@4.0.3(postcss@8.4.24)
-      postcss-modules-scope: registry.npmjs.org/postcss-modules-scope@3.0.0(postcss@8.4.24)
-      postcss-modules-values: registry.npmjs.org/postcss-modules-values@4.0.0(postcss@8.4.24)
-      string-hash: registry.npmjs.org/string-hash@1.1.3
-    dev: false
-
   registry.npmjs.org/postcss-nesting@10.2.0(postcss@8.4.24):
     resolution: {integrity: sha512-EwMkYchxiDiKUhlJGzWsD9b2zvq/r2SSubcRrgP+jujMXFzqvANLt16lJANC+5uZ6hjI7lpRmI6O8JIl+8l1KA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/postcss-nesting/-/postcss-nesting-10.2.0.tgz}
     id: registry.npmjs.org/postcss-nesting/10.2.0
@@ -12563,17 +12510,6 @@ packages:
     dependencies:
       postcss: registry.npmjs.org/postcss@8.4.24
       postcss-selector-parser: registry.npmjs.org/postcss-selector-parser@6.0.10
-    dev: false
-
-  registry.npmjs.org/postcss-pxtorem@6.0.0(postcss@8.4.24):
-    resolution: {integrity: sha512-ZRXrD7MLLjLk2RNGV6UA4f5Y7gy+a/j1EqjAfp9NdcNYVjUMvg5HTYduTjSkKBkRkfqbg/iKrjMO70V4g1LZeg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/postcss-pxtorem/-/postcss-pxtorem-6.0.0.tgz}
-    id: registry.npmjs.org/postcss-pxtorem/6.0.0
-    name: postcss-pxtorem
-    version: 6.0.0
-    peerDependencies:
-      postcss: ^8.0.0
-    dependencies:
-      postcss: registry.npmjs.org/postcss@8.4.24
     dev: false
 
   registry.npmjs.org/postcss-reduce-initial@6.0.0(postcss@8.4.24):
@@ -15226,12 +15162,6 @@ packages:
     resolution: {integrity: sha512-u/1tdPl4yQnPBjnVrmdLo9gtuLvELKsAoRapekWggdiQNvvvum+jYF329d84NAa660KQw7pB2n36KrIKVoXa3A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/string-convert/-/string-convert-0.2.1.tgz}
     name: string-convert
     version: 0.2.1
-    dev: false
-
-  registry.npmjs.org/string-hash@1.1.3:
-    resolution: {integrity: sha512-kJUvRUFK49aub+a7T1nNE66EJbZBMnBgoC1UbCZ5n6bsZKBRga4KgBRTMn/pFkeCZSYtNeSyMxPDM0AXWELk2A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/string-hash/-/string-hash-1.1.3.tgz}
-    name: string-hash
-    version: 1.1.3
     dev: false
 
   registry.npmjs.org/string-width@4.2.3:
