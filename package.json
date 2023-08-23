@@ -11,32 +11,32 @@
     "release:only": "vary release:only",
     "release:quick": "vary release:quick",
     "clean:output": "vary clean:output",
-    "normalize:pkg": "swno scripts/normalizePkg.ts",
+    "normalize:pkg": "tsx scripts/normalizePkg.ts",
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
-    "@fz6m/eslint-plugin-sakina": "^2.0.2",
     "@types/fs-extra": "^11.0.1",
-    "@types/lodash": "^4.14.195",
-    "@types/node": "^20.4.4",
+    "@types/lodash": "^4.14.197",
+    "@types/node": "^20.5.3",
     "@xn-sakina/vary": "^1.1.1",
     "chalk": "^4.1.2",
     "commit-verify": "^1.1.0",
-    "eslint": "^8.45.0",
+    "esbuild": "0.19.2",
+    "eslint": "^8.47.0",
+    "eslint-plugin-sakina": "^4.3.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.3",
+    "lint-staged": "^14.0.1",
     "lodash": "4.17.21",
     "only-allow": "^1.1.1",
-    "prettier": "^2.8.8",
-    "prettier-plugin-organize-imports": "^3.2.2",
-    "prettier-plugin-packagejson": "^2.4.3",
+    "prettier": "^3.0.2",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "prettier-plugin-packagejson": "^2.4.5",
     "rimraf": "^5.0.1",
     "sort-package-json": "^1.57.0",
-    "swno": "^1.3.2",
+    "tsx": "^3.12.7",
     "typescript": "^5.1.6",
-    "zx": "^7.2.3",
-    "esbuild": "0.18.16"
+    "zx": "^7.2.3"
   },
   "lint-staged": {
     "*.{jsx,less,md,json}": [
@@ -58,5 +58,5 @@
       "esbuild": "$esbuild"
     }
   },
-  "packageManager": "pnpm@8.6.0"
+  "packageManager": "pnpm@8.6.12"
 }
