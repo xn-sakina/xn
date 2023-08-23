@@ -1,18 +1,18 @@
-import { Button } from "antd";
-import { Button as ArcoButton } from "@arco-design/web-react";
-import { add } from "lodash";
-import { a as libA } from "@xn-sakina/example-lib";
-import { some } from "./a";
-import { some2 } from "./a1";
+import { Button } from 'antd'
+import { Button as ArcoButton } from '@arco-design/web-react'
+import { add } from 'lodash'
+import { a as libA } from '@xn-sakina/example-lib'
+import { some } from './a'
+import { some2 } from './a1'
 
-import imgUrl from "./img.jpg";
-import svgUrl from "./s.svg";
+import imgUrl from './img.jpg'
+import svgUrl from './s.svg'
 
 // svgr: true
 // import Svg from './s.svg'
 
-import styles from "./sass.module.scss";
-import "./sass.scss";
+import styles from './sass.module.scss'
+import './sass.scss'
 
 export default function Page() {
   return (
@@ -28,5 +28,5 @@ export default function Page() {
       <div>a-js: {some}</div>
       <div>a-js: {some2}</div>
     </div>
-  );
+  )
 }

@@ -1,10 +1,10 @@
-import { Button } from "antd";
-import { Button as ArcoButton } from "@arco-design/web-react";
-import { add } from "lodash";
-import { a as libA } from "@xn-sakina/example-lib";
+import { Button } from 'antd'
+import { Button as ArcoButton } from '@arco-design/web-react'
+import { add } from 'lodash'
+import { a as libA } from '@xn-sakina/example-lib'
 
 export default function Page() {
-  const a = 12333333333n;
+  const a = 12333333333n
 
   return (
     <div>
@@ -13,5 +13,5 @@ export default function Page() {
       <ArcoButton>button</ArcoButton>
       lib-a:{libA}
     </div>
-  );
+  )
 }
