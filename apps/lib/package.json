@@ -2,5 +2,8 @@
   "name": "@xn-sakina/example-lib",
   "version": "1.0.0",
   "private": true,
-  "main": "dist/index.js"
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  }
 }

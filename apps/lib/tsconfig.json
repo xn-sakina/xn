@@ -1,0 +1,10 @@
+{
+  "extends": "@xn-sakina/mental/lib-react",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true
+  },
+  "include": ["src"]
+}

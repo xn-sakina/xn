@@ -23,6 +23,9 @@ importers:
       '@types/node':
         specifier: ^20.5.3
         version: registry.npmjs.org/@types/node@20.5.3
+      '@xn-sakina/mental':
+        specifier: ^4.0.2
+        version: registry.npmjs.org/@xn-sakina/mental@4.0.2
       '@xn-sakina/vary':
         specifier: ^1.1.1
         version: registry.npmjs.org/@xn-sakina/vary@1.1.1
@@ -5553,6 +5556,12 @@ packages:
       '@webassemblyjs/ast': registry.npmjs.org/@webassemblyjs/ast@1.11.5
       '@xtuc/long': registry.npmjs.org/@xtuc/long@4.2.2
     dev: false
+
+  registry.npmjs.org/@xn-sakina/mental@4.0.2:
+    resolution: {integrity: sha512-bAS6pJxoGVZMdlWeDydfSwphowxarA1jgcO5bmvzTt4bNj9L+/lVOhdL6ci34rBeFppSJZVQVSVDyW4AIBm79w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@xn-sakina/mental/-/mental-4.0.2.tgz}
+    name: '@xn-sakina/mental'
+    version: 4.0.2
+    dev: true
 
   registry.npmjs.org/@xn-sakina/vary@1.1.1:
     resolution: {integrity: sha512-d0Snkvkyx/Lzot2bev0gK0MFMBXCcsJFKPp/saPPycM9RY6nTEEO3NdyfzO5+7A0LMqrUk4b0IH2rqwPlbNUxw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@xn-sakina/vary/-/vary-1.1.1.tgz}
