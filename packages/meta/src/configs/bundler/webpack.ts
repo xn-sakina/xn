@@ -24,7 +24,7 @@ import { addStats } from '../stats'
 const { noop } = lodash
 
 export const applyWebpackConfig = async (opts: IConfigChainOpts) => {
-  const { envs, userConfig, config, monorepoInfo, mode, paths } = opts
+  const { envs, userConfig, config, monorepoInfo } = opts
   // mfsu
   let mfsu: MFSU | undefined
   if (envs.isDev && userConfig.mfsu) {

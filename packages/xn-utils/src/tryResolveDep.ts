@@ -7,7 +7,7 @@ export function tryResolveDep(opts: { name: string; from: string }) {
     return dirname(
       resolve.sync(`${name}/package.json`, {
         basedir: from,
-      })
+      }),
     )
   } catch {}
 }

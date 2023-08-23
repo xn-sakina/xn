@@ -32,7 +32,7 @@ export const initProject = async (opts: IOpts) => {
         type: 'confirm',
         name: 'confirm_delete',
         message: `Target ${chalk.yellow(
-          dirName
+          dirName,
         )} dir existed, confirm override?`,
         default: false,
       },
