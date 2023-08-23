@@ -3,6 +3,10 @@ import { IRspContext, RspBuiltins } from './interface'
 
 const { set } = lodash
 
+/**
+ * TODO: migrate to rspack.XxxPlugin
+ * https://github.com/web-infra-dev/rspack/discussions/4006
+ */
 export const addPluginsRsp = ({ opts, config }: IRspContext) => {
   const { paths, userConfig, envs } = opts
 
