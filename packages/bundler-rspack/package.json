@@ -28,8 +28,8 @@
     "dev": "tsc --watch"
   },
   "dependencies": {
-    "@rspack/core": "0.2.9",
-    "@rspack/dev-server": "0.2.9",
-    "@rspack/plugin-html": "0.2.9"
+    "@rspack/core": "0.2.12",
+    "@rspack/dev-server": "0.2.12",
+    "@rspack/plugin-html": "0.2.12"
   }
 }
