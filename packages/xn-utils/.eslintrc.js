@@ -1,3 +1,1 @@
-module.exports = {
-  extends: ['plugin:@fz6m/sakina/recommended'],
-}
+module.exports = require('eslint-plugin-sakina/recommended')()
