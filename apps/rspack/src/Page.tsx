@@ -3,7 +3,7 @@ import { Button as ArcoButton } from '@arco-design/web-react'
 import { add } from 'lodash'
 import { a as libA } from '@xn-sakina/example-lib'
 import { some } from './a'
-import { some2 } from './a1'
+import { some2 } from './a1.mjs'
 
 import imgUrl from './img.jpg'
 import svgUrl from './s.svg'
@@ -27,6 +27,7 @@ export default function Page() {
       <div className={styles.red}>red text</div>
       <div>a-js: {some}</div>
       <div>a-js: {some2}</div>
+      <div>env: {process.env.XN_APP_TEST}</div>
     </div>
   )
 }

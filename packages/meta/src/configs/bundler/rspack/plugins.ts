@@ -1,12 +1,6 @@
-import { lodash, winPath } from '@xn-sakina/xn-utils'
-import { IRspContext, RspBuiltins } from './interface'
+import { winPath } from '@xn-sakina/xn-utils'
+import { IRspContext } from './interface'
 
-const { set } = lodash
-
-/**
- * TODO: migrate to rspack.XxxPlugin
- * https://github.com/web-infra-dev/rspack/discussions/4006
- */
 export const addPluginsRsp = ({ opts, config }: IRspContext) => {
   const { paths, userConfig, envs } = opts
 
@@ -14,10 +8,14 @@ export const addPluginsRsp = ({ opts, config }: IRspContext) => {
   const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin')
 
   const mod: typeof import('@xn-sakina/bundler-rspack') = require('@xn-sakina/bundler-rspack')
+  const rspack = mod.rspack
+
+  // FIXME: `rspack.HtmlPlugin` cannot support `inject: true` and custom key-value
   const HtmlPlugin = require(mod.rsHtmlPlugin).default
+
   const BundleAnalyzerPlugin =
     require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-  // const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+  const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
   config.plugins ||= []
   config.plugins.push(
@@ -25,9 +23,13 @@ export const addPluginsRsp = ({ opts, config }: IRspContext) => {
       // clean ok
       new CleanWebpackPlugin(),
 
-      // builtin define
+      // define
+      new rspack.DefinePlugin(envs.stringified),
 
-      // builtin provide
+      // provide
+      new rspack.ProvidePlugin({
+        process: require.resolve('process/browser'),
+      }),
 
       // builtin html
       new HtmlPlugin({
@@ -42,16 +44,29 @@ export const addPluginsRsp = ({ opts, config }: IRspContext) => {
 
       // not support single-pack-plugin
 
-      // builtin copy
+      // copy
+      new rspack.CopyPlugin({
+        patterns: [
+          {
+            from: paths.publicDirPath,
+            to: paths.outputDir,
+            toType: 'dir',
+            noErrorOnMissing: true,
+            globOptions: {
+              ignore: [winPath(paths.indexHtml), '**/.DS_Store'],
+            },
+          },
+        ],
+      }),
 
-      // builtin bar
+      // bar
+      // Why not use builtins.bar ?
+      // because rspack is blazing fast
 
       // not need css-extract
 
       // fork-ts
-      // TODO: rspack not support `tapPromise`
-      // Cannot read properties of undefined (reading 'tapPromise')
-      // new ForkTsCheckerWebpackPlugin()
+      new ForkTsCheckerWebpackPlugin(),
 
       // analyzer, ok
       userConfig.analyzer && new BundleAnalyzerPlugin(),
@@ -59,18 +74,6 @@ export const addPluginsRsp = ({ opts, config }: IRspContext) => {
       // not need react-refresh
     ].filter(Boolean),
   )
-
-  // define
-  set(
-    config,
-    'builtins.define',
-    envs.stringified satisfies RspBuiltins['define'],
-  )
-
-  // provide
-  set(config, 'builtins.provide', {
-    process: require.resolve('process/browser'),
-  } satisfies RspBuiltins['provide'])
 
   // html
   // Why we not use builtins.html ?
@@ -83,34 +86,4 @@ export const addPluginsRsp = ({ opts, config }: IRspContext) => {
   //     ...envs.raw
   //   },
   // ] satisfies RspBuiltins['html'])
-
-  // copy
-  set(config, 'builtins.copy', {
-    patterns: [
-      {
-        from: paths.publicDirPath,
-        to: paths.outputDir,
-        toType: 'dir',
-        noErrorOnMissing: true,
-        globOptions: {
-          ignore: [winPath(paths.indexHtml), '**/.DS_Store'],
-        },
-      },
-    ],
-  } satisfies RspBuiltins['copy'])
-
-  // bar
-  // Why not use builtins.bar ?
-  // because rspack is blazing fast
-  // set(config, 'builtins.progress', {} satisfies RspBuiltins['progress'])
-
-  // --- rspack special ---
-  // react
-  set(config, 'builtins.react', {
-    development: envs.isDev,
-    refresh: envs.isDev,
-    runtime: 'automatic',
-  } satisfies RspBuiltins['react'])
-
-  // TODO: To be added to other builtins feature ...
 }
