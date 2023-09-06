@@ -162,6 +162,19 @@ export const applyRspackConfig = async (
           rawConfig.infrastructureLogging as RspConfig['infrastructureLogging']
       },
     ],
+    experiments: [
+      () => {},
+      () => {
+        if (process.env.XN_USE_RSPACK_EXPERIMENTS) {
+          logger.warn(`rspack use experiments mode`)
+          rspackConfig.experiments = {
+            rspackFuture: {
+              newResolver: true,
+            },
+          }
+        }
+      },
+    ],
   }
 
   // generate webpack config
