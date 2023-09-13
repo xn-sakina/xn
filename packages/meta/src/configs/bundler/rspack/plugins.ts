@@ -10,8 +10,8 @@ export const addPluginsRsp = ({ opts, config }: IRspContext) => {
   const mod: typeof import('@xn-sakina/bundler-rspack') = require('@xn-sakina/bundler-rspack')
   const rspack = mod.rspack
 
-  // FIXME: `rspack.HtmlPlugin` cannot support `inject: true` and custom key-value
-  const HtmlPlugin = require(mod.rsHtmlPlugin).default
+  // `rspack.HtmlPlugin` cannot support `inject: true` and custom key-value
+  const HtmlWebpackPlugin = require('html-webpack-plugin')
 
   const BundleAnalyzerPlugin =
     require('webpack-bundle-analyzer').BundleAnalyzerPlugin
@@ -31,8 +31,8 @@ export const addPluginsRsp = ({ opts, config }: IRspContext) => {
         process: require.resolve('process/browser'),
       }),
 
-      // builtin html
-      new HtmlPlugin({
+      // html
+      new HtmlWebpackPlugin({
         template: paths.indexHtml,
         inject: true,
         title: userConfig.title,
@@ -40,12 +40,12 @@ export const addPluginsRsp = ({ opts, config }: IRspContext) => {
       }),
 
       // interpolate-html
-      new InterpolateHtmlPlugin(HtmlPlugin, envs.raw),
+      new InterpolateHtmlPlugin(HtmlWebpackPlugin, envs.raw),
 
       // not support single-pack-plugin
 
       // copy
-      new rspack.CopyPlugin({
+      new rspack.CopyRspackPlugin({
         patterns: [
           {
             from: paths.publicDirPath,
@@ -74,16 +74,4 @@ export const addPluginsRsp = ({ opts, config }: IRspContext) => {
       // not need react-refresh
     ].filter(Boolean),
   )
-
-  // html
-  // Why we not use builtins.html ?
-  // Because we need to use InterpolateHtmlPlugin rewrite %VAR%
-  // set(config, 'builtins.html', [
-  //   {
-  //     template: paths.indexHtml,
-  //     // inject: true, // not support `true`
-  //     title: userConfig.title,
-  //     ...envs.raw
-  //   },
-  // ] satisfies RspBuiltins['html'])
 }
