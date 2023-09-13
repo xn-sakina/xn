@@ -17,15 +17,9 @@ export const getSwcConfigs = ({ root, envs }: IConfigChainOpts) => {
       ? {}
       : {
           env: {
-            /**
-             * need inject list:
-             * https://unpkg.com/browse/core-js-compat@3.21.0/modules-by-versions.json
-             *
-             * @issue https://github.com/swc-project/swc/issues/2607
-             *        https://github.com/swc-project/swc/issues/1604
-             *
-             * display inject polyfill
-             */
+            targets: {
+              chrome: '79',
+            },
             include: [
               ...getPolyfills({ root, env: envs.raw.NODE_ENV }),
               // we always transpile optional chaining and nullish coalescing
@@ -43,7 +37,6 @@ export const getSwcConfigs = ({ root, envs }: IConfigChainOpts) => {
         decorators: ENABLE_DECO_FEATURE,
         tsx: true,
       },
-      target: 'es5',
       // not use @swc/helper
       externalHelpers: false,
       transform: {
