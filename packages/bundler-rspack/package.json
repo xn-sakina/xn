@@ -28,7 +28,7 @@
     "dev": "tsc --watch"
   },
   "dependencies": {
-    "@rspack/core": "0.3.4",
-    "@rspack/dev-server": "0.3.4"
+    "@rspack/core": "0.3.7",
+    "@rspack/dev-server": "0.3.7"
   }
 }

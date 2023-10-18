@@ -18,27 +18,27 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
-    "@types/fs-extra": "^11.0.1",
-    "@types/lodash": "^4.14.197",
-    "@types/node": "^20.5.3",
+    "@types/fs-extra": "^11.0.2",
+    "@types/lodash": "^4.14.199",
+    "@types/node": "^20.8.6",
     "@xn-sakina/mental": "^4.0.2",
     "@xn-sakina/vary": "^1.1.1",
     "chalk": "^4.1.2",
     "commit-verify": "^1.1.0",
-    "esbuild": "0.19.2",
-    "eslint": "^8.47.0",
-    "eslint-plugin-sakina": "^4.3.0",
+    "esbuild": "0.19.5",
+    "eslint": "^8.51.0",
+    "eslint-plugin-sakina": "^4.4.0",
     "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
+    "lint-staged": "^15.0.1",
     "lodash": "4.17.21",
-    "only-allow": "^1.1.1",
-    "prettier": "^3.0.2",
+    "only-allow": "^1.2.1",
+    "prettier": "^3.0.3",
     "prettier-plugin-organize-imports": "^3.2.3",
-    "prettier-plugin-packagejson": "^2.4.5",
-    "rimraf": "^5.0.1",
+    "prettier-plugin-packagejson": "^2.4.6",
+    "rimraf": "^5.0.5",
     "sort-package-json": "^1.57.0",
-    "tsx": "^3.12.7",
-    "typescript": "^5.1.6",
+    "tsx": "^3.14.0",
+    "typescript": "^5.2.2",
     "zx": "^7.2.3"
   },
   "lint-staged": {
@@ -61,5 +61,5 @@
       "esbuild": "$esbuild"
     }
   },
-  "packageManager": "pnpm@8.7.0"
+  "packageManager": "pnpm@8.9.2"
 }
