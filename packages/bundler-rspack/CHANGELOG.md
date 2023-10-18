@@ -1,5 +1,11 @@
 # @xn-sakina/bundler-rspack
 
+## 3.8.1
+
+### Patch Changes
+
+- Upgrade rspack and other deps
+
 ## 3.8.0
 
 ### Minor Changes

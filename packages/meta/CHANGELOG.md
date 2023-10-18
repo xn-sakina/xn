@@ -1,5 +1,12 @@
 # @xn-sakina/meta
 
+## 3.8.1
+
+### Patch Changes
+
+- Upgrade rspack and other deps
+  - @xn-sakina/xn-utils@3.8.1
+
 ## 3.8.0
 
 ### Minor Changes
