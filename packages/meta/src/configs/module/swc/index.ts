@@ -1,16 +1,15 @@
 import { getPolyfills } from '../../../utils/polyfill/getPolyfills'
 import { IConfigChainOpts } from '../../interface'
+import type { Options as SwcOptions } from '@swc/core'
 
 const ENABLE_DECO_FEATURE = true
 
 export const getSwcConfigs = ({ root, envs }: IConfigChainOpts) => {
   const isDev = envs.isDev
 
-  const configs = {
+  const configs: SwcOptions = {
     module: {
       type: 'es6',
-      // If set to true, dynamic imports will be preserved.
-      ignoreDynamic: true,
     },
     // polyfill
     ...(isDev
