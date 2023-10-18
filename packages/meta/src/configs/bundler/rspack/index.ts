@@ -1,4 +1,4 @@
-import { logger } from '@xn-sakina/xn-utils'
+import { logger, lodash } from '@xn-sakina/xn-utils'
 import { Configuration as WebpackConfig } from 'webpack'
 import { createAddDevServer } from '../../devServer'
 import {
@@ -27,6 +27,8 @@ import { addCssRuleFromWebpack, addCssRuleRsp } from './module/addCssRuleRsp'
 import { addJavaScriptRuleRsp } from './module/addJavaScriptRuleRsp'
 import { addOptiRsp } from './opti'
 import { addPluginsRsp } from './plugins'
+
+const { set } = lodash
 
 export const applyRspackConfig = async (
   opts: IConfigChainOpts,
@@ -82,7 +84,11 @@ export const applyRspackConfig = async (
         rspackConfig.resolve = rawConfig.resolve as RspResolve
         // special
         if (opts.paths.tsconfigFile) {
-          rspackConfig.resolve!.tsConfigPath = opts.paths.tsconfigFile
+          set(
+            rspackConfig.resolve!,
+            'tsConfig.configFile',
+            opts.paths.tsconfigFile,
+          )
         }
       },
     ],
@@ -167,6 +173,7 @@ export const applyRspackConfig = async (
       () => {
         if (process.env.XN_USE_RSPACK_EXPERIMENTS) {
           logger.warn(`rspack use experiments mode`)
+          set(rspackConfig.resolve!, 'tsConfig.references', 'auto')
           rspackConfig.experiments = {
             rspackFuture: {
               newResolver: true,
