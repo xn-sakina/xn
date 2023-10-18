@@ -52,6 +52,7 @@ export const addPluginsRsp = ({ opts, config }: IRspContext) => {
             to: paths.outputDir,
             toType: 'dir',
             noErrorOnMissing: true,
+            info: { minimized: true },
             globOptions: {
               ignore: [winPath(paths.indexHtml), '**/.DS_Store'],
             },
