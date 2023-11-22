@@ -84,6 +84,7 @@ export const applyRspackConfig = async (
         rspackConfig.resolve = rawConfig.resolve as RspResolve
         // special
         if (opts.paths.tsconfigFile) {
+          set(rspackConfig.resolve!, 'tsConfig.references', 'auto')
           set(
             rspackConfig.resolve!,
             'tsConfig.configFile',
@@ -168,20 +169,7 @@ export const applyRspackConfig = async (
           rawConfig.infrastructureLogging as RspConfig['infrastructureLogging']
       },
     ],
-    experiments: [
-      () => {},
-      () => {
-        if (process.env.XN_USE_RSPACK_EXPERIMENTS) {
-          logger.warn(`rspack use experiments mode`)
-          set(rspackConfig.resolve!, 'tsConfig.references', 'auto')
-          rspackConfig.experiments = {
-            rspackFuture: {
-              newResolver: true,
-            },
-          }
-        }
-      },
-    ],
+    experiments: [() => {}, () => {}],
   }
 
   // generate webpack config
