@@ -3,12 +3,14 @@ import { IRspContext } from './interface'
 
 export const addPluginsRsp = ({ opts, config }: IRspContext) => {
   const { paths, userConfig, envs } = opts
+  const isDev = envs.isDev
 
   const { CleanWebpackPlugin } = require('clean-webpack-plugin')
   const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin')
 
   const mod: typeof import('@xn-sakina/bundler-rspack') = require('@xn-sakina/bundler-rspack')
   const rspack = mod.rspack
+  const ReactRefreshPlugin = mod.rspackReactRefreshPlugin.default
 
   // `rspack.HtmlPlugin` cannot support `inject: true` and custom key-value
   const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -72,7 +74,8 @@ export const addPluginsRsp = ({ opts, config }: IRspContext) => {
       // analyzer, ok
       userConfig.analyzer && new BundleAnalyzerPlugin(),
 
-      // not need react-refresh
+      // react-refresh
+      isDev && new ReactRefreshPlugin(),
     ].filter(Boolean),
   )
 }
