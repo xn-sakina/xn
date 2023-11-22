@@ -42,11 +42,11 @@ export const getSwcConfigs = ({ root, envs }: IConfigChainOpts) => {
         legacyDecorator: ENABLE_DECO_FEATURE,
         decoratorMetadata: ENABLE_DECO_FEATURE,
         react: {
-          runtime: 'automatic', // classic
+          runtime: 'automatic',
           throwIfNamespace: true,
           useBuiltins: true, // Use Object.assign() instead of _extends. Defaults to false.
           development: isDev,
-          refresh: true,
+          refresh: isDev,
         },
       },
     },

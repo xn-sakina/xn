@@ -53,10 +53,6 @@ export const PACKAGES = {
 
 export const RSPACK_CONST = {
   type: {
-    js: 'js',
-    ts: 'ts',
-    jsx: 'jsx',
-    tsx: 'tsx',
     css: 'css',
     cssModule: 'css/module',
     jsAuto: 'javascript/auto',
