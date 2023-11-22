@@ -1,5 +1,15 @@
 # @xn-sakina/meta
 
+## 3.9.0
+
+### Minor Changes
+
+- Upgrade rspack to 0.4.0
+
+### Patch Changes
+
+- @xn-sakina/xn-utils@3.9.0
+
 ## 3.8.1
 
 ### Patch Changes

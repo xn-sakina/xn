@@ -1,5 +1,11 @@
 # @xn-sakina/bundler-rspack
 
+## 3.9.0
+
+### Minor Changes
+
+- Upgrade rspack to 0.4.0
+
 ## 3.8.1
 
 ### Patch Changes
