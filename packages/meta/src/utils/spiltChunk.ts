@@ -92,8 +92,11 @@ export function getSplitChunksConfig({
   extraSplitChunk = [],
 }: {
   componentsDir?: string
-  extraSplitChunk?: string[]
+  extraSplitChunk?: string[] | string
 }) {
+  extraSplitChunk = Array.isArray(extraSplitChunk)
+    ? extraSplitChunk
+    : [extraSplitChunk]
   const defaultSplitKeywords = uniq(['react', 'antd', 'rc', ...extraSplitChunk])
   const depsSplit: Record<string, any> = {}
   defaultSplitKeywords.forEach((depName) => {
