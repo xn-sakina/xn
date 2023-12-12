@@ -28,26 +28,26 @@
     "dev": "tsc --watch"
   },
   "dependencies": {
-    "@manypkg/get-packages": "2.1.0",
+    "@manypkg/get-packages": "2.2.0",
     "chalk": "4.0.0",
     "commander": "9.4.1",
     "cross-spawn": "7.0.3",
     "find-up": "5.0.0",
-    "fs-extra": "11.1.0",
-    "inquirer": "8.2.4",
+    "fs-extra": "11.2.0",
+    "inquirer": "8.2.6",
     "lodash": "4.17.21",
     "mustache": "4.2.0",
     "node-fetch": "2.6.7",
-    "resolve": "1.22.1",
+    "resolve": "1.22.8",
     "yargs-parser": "21.1.1"
   },
   "devDependencies": {
-    "@types/cross-spawn": "^6.0.2",
-    "@types/fs-extra": "^9.0.13",
-    "@types/inquirer": "^8.2.1",
-    "@types/mustache": "^4.2.2",
-    "@types/node-fetch": "^2.6.2",
-    "@types/resolve": "^1.20.2",
-    "@types/yargs-parser": "^21.0.0"
+    "@types/cross-spawn": "^6.0.6",
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^8.2.10",
+    "@types/mustache": "^4.2.5",
+    "@types/node-fetch": "^2.6.9",
+    "@types/resolve": "^1.20.6",
+    "@types/yargs-parser": "^21.0.3"
   }
 }
