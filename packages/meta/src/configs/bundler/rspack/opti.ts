@@ -25,6 +25,10 @@ export const addOptiRsp = ({ opts, rawConfig, config }: IRspContext) => {
     return
   }
   // FIXME: rspack function support is not complete
+  //
+  //        'TypeError: module.size is not a function'
+  //         rspack currently not support `module.size()`
+  //
   // {
   //   const { splitChunks } =
   //     splitChunksConfig === ESplitStrategys.granular
