@@ -4,6 +4,11 @@ import { EMode } from '../../constants'
 import { createCompiler, createInstanceImpl } from '../compiler/createCompiler'
 import { processPrepare } from '../prepare'
 
+type IDevserverExpand<T> = T & {
+  close?: () => Promise<void>
+  stop?: () => Promise<void>
+}
+
 async function dev() {
   processPrepare()
 
@@ -38,17 +43,27 @@ async function dev() {
     )
     console.log()
   })
+  const stopDevServer = async () => {
+    const devServerExpand = devServer as IDevserverExpand<typeof devServer>
+    // compat for rspack
+    if (devServerExpand?.close) {
+      await devServerExpand.close()
+    } else if (devServerExpand?.stop) {
+      // webpack-dev-server v5
+      await devServerExpand.stop()
+    }
+  }
   ;['SIGINT', 'SIGTERM'].forEach(function (sig) {
-    process.on(sig, function () {
-      devServer.close()
+    process.on(sig, async function () {
+      await stopDevServer()
       process.exit()
     })
   })
 
   if (process.env.CI !== 'true') {
     // Gracefully exit when stdin ends
-    process.stdin.on('end', function () {
-      devServer.close()
+    process.stdin.on('end', async function () {
+      await stopDevServer()
       process.exit()
     })
   }
