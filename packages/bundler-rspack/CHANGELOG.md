@@ -1,5 +1,11 @@
 # @xn-sakina/bundler-rspack
 
+## 3.10.0
+
+### Minor Changes
+
+- Upgrade deps
+
 ## 3.9.0
 
 ### Minor Changes

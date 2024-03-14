@@ -1,5 +1,15 @@
 # @xn-sakina/meta
 
+## 3.10.0
+
+### Minor Changes
+
+- Upgrade deps
+
+### Patch Changes
+
+- @xn-sakina/xn-utils@3.10.0
+
 ## 3.9.0
 
 ### Minor Changes
